@@ -1,0 +1,21 @@
+# RACC - Bot chat file
+#
+# The maximum number of sentences that can be put in this file is 100.
+# Any void or sharp-prepended line will be ignored.
+# The '%s' will be filled in game by the name of the player.
+
+je casse la formation %s
+je casse la formation
+je ne te couvre plus %s
+je ne te couvre plus
+je fais cavalier seul
+j'y vais tout seul
+je lache la formation
+ne m'attends plus %s
+je me retire %s
+j'y vais %s
+j'y vais maintenant
+ne m'attends plus
+je ne suis plus en formation %s
+je te lache
+je te lache %s

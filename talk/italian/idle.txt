@@ -1,0 +1,42 @@
+# RACC - Bot chat file
+#
+# The maximum number of sentences that can be put in this file is 100.
+# Any void or sharp-prepended line will be ignored.
+# The '%s' will be filled in game by the name of the player.
+
+non c'e' nessuno?
+ve faccio un mazzaccio ? =)
+'ndo state maiali?
+'ndo stai finocchio?
+chi vuol essere il prossimo?
+%s dove sei? te devo seccaaaaa''
+eddaje damme er cu....
+ESCI FUORI!
+USCITE FUORI CON LA CEPPA BENE IN VISTA !!
+ARRENDETEVI !!!
+NON AVETE SCAMPO !!
+USCITE FUORI CON LE CHIAPPE BENE IN VISTA !! 
+eddajolooo che ve secco tutti!
+hahahahahaha 'sso azzacci fernet =)
+eddaje %s, esci e combatti
+buhi di hulo tutti eh? =)
+ESCI E FATTI TROMBARE ?
+che cacaiooooooo..
+hehehe ve sdrajoo tutti!
+emmo' te rompo !!!!
+nun te faccio male.... esci ?? =)
+'ndo sei?, te sdrajoooo
+ahoooooo %s, crepi o no??
+HAUAHAUAHAUAHAA CACASOTTO ?
+<--- che palleeeeeee
+'ndo stai che te aieggio il cervelletto ??
+bene %s, esci e crepa !!
+ahoooooooo %s, te vengo a pijaaaaa !!!
+approfitta che sto ricaricando.....
+booommmeeeete =)
+%s, te sdrajooooooo! =)
+guardati le chiappe =)
+se se parla parla !
+loooool
+me le avete tritate abbastanza.....
+no comment =)

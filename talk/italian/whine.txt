@@ -1,0 +1,117 @@
+# RACC - Bot chat file
+#
+# The maximum number of sentences that can be put in this file is 100.
+# Any void or sharp-prepended line will be ignored.
+# The '%s' will be filled in game by the name of the player.
+
+%s camperone di merda....
+ahooo stroooonzi....cambiamo mappa ?
+PROOOOOOOOTTTTTT !!!!! MUAHUAHUAHUAHUAH !!!!
+che palle ....
+eccheccazzo
+testina... vai a cagare
+eheheheheh....
+fanculizzati
+avete rotto la ceppa a camperare sempre
+sei un cheater di merda
+fanculo ai santoni
+HL non vuole santoni
+in culo ai santoni
+%s una banda di cazzoni
+non ci sono bot %s, fidate !!!
+Bots cazzoni !!!
+i bots na cippa
+laaaaaaag  di merda
+azzzooooooo che laggataaaaaaaaaaaaa
+eheheheh.... che culo
+azzo di lag !
+miiiiiii ebbasta !!!
+MAUAHUAHAUHAUHAUHAUHAUHAUHA
+BUAHAUHAUHAUHAUHAUHAUHA
+vado, pisci e torno.....
+che cazzo votate dust stronzi
+fanculo va
+hai rotto l'anima
+camperone di merda
+Half-Life uguale cheaters
+%s da quando giochi a HL ?
+HL FOREVER !!!
+troppi lamer idioti
+CS uguale camperstrike
+noooooo che palle sta mappa
+preso per il culo
+pompino buahuahuahuahuahuahuahuah
+cagato bene stamattina ?
+segaiolo vai via
+che minchia vuoi ?
+andate a cagare tutti
+ehehe...culo !
+%s sei un cheater di merda
+PRRRRROOOOOOOOOOT !!!
+CHI NON CAGA IN COMPAGNIA O E' UN LADRO O UNA SPIA
+%s mi fai schifo
+che caaaaaazzzzzzzoooooooooo
+mi si e incastrato il mouse
+porca puttana
+stai usando aimbot vero ?
+certo sono un cheater di merda
+pausa cicca
+minchia due caricatori e niente
+%s cheater del cazzo !!!!!
+ne ho le palle piene
+basta...mi sono rotto le palle
+sei solo un camper schifoso
+%s vali meno di niente
+santone delle palle mie
+cazzo di camper
+%s imbecille
+%s idiota
+%s e' vero che stai cittando ?
+siii....
+piu di tutti
+eheheheheheheheh
+certo hai aimbot 
+no
+si
+piu o meno
+non rompere le palle
+che palle
+porca zozza
+andate a fanculo tutti
+fanculo
+citer di merda
+sai solo trassare....
+trassoni del cazzo
+fanculo a voi
+ciao brutti animali !!!
+piscia piu corto
+ahahah che cazzoni !
+ciauuuuuz bastardi
+fanculo a tutti
+PRRRRRRRROOOOOOOOOOTTT COGLIONAZZI
+A ZORIIIIII !!!!! FANCULO
+MEZZA SEGA VIVENTE
+MEZZA SEGA MORENTE
+chi e che campera ?
+quel cazzone
+ma vattela  a prendere nel culo
+cheaterrrrrr
+cazzaro
+ma che palle
+ecchissene.....
+mavaffanculo
+sto 'mbriaco
+camper delle palle
+ve' ve' sto camper della ceppa mia
+%s te ed il tuo wallhack
+HAUAHAUAHAUAHAUAHAAUAHAUAHAUAHAUAHA !!!!!
+%s, stai trassando con aimbot eh ? BASTARDO !!!
+ma sto cazzo di PB non funge...
+seeeeee tutti citeroni !!!!!!
+aimbot ??? buono !!!! zitto %s!
+aimbot e meglio di wallhack
+s% cheater dimmerda
+oooooOOOOOOOooooooooOOOOOOOOooooooooo
+di sempre rompicoglioni !!! %s!
+mi piace !!
+dai %s, sei sega !!!!

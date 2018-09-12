@@ -1,0 +1,33 @@
+# RACC - Bot chat file
+#
+# The maximum number of sentences that can be put in this file is 100.
+# Any void or sharp-prepended line will be ignored.
+
+bon je crois qu'on va arreter la...
+bon c pas tout ca mais fo ke j me tire moi
+bon je vais aller assassiner ailleurs moi...
+bon j'en ai assez la. a + tard tt le monde.
+bon j'arrete la...
+bon faut ke j'aille dormir moua =)
+bon la faut que j'arrete a+
+je crois que je vais arreter
+je me tire. pas trop decus? =)
+j'arrete a+
+a+ tout le monde j'arrete
+i'll be back... =)
+tchao tout le monde c l'heure de faire dodo =)
+allez a tchao
+a+ =)
+j'ai eu ma dose. a+
+j'arrete pcq ca commence a me rendre fou =)
+j'arrete les mecs a+
+i'll be back =) ...
+bon je me tire
+a+ les mecs
+ok je quitte
+tchao tlm
+a plus tt le monde
+ok ca pue je me casse
+putain ca rame vraiment trop aujourd'hui je me casse a+
+allez au dodo
+allez zou je m'en vais

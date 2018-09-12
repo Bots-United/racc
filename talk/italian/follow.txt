@@ -1,0 +1,41 @@
+# RACC - Bot chat file
+#
+# The maximum number of sentences that can be put in this file is 100.
+# Any void or sharp-prepended line will be ignored.
+# The '%s' will be filled in game by the name of the player.
+
+OK
+si si ti seguo
+OK, vai avanti
+OK %s
+capito ! %s
+ti seguo %s
+vai avanti %s
+al tuo servizio %s
+OK %s arrivo
+azz
+sto arrivando %s
+sei pippa senza di me %s vero ?
+OK %s famojie  er mazzo
+eddamme tempo...
+non son lontano %s
+ti copro %s
+OK ti copro io...
+vabbuo' !!
+eddajela.... 
+evvai %s...
+ok %s ti sto seguendo
+vai...
+bene %s 'namo ?
+azz %s ARRIVO !!
+vai avanti %s ti copro da dietro...
+OK %s ennamo...
+oleeeeee %s daiiiiii !!
+ennamooooooooo %s!!
+'sso piu' ombra io der culo dell'orsetto polare.
+OK %s famoli neri
+OK %s fammo 'na bella ammucchiata...
+eddajolo... arrivo e ti copro....
+certo %s
+GO GO GO !!!
+%s emmoviti !!!

@@ -1,0 +1,85 @@
+# RACC - Bot chat file
+#
+# The maximum number of sentences that can be put in this file is 100.
+# Any void or sharp-prepended line will be ignored.
+# The '%s' will be filled in game by the name of the player.
+
+=) hehehe
+nyark nyark nyark =)
+hohohohohoho =)
+hehehehehe =)
+hehehe mon pauvre je suis sur que t'as meme pas vu la couleur de mon gun! =)
+arf ca me plait ce jeu =)
+LOL %s t'es plus beau quand t'es mort
+bin alors quoi? =)
+du nerf %s, defends-toi!!! arf
+essaye encore
+bien essaye =)
+c'etait facile. =)
+hihihihihihihi =)
+mouarf =)
+desole %s! j'avais pas que ca a faire!
+pourquoi t'essayes %s? t'y arrivera pas...
+lol t'y arrivera pas...
+par-fait =)
+arf =)
+hahaha :-) hihihi :-) hohoho :-)
+he %s, si tu cherches ton crane il est juste la sur le mur hehehehehe
+hohoho ca c'etait fun
+decidement ca commence a bien faire: y'a des cadavres partout !!!
+ca serait bien que kk1 de meilleur rejoigne le serveur ;o)
+ho que j'aime assassiner!!!
+hohoho! t'as bien explose!
+lol comment t'as vole !!! =)
+t'as mal %s?
+LOL j'ai mal pour toi mon pauvre...
+hohoho =) nettoie le mur maintenant =)
+et voila!! tu vois que je tiens toujours mes promesses...
+je t'avais prevenu !!!
+%s ne laisse pas trainer tes cadavres partout c'est degoutant ;-)
+je t'avais dit que t'etais mort!!
+il fallait que je le fasse, mon petit. tu comprends =)
+=) nyerk =) nyerk =) nyerk =)
+ouh ca avait l'air de faire mal.
+=) wazn't me =)
+oh mon dieu %s... qu'ai-je fait? =)
+arf, d'habitude je suis encore meilleur
+ho %s, faut pas s'enerver comme ca, c'est k1 jeu! looooool
+oh pardon! g po fait expres hehehehehe
+%s! tu joues tout au clavier ou quoi?
+t'aurais du courir hehehe
+hehe je te l'avais dit !!!!
+assez fun =)
+LOL c'est pas moi c'est murphy!
+%s t'es l'exemple de comment mal jouer.
+mais qu'est-ce que tu joues mal!! =)
+hohohoho. si j'avais su que tu jouais si mal! =)
+chui sur que ca t'a surpris %s pas vrai? =)
+LoL %s ton sang c de l'art mural
+pkoi tt le monde il veut tjrs etre mechant avec moi? =)
+wazn't me!!
+=) xxx'c'est bon =) xxx'c'est bon =) xxx'c'est bon !!!
+et un de plus, un!
+tiens, ca t'apprendra
+allez %s, tu feras mieux la prochaine fois =)
+amusant!!
+c bien de te tuer %s =)
+yep. j'adore ca!
+lol c bon ca =)
+ho que j'aime ca !!!
+mmm... du sang....
+oh chui desole %s je T pris pour un ennemi
+hehe oops
+ooups pardon
+oh pardon G po fait expres
+desole %s fallait pas te mettre dans mon chemin
+hahahahaha
+lol
+hehehe
+alors %s t'as mal?
+j'ai mal pour toi %s
+niark niark niark
+mouarf
+w00t
+w00t w00t
+:) :) :)

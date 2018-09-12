@@ -1,0 +1,39 @@
+# RACC - Bot chat file
+#
+# The maximum number of sentences that can be put in this file is 100.
+# Any void or sharp-prepended line will be ignored.
+# The '%s' will be filled in game by the name of the player.
+
+OK
+ora ci vado
+OK vado avanti stai qua'!
+OK %s mo arrivano tutti
+capito tutto %s
+cor cazzo che passano de qua' %s
+ok %s campeggio qua'
+ecchime %s
+OK %s non mi muovo
+ora ce la famo!!! :-)
+OK %s io non mi muovo
+sdrajo tutto quello che passa %s, giusto?
+mo li aspetto qua' !!!
+VE ASPETTIAMO FUORI!!
+OK qua ce sto io....
+non passa nessuno di qua'!!
+non ti preoccupare %s 
+ok %s ci sono io...
+'sso il re del camper
+yess %s
+certo %s curati !!
+si si  %s vai avanti che io sto qua'
+eddajee %s se hai bisogno chiama
+difendi !!
+%s torna indietro...
+%s 'sso cotto e non me movo !
+OK %s son qua vicino
+cor cazzo che passano, %s =)
+%s sono in zona
+non mi aspettare tanto, %s
+sei il capo %s...
+si si !!!
+eccome no !! LoL

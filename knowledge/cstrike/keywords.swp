@@ -1,0 +1,57 @@
+# RACC HAL keywords swap file
+#
+# The word on the left is changed to the word on the right in
+# the reply when used as a keyword.
+#
+# Entries MUST be sorted alphabetically.
+# Entries MUST be in capital letters.
+# separators MUST be tabs.
+#
+
+DISLIKE	LIKE
+HATE		LOVE
+I		YOU
+I'D		YOU'D
+I'LL		YOU'LL
+I'M		YOU'RE
+I'VE		YOU'VE
+J'AI		T'AS
+JE		TU
+LIKE		DISLIKE
+LOVE		HATE
+MA		TA
+ME		YOU
+MES		TES
+MINE		YOURS
+MOI		TOI
+MON		TON
+MY		YOUR
+MYSELF	YOURSELF
+NO		YES
+NOS		VOS
+NOTRE		VOTRE
+NOUS		VOUS
+PQ		PCQ
+PQOI		PARCQUE
+T'AS		J'AI
+TA		MA
+TES		MES
+TOI		MOI
+TON		MON
+TU		JE
+VOS		NOS
+VOTRE		NOTRE
+VOUS		NOUS
+WHY		BECAUSE
+Y		COS
+YEAH		NOPE
+YES		NO
+YOU		I
+YOU		ME
+YOU'D		I'D
+YOU'LL	I'LL
+YOU'RE	I'M
+YOU'VE	I'VE
+YOUR		MY
+YOURS		MINE
+YOURSELF	MYSELF
