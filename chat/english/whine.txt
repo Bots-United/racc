@@ -1,0 +1,107 @@
+# RACC - Bot chat file
+#
+# The maximum number of sentences that can be put in this file is 100.
+# Any void or sharp-prepended line will be ignored.
+# The '%s' will be filled in game by the name of the player.
+
+eehh? that's not nice at all, %s!!
+u gonna bleeeeeeed
+now i put my curse on you %s
+angeeeeer!!!!
+NOOOOOOOO!!!!!
+why am i always the first to be wiped out?
+ohhh. seems like i'll have to start playing seriously now.
+%s you're not funny.
+no pain, bastard
+i'll report it!
+OK, %s. now I know what I have to do.
+you think thats funny motherfucker?
+run %s, run.
+ho bullshit %s!!!
+let's stay zen..............
+well done!!!
+nice move %s
+%s, you'll realize soon that you mustn't do that...
+i once liked you, %s.
+%s i've got only two but you broke them both
+aha...aha.
+what a shitty game.
+<----- furious
+my revenge will be sweet
+nice %s you did it well
+oyeeeah.....how KewL.
+oh no not again!!!
+this is really starting to piss me off. serious.
+that's not very nice at all %s
+grrrrrrrrr %s grrrrrrrrrrrrrrrrrrrr
+i definitely hate that, %s
+oh you! you're so dead!!!
+you are dead %s. run.
+%s do you ever think you will survive to this?
+pain.
+grrrrrrrrrrrr
+<<------- is about to lose his nerves
+%s need a good ass kick! ::paw:: ::paw::
+why all the violence?
+i'm disgusted.
+noooooo %s
+noooooooooooo
+i must be dreaming
+ayaya ur dead
+%s, you will bleed
+die
+die sucker
+die motherfucker
+REVENGE
+i'm ashaaaaamed
+i'm pissed off now
+BULLSHHHHHIT
+GODDAMN SHIT
+wo i cant believe that.
+that's impossible????
+heeeeeh? what was that?
+HOW DID YOU DO THAT ??????
+WHAT????????
+i saw nothing coming...
+where is this nice %s that did me that i want to kill him
+this one %s was you right?
+i'll remember you %s
+yay? well run, start to run now
+dirty bastard if I catch you...
+%s... we used to be friends but now it's all over.
+%s. you're a coward.
+eeeeeh what a bastard
+where r u %s i'm gonna break your head
+phew. how nice.
+silly fool you'll gonna see
+bastard
+i dislike dying, %s.
+you'll eat flowers by the roots %s
+WOOOOOOO SHIT SHIT SHIT GODDAMN SHIT
+>:-@ BIG ANGER >:-@
+you bastard.... you could at least let me reload!!!
+oh you you'll feel some pain soon
+death won't stop me, %s. you are gonna pay.
+U r dead %s. go and hide.
+whoa I always have been nice with you !!!!
+not hit me, %s. I good.
+bullshit, %s? how did u ever do that??
+hey people !! %s is using a bot.
+pffffffff
+DAMN SHIT!!! TAKE HIS GUN, OR WHAT!!!
+oh finally i'm pissed off
+you you'll suffer soon
+i'll report it to Botman!!!
+crap
+can someone send a plane on %s???
+fool
+fuck off
+shit
+bullshit youre dead
+rhoa you
+prepare to suffer
+oh my god how much you'll pay
+you shouldn't have done that %s
+you shouldn't have done that, u can't even figure out why.
+ok %s calm down now
+but that's the end is it?

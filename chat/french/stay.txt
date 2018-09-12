@@ -1,0 +1,47 @@
+# RACC - Bot chat file
+#
+# The maximum number of sentences that can be put in this file is 100.
+# Any void or sharp-prepended line will be ignored.
+# The '%s' will be filled in game by the name of the player.
+
+OK
+allez-y je tiens la place
+OK vas-y je reste ici
+OK %s qu'ils viennent donc
+d'accord %s
+ils passeront pas %s
+ok %s je tiens la place
+a tes ordres %s
+OK %s je ne bouge pas d'ici
+d'ac!
+je tiens la place!
+je serai a la hauteur de ma mission!!! :-)
+OK %s je lache la formation
+je tire sur tout ce qui bouge %s c'est ca ?
+OK qu'y z'y viennent !!!
+je les attends!!
+OK je garde la place
+bien compris, ils passeront pas
+t'inquiete pas %s ils passeront jamais...
+tres bien %s je reste en position
+d'accord
+bon je reste en position
+yep %s
+d'accord %s fais gaffe a toi
+OK %s vas-y je reste la
+vas-y %s si ca chauffe trop je t'appelle
+defenseur en position!!
+je defends la place
+%s si ca chauffe t'as interet a rappliquer...
+OK %s je defends la position
+OK je tire sur tout ce qui bouge!!
+bien compris %s
+a vos ordres general
+vas-y %s ils n'oseront pas se montrer
+OK %s je reste dans le coin
+ils ne passeront pas %s =)
+OK %s je reste dans la zone
+me laisse pas trop longtemps %s
+c'est toi le patron %s...
+yes sir !!!
+a tes ordres %s

@@ -1,0 +1,329 @@
+RACC
+
+Changelog since Botman's HPB template #3:
+-(OK) Bots should no longer get stuck forever facing corners
+-(OK) Deathmatch bots may forget to reload their weapon in action
+-(OK) Bots may now chat when killing
+-(OK) Bots may now chat better when killed
+-(OK) Bots may now complain when they've not seen an enemy for a long time
+-(OK) Deathmatch game fakes bots randomly leaving/joining the server
+-(OK) Bots may now say hello when they join and goodbye when they leave
+-(OK) Deathmatch bots have their own characteristics, e.g. name, skin and skill
+-(OK) Bots can now fire better when using the MP5
+-(OK) Bots preferences for weapons have been tweaked
+-(OK) Bots accuracy improve with their aiming time
+-(OK) Bots may now aim from head to feet instead of just the head/body
+-(OK) Bots may now fire auto-aimed rockets or direct shot rockets
+-(OK) Bots rush when their enemies go out of sight
+-(OK) Bots field of view has been tweaked
+-(OK) Basic console help support has been added (type "?" or "help")
+-(OK) (1st pass) Code has been cleaned up a bit
+-(OK) Min and max number of bots can be dynamically set up from the console
+-(OK) Fixed many unpleasant things in bot in-game introduction code
+-(OK) Bots can now fire better when using the M249
+-(OK) Bots preferences for weapons have been tweaked for OpFor
+-(OK) Bots may now use or not the Desert Eagle's laser spot
+-(OK) Various bots stats may now be obtained from the console (easy to improve)
+-(OK) DLL code was becoming unmaintainable and has been split between all mods
+-(OK) (2nd pass) Code has been cleaned up a bit
+-(OK) Team bots no more leave the game
+-(OK) Team bots now automatically join the less populated team
+-(OK) Team bots can now follow a user
+-(OK) Team bots can now keep a position
+-(OK) Team bots staying in position randomly look around themselves for enemies
+-(OK) Team bots can now ask for backup when they get damaged
+-(OK) Team bots now answer to orders
+-(OK) Team bots ask-for-backup code bugfixed (don't speak twice)
+-(OK) Team bots follow-user code greatly improved (can chase through doors...)
+-(OK) TFC_DLL code cleaned up a bit
+-(OK) Added smart install batch script
+-(OK) Bots should no more attack disconnected client edicts (thanks Botman!)
+-(OK) Added a nice mouse-driven menu to pass order to bots in TFC
+-(OK) Bot chat frequency is now dynamic and relies on the number of players
+-(OK) Bots don't rush to enemies when "used", but fire at a distant range.
+-(OK) Fixed various bot follow user bugs
+-(OK) Fixed bot aim bug with follow user code
+-(OK) Added keybindings to pass order to bots in TFC and CSTRIKE
+-(OK) Re-arranged BotThink() function in TFC and CSTRIKE (once more)
+-(OK) Fixed bot face enemy bug in follow user code
+-(OK) When a team edict fires, all used bots turn towards that direction
+-(OK) Fixed many irrelevant pBot->pEdict binds - engine should crash no more
+-(OK) Bots won't prevent players to connect to a full server no more
+-(OK) Fixed a last CS-specific BotFollowUser bug
+-(OK) At last! CS bots can now speak on the radio
+-(OK) Team bots can now follow their users on ladders
+-(OK) Fixed CS BotTalkOnTheRadio repeating bug
+-(OK) Now able to detect end of rounds: had a look into eLiTe's Teambot :-P
+-(OK) Added brand new CS BotBuyStuff code. Counter-Strike bots now buy stuff!
+-(OK) CS bots now know how to use sniper rifles
+-(OK) Rewrote CS bot buy code in a cleaner way
+-(OK) Fixed a BotShootAtEnemy bug in team play bot code
+-(OK) In Counter-Strike, bots plant bombs =)
+-(OK) Upgraded to version 1.1.0.8 of HL engine - still working
+-(OK) Upgraded to version 1.3 of Counter-Strike - still working
+-(OK) Team bots may decide to camp for a while if their enemy hide
+-(OK) TFC bots may now ask for a medic if they get damaged
+-(OK) Added two TFC bot chat situations: 'affirmative' and 'negative'
+-(OK) Fixed a possible leak in bot-specific ClientCommand() code
+-(OK) TFC used spy bots can be asked to feign death
+-(OK) CS bots will plant bombs if they actually 'see' the bomb spot in field
+-(OK) Delayed TFC bot calls for medic (more human-like)
+-(OK) Good-skilled bots now aim to feet when using the RPG
+-(OK) Code has been cleaned up a bit (once more...)
+-(OK) Bots turning completely around do now 170 < angle < 190 instead of 180
+-(OK) Fixed TFC engineer tf_weapon_spanner bug (bots can now use this weapon)
+-(OK) Bots can now make a much better use of crowbars and knifes
+-(OK) Fixed bot start bug in OpFor (bots were stuck when respawning)
+-(OK) Fixed used bots' yaw becoming firing teammate's yaw bug... a tough one
+-(OK) Used bots no more pause facing a wall
+-(OK) CS VIP bots no more try to buy stuff
+-(OK) Fixed ideal_yaw engine start bug in some CS maps (de_dust...)
+-(OK) Reliability fix: BotFixIdealYaw() and BotFixIdealPitch() warped
+-(OK) Added a cool new welcome message effect :-)
+-(OK) Bot pause times decreased a little
+-(OK) CS terrorist bots now fire at the VIP before firing at other enemies
+-(OK) CS terrorist bots call the bot holding the C4 when they see a bomb site
+-(OK) Made multiple client connections easier (sets bot_check_time to now)
+-(OK) Made BotCheckForSpecialZones() function for bots to complete team goals
+-(OK) CS BotBuyStuff() code improved, bots now buy stuff more cleverly
+-(OK) Added BotSwitchToBestWeapon() - bots won't wander around with a crowbar
+-(OK) Fixed bug: some bots weren't shooting after a few frags
+-(OK) CS terrorist bots can now pickup a dropped bomb and CTs cruise around
+-(OK) Fixed bugs in BotCheckForSpecialZones() in caller bots sections
+-(OK) Bots now duck, duck-jump and strafe left/right to avoid walls & enemies
+-(OK) Fixed bug in BotFireWeapon(): bots hesitate no more which gun to fire
+-(OK) BotFollowUser() code still improved: bots follow you if you duck or jump
+-(OK) TFC bots now head to flags and info_tfgoal sites when they see one
+-(OK) "search" server command improved (displays distance and BModels)
+-(OK) Bots adjust pitch when using handgrenades and MP5 bombs
+-(OK) pBot->f_aim_time better used to offset bot aim
+-(OK) Bots don't move when sniping with the crossbow and the opfor rifle
+-(OK) Upgraded all the LINK_ENTITY_TO_FUNC() to newest version of the DLLs
+-(OK) Added bots to Deathmatch Classic. RACC bot now supports 5 mods!
+-(OK) DMC bots now join the game more cleanly (thanks Botman!)
+-(OK) Fixed a crash bug in Counter-Strike BotCheckForSpecialZones() code
+-(OK) Rewrote GiveFnptrsToDll() in a cleaner way
+-(OK) Fixed bot ttl bug in OpFor CTF: bots won't leave their team anymore
+-(OK) Rewrote BotFireWeapon() so that bots won't miss a good weapon choice
+-(OK) Fixed 1+ bug in CS BotCheckForSpecialZones() when bots call each other
+-(OK) A good one... Wrote BotMove() to handle better bot directions
+-(OK) Bots can now go backwards, they won't stuck user in a corner no more
+-(OK) Implemented b_is_fearful variable, bot may or may not rush to enemy
+-(OK) Got rid of old wall check code. I feel happy when I delete stuff! :-)
+-(OK) Fixed bug w/ bots could get stuck trying to stay away from a tripmine
+-(OK) New BotTurnAtFall() code is working! Bots fall much less often :-)
+-(OK) Made BotCheckForItems() call BotTurnAtFall() too for bots not to fall
+-(OK) Fixed some angle wrap code in BotTurnAtWall() and BotTurnAtFall()
+-(OK) Code has been cleaned up once more. I *LOVE* deleting stuff !
+-(OK) Automatic adjustment of maxbots to bot list count if bot names defined
+-(OK) Bots now duck when idle
+-(OK) Bots talk ! about 70 radio samples precached for bot radio experience !!
+-(OK) Rewrote bot chat stuff in a cleaner way
+-(OK) Team bots avoid grenades
+-(OK) Fixed lack in CS code: bots can now yell for backup (just forgotten...)
+-(OK) Fixed grenade detection bug in TFC: strstr() args were swapped ;-)
+-(OK) Bots now detect and avoid grenades AND satchels
+-(OK) Started working on new random navigation system. Bots roam better!
+-(OK) Bots won't hear you anymore when botdontshoot is set
+-(OK) Fixed possible leaks related to ideal_yaw and idealpitch overflows
+-(OK) Updated engine.cpp and h_export.cpp to merge version 2.5 of the SDK
+-(OK) CS bots should now be able to pick up other player's weapons
+-(OK) Added console commands: 'asearch' and 'traceline' for testing purposes
+-(OK) Bot corner detection stuff working! I learned ideal_yaw is inverted...
+-(OK) For now, bots tend to roam *REALLY* better!
+-(OK) Counter-Strike bot support for grenades added (improvable)
+-(OK) In TFC, engineers repair your armor if you get damaged (thanks Botman!)
+-(OK) In TFC, medics & engineers reply when you call them (thanks Botman!)
+-(OK) In TFC, bots don't target disguised spies often (thanks Botman!)
+-(OK) Fixed fatal obstacle bug in BotReachPosition()
+-(OK) News in BotReachPosition(): bots will follow you if you jump
+-(OK) Bots won't stand on each other with the crowbar anymore (thanks Botman!)
+-(OK) Tweaked some weapon preferences once again
+-(OK) Fixed enemy alert bug in TFC
+-(OK) Fixed possible leak in BotSayText() related to pBotLastSeenEnemy edict
+-(OK) TFC grenade support added (thanks Botman!)
+-(OK) Bots now chat on the radio when throwing grenades at enemies
+-(OK) Bots are able to recognize their grenades vs. those of their enemies
+-(OK) Improved BotTurnAtWall() so bot won't hesitate in corners no more
+-(OK) Removed BotStuckInCorner() - new stuff handled in BotTurnAtWall()
+-(OK) Bot will aim your feet if they don't see your head (idea: BlackJ@CK)
+-(OK) Bots don't fear smoke grenades anymore in Counter-Strike
+-(OK) Bots don't confuse C4 with a grenade anymore in Counter-Strike
+-(OK) Rewrote file parsing stuff in GameDLLInit in a much more cleaner way
+-(OK) You can now use tabs or multiple spaces in bot_names.txt
+-(OK) Fixed incorrect bounds bug in 'botskill' clientcommand
+-(OK) Fixed bug in 'botchecktime' clientcommand
+-(OK) Got rid of some crappy code that wasn't working anyway
+-(OK) Rewrote bot targeting system in a much more realistic way
+-(OK) Bots spray logos (can't change decal for now...)
+-(OK) Repaired bomb defusing code in Counter-Strike
+-(OK) Bots can wait for enemy to strike back or chase them when they lose one
+-(OK) Fixed leak in BotReachPosition()
+-(OK) Bots fear grenades in Deathmatch Classic
+-(OK) Bot names, chat and sound files centralized in the racc/ folder
+-(OK) Found and removed the last bug in file parsing code
+-(OK) Bot skill values are now more intuitive (1 = very bad, 5 = very good)
+-(OK) Bot navigation repaired in Deathmatch Classic
+-(OK) Bots are now able to recognize teleporters in Deathmatch Classic
+-(OK) Rewrote BotCantMoveForward() for better and cleaner checking
+-(OK) Removed bot f_dont_check_stuck time stuff (was never used anyway)
+-(OK) Rewrote bot stuck check code in a much more cleaner way
+-(OK) Bots correctly aim for their enemie's feet when those are ducking too
+-(OK) When burst-firing, bots should know when their clip gets empty
+-(OK) Bots strafe to avoid RPG rockets
+-(OK) Just for fun... Bots sometimes cut chickens' throat in Counter-Strike
+-(OK) Bots now strafe to avoid teammates while wandering
+-(OK) Wrote BotUnstuck() for bots to unstuck better
+-(OK) Fixed a bug in botclient.cpp related to takedamage engine messages
+-(OK) Bots can discard their weapons and get better ones in CS
+-(OK) Bots may jump in combat
+-(OK) Fixed yaw bug in BotThink() where sometimes bots would keep turning
+-(OK) Bots strafe when they see flashbangs to (hopefully) take cover in CS
+-(OK) Fixed pitch bug in bot spraying logo stuff
+-(OK) Distribution install procedure simplified
+-(OK) Fixed bot unspawned breakable attack bug (idea: Cheesy)
+-(OK) Fixed possible angle leaks in BotChangePitch() and BotChangeYaw()
+-(OK) Rewrote BotFindLadder() in a cleaner way
+-(OK) Code layout changed so now each MOD bot shares the same bot_t structure
+-(OK) Bot navigation code has been put in common for all MODs to reduce work
+-(OK) Tweaked BotOnLadder() so that bots should square up better on ladders
+-(OK) Slope code (almost) working! Bots are able to 'see' up a slope
+-(OK) Staircase code (almost) working! Bots are able to 'see' up a staircase
+-(OK) Better realism in BotShootAtTripmine() - bots aim like real players
+-(OK) Cosmetics: 'bot_names.txt' renamed in 'profiles.cfg'
+-(OK) Bot field of view is now human-like: accurate ahead, fuzzy on the sides
+-(OK) Fixed bug with bots staying at distant range with proximity weapons
+-(OK) Rewrote BotCanJumpUp() and BotCanDuckUnder() with human-like algorithm
+-(OK) Removed BotCheckForVIP() - New stuff handled in BotCheckForEnemies()
+-(OK) Bots are not all affected the same way by flashbangs in Counter-Strike
+-(OK) Rewrote corner detection stuff in a cleaner and more efficient way
+-(OK) Bots can now 'see' down certain slopes that go down too
+-(OK) Fixed bug in bot combat behaviour that prevented bots from ducking
+-(OK) Botman's IGNORE_DAMAGE fall damage bug worked around (can't fix)
+-(OK) Changed name to RACC (not to confuse with the IRC pmbot)
+-(OK) Rewrote StartFrame() and BotCreate() in a cleaner way
+-(OK) Bots can now target their enemies' whole body (head, waist, arms, feet)
+-(OK) Bots can now see, head up to and open all sort of doors
+-(OK) Fixed a possible bug in bot navigation where bots could get stuck
+-(OK) Bots can now strafe on ladders to get to the exact center of it
+-(OK) Added code for bots to check if it is safe to fire a rocket or not
+-(OK) Added support for sniper mode toggle when bots select sniper rifles
+-(OK) RACC now supports Azure Sheep (I like the 'no armor' concept...)
+-(OK) Cleaned up the code once more
+-(OK) Some bot-related CVARS put in the server's 'Advanced options' game menu
+-(OK) Rewrote low-level bot DLL interfacing code, much much crap removed :-)
+-(OK) Added a nice welcome sound effect
+-(OK) Fixed Deathmatch Classic weapon select bug. It took me several months!
+-(OK) Bots now fear and fight snarks and toads (squeak animal alien grenades)
+-(OK) Improved bot hearing a bit
+-(OK) Fixed engine kicked bot edict re-usage bug
+-(OK) Rewrote bot game introduction code
+-(OK) Implemented the "internet mode" CVAR in the Advanced Options menu
+-(OK) Bots should now be able to open doors that need a button press
+-(OK) Translated bot text chat files in english (thanks to Richard Greenlees)
+-(OK) Check implemented for game locale to load the appropriate chat files
+-(OK) Fixed grenade owner crash bug in TFC
+-(OK) Tweaked and fixed some weapons delay, especially in Counter-Strike
+-(OK) Rewrote a new FakeClientCommand() much better than the previous
+-(OK) Rewrote the associated Cmd_argc(), Cmd_args(), Cmd_argv() the right way
+-(OK) Rewrote entire ClientCommand() stuff in a cleaner way
+-(OK) Fixed teammate heal/repair bug in TFC
+-(OK) Demomans can be asked to place their plastic in TFC
+-(OK) Engineers can be asked to build & control sentries & dispensers in TFC
+-(OK) Spies can be asked to disguise as enemy or as friends in TFC
+-(OK) Fixed teammate heal/repair bug in TFC
+-(OK) You can now play single player games without having to uninstall the bot
+-(OK) Fixed weapon reload bug for weapons that have or haven't ammo clips
+-(OK) Demomans now place their plastic by themselves when appropriate in TFC
+-(OK) Reduced tracelines consumption a little
+-(OK) Improved navigation a bit: bots don't head towards dead ends no more
+-(OK) Implemented debug_nav command to monitor bot navigation in real time
+-(OK) Implemented three bot voice chat modes: ambient speech, HL voice, mute
+-(OK) Snipers try to stay at distant range from their enemy (walk back)
+-(OK) Spies can decide to disguise on their own when enemy is near in TFC
+-(OK) Engineers can decide to build sentry guns on their own in TFC (rare)
+-(OK) Corrected bot max speed according to the weapon bot is holding in CS
+-(OK) Finalized aiming system. RACC has one of the best aiming systems now
+-(OK) Implemented Botman's checks in pfnClientCommand() and pfnClientPrintf()
+-(OK) Rewrote BotUseLift () in a cleaner way
+-(OK) CT bots now buy the defuse kit only when appropriate in Counter-Strike
+-(OK) Rewrote wall-mounted station usage code similar to TFC/CS special zones
+-(OK) cs_assault spawn bug fixed in Counter-Strike
+-(OK) Discard weapon bug fixed in Counter-Strike
+-(OK) Fixed text color bug for all MODs
+-(OK) Lift move detection better handled with ENT_IS_ON_FLOOR() check on bots
+-(OK) Dropped bomb detection repaired in Counter-Strike
+-(OK) Bots can now use the whole palette of radio messages in Counter-Strike
+-(OK) Implemented Botman's BotChatHumanizer technology. Thank you Botman!
+-(OK) Fixed spawn angle bug where bots were spawning with the same view angles
+-(OK) Fixed one crash bug in Counter-Strike related to BotReset()
+-(OK) Fixed mp_freezetime bug in Counter-Strike
+-(OK) Added Italian text and audio chat (thanks STICazzi-Slayer!)
+-(OK) Improved navigation a bit in small obstacle bypassing code
+-(OK) Tweaked some stuck detection code variables
+-(OK) Improved bot follow target code
+-(OK) Sniper bots don't fire their gun anymore if their aiming is insufficient
+-(OK) Re-enabled dedicated server support
+-(OK) Fixed angle bug in BotDefuseBomb() where bots would not look at the bomb
+-(OK) Got VERY ANGRY and used the STRONG MEANS and got rid of MANY crash bugs
+-(OK) Re-enabled dedicated server commands support through the "racc" CVAR
+-(OK) Cleaned up some crap in StartFrame() function
+-(OK) Cleaned up BotCreate() prototype and argument list
+-(OK) Wrote a common argument parsing routine GetArg() for SV and CL commands
+-(OK) Fixed an odd bug related to 'const char *' and 'char *' types specs
+-(OK) Fixed a bug where bots would get stuck trying to "use" themselves
+-(OK) Implemented a (still very basic) sense of orientation
+-(OK) Merged bot server commands between listen server and dedicated server
+-(OK) Fixed some CVAR-related bugs
+-(OK) Bots should move to keep their moving targets in vision when tracking
+-(OK) Definitely fixed the bomb defusal bug (well, I hope)
+-(OK) Bots now answer and react to different radio commands in Counter-Strike
+-(OK) Bots now rush (don't pause) at start of rounds in round-based games
+-(OK) Slightly rewrote bot chat stuff in a better way
+-(OK) Rewrote bot order handling stuff in a more rational way (human-like)
+-(OK) Improved and bugfixed bot follow user code
+-(OK) Fixed a teammate avoidance bug
+-(OK) THANK YOU Bluesy!!! Bullshit I finally got rid of that sizebuf_t crap!!
+-(OK) THANK YOU SoulWind AND Cheesemonster!!! Got rid of many bad pointer bugs
+-(OK) Fixed a wallhugging bug related to item pickup code
+-(OK) Completely rewrote weapon discard/exchange code for Counter-Strike
+-(OK) Bots can pick up abandoned defuse kits in Counter-Strike
+-(OK) Fixed that "ghost bots" problem... Yes!!!
+-(OK) Bot max speed change stuff rewrote following @$3.1415rin's idea
+-(OK) Fixed a stability issue related to fakeclient private data reallocation
+-(OK) Improved some weapons (automatic snipers) usage for Counter-Strike
+-(OK) Fixed a stuck bug related to special zones checking (flag sites, etc...)
+-(OK) Fixed more bugs, especially a weapon select issue
+-(OK) Improved obstacle avoidance code
+-(OK) Rewrote staircase detection stuff that wasn't working anyway
+-(OK) Moved player count from ClientConnect() to ClientPutInServer()
+-(OK) Fixed a bug in message interception code (thanks Cheesy!)
+-(OK) Fixed another bug in message interception code
+-(OK) Implemented the racc_autofill CVAR for bots to get added automatically
+-(OK) Bugfixed many things in client connexion code
+-(OK) Bots now shoot shootable buttons in DMC (thanks Cheesy for the trick!)
+-(OK) Fixed a bug where the "racc add" servercmd parameters would be ignored
+-(OK) Bot nationalities implemented in bot profiles (idea: STICazzi-Slayer)
+-(OK) There may now be foreigner bots on the same server
+-(OK) Fixed a crash bug in bot text chat
+-(OK) Fixed a freeze bug in bot text chat
+-(OK) Repaired tripmine detection code
+-(OK) Bots are now able to tell a tripmine's location only by seeing its beam
+-(OK) Bot assistance to teammates in combat improved a bit
+-(OK) Bots now evaluate the greatest threat and react accordingly in combat
+-(OK) Added English voice chat sound files (thanks Ezamudin!)
+-(OK) Bot now knows when the bomb icon is blinking on his HUD
+-(OK) Bot now knows when the defuser icon is present on his HUD
+-(OK) The bots now react to bullet sounds near them
+-(OK) Implemented a (hopefully) realistic burst-firing method
+-(OK) Fixed an inappropriate logo spraying bug
+-(OK) Fixed slope-adaptative LOS bug (focus flicker when bot climbs a slope)
+-(OK) Bots won't try to stab their knives anymore when enemy is too far
+-(OK) RACC can now be used together with Metamod
+-(OK) Implemented the racc_botforceteam CVAR to force bot's team selection
+-(OK) Fixed msg_CS_TextMsg message interception bug in Counter-Strike
+-(OK) Bots camp (still very basic) and know where to watch when camping
+-(OK) Cleaned up the enemy detection code a bit
+-(OK) Counter-terrorist bots decide to stop camping more appropriately
+-(OK) Fixed wrong ClientCommand bug in weapon selection code
+-(OK) Hopefully got rid of that last angle overflow freeze bug!

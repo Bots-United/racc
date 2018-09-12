@@ -1,0 +1,54 @@
+# RACC - Bot chat file
+#
+# The maximum number of sentences that can be put in this file is 100.
+# Any void or sharp-prepended line will be ignored.
+# The '%s' will be filled in game by the name of the player.
+
+kelk1 pour combattre ici?
+quelqu'un veut que je le butte? =)
+alors bande de petits pedes on se cache?
+alors c koi ce bordel ici?
+c koi ce bordel =)
+houla c le bronx je m'en vais remettre un peu d'ordre ici =)
+bon alors ki veut etre le prochain ?
+%s tu peux me dire ou tu es que je te butte?
+je cherche un peu d'amour....
+montrez-vous!
+montrez-vous bande de laches !!
+sors de la !!!
+sortez de la et venez vous battre, bande de poltrons !!
+sortez de votre trou bande de froussards!!! =)
+youpi j'ai un gros fusil
+hoho voila un gun ki me plait =)
+allez %s viens te la mettre
+y a-t-il des femmes ici? =)
+ou sont les femmes
+hoho y'a beaucoup trop de cadavres par ici...
+bonjour je m'appelle remi je suis sans famille et j'ai envie de butter tout le monde =)
+hehehe vous etes tous morts....
+alors %s on se cache?
+hoho maintenant j'ai un gros flingue!!!
+qui veut tater de mon gros gun ?? =)
+ou etes-vous que j'vous butte ?
+hey %s tu veux mourir??
+alors bande de ptits pedes on a peur?
+ki a peur du grand mechant loup??
+<--- s'ennuie
+ou es-tu que je te fasse exploser la cervelle??
+vous voulez bien vous flinguer avec moi?
+tiens %s, j'ai peur que tu soies ma prochaine victime LoL
+tiens %s, j'ai envie de te demonter la tete =)
+attendez attendez je change de gun
+j'arrive les amis LoL pan vous etes morts =)
+attention %s je suis derriere toi!! =)
+derriere toi! =)
+bande de poltrons vous passez votre temps a discuter en vous cachant!!!
+te fais pas trop remarquer sinon..... :)
+c un jeu trop violent pour toi mon pauvre
+loooool
+mouarf
+sans commentaires =)
+alors c'est quoi ce bordel
+alors quelqu1 veut que je le butte????
+hey %s tu veux mourir??
+bande de petits pedes hahahaha

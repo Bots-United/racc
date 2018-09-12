@@ -1,0 +1,307 @@
+
+I imagine the bot's brain like an three-dimensional array, like "bot_brain (Personality,Emotions,Skill)"
+
+The emotions are in range 0-100 but the values are in 10 by 10... this will decide who calls the tactics and the emotions change is
+not quick like in reality. Obviusly this table is a "beta" of the emotions states. For example you can code ten differents reactions
+for one emotion state, choosing the appropriate reaction looking skill and personality values and definitions. In this mode, the bots
+can have differents reactions ever (uhmmmm....). Is a good idea to implements the "luck factor", with a random variable that shakes
+the parameters a bit.
+
+
+EMOTIONS AXIS :
+|------------------|---------|-----------------------------------------------------|------------------------------------------------|
+|  Emotion  State  |  Value  | Action                                              |  Consequence                                   |
+|------------------|---------------------------------------------------------------|------------------------------------------------|
+|                  |         | Happy state. Bot rushes with no cares, without      | bots dead frequently, but he knows that is     |
+|                  |         | looks at his skill or personality (somethimes)      | only for game :).                              |
+|                  |   100   | Attempts to setup a "team" for cover. Use           | Bot chats frequently when dead about silly     |
+|                  |         | his "tactics" with team. He's plays for fun :)      | things... He can change his state ? :))        |
+|       Joy        |         |                                                     |                                                |
+|                  |---------|-----------------------------------------------------|------------------------------------------------|
+|                  |         | High State. Bot use more tactics based on his       | the consequences are based on personality.     |
+|                  |    90   | personality, like rush, camp, stealth.He can follow | i.e : if the bot is killed by HS for "x" times |
+|                  |         | his teammates or not. He his happy but looking for  | he can angry quickly.                          | 
+|                  |         | frags.                                              |                                                | 
+|------------------|---------|-----------------------------------------------------|------------------------------------------------|
+|                  |    80   | Middle-high State. The bot is playing for frags.    | He survives... but increases his emotion when  |
+|                  |         | and he use his personality and skill for this       | frag. When killed chats about the tactics or   |
+|                  |         | target. He camps more intelligently                 | gameplay in general.Decrease his emotion when  |
+|                  |         |                                                     | he's killed without no frag                    |
+|     Carefull     |---------|-----------------------------------------------------|------------------------------------------------|
+|                  |         | High-Normal State. Bots take more confidence with   | He changes his emotion in consequence of his   |
+|                  |    70   | teammates and map.                                  | actions... if he is a skilled bot he can raise |
+|                  |         | Uses his skill to play...                           | emotion and change the state frequently.       |
+|------------------|---------|-----------------------------------------------------|------------------------------------------------|
+|                  |         | Normal State (Default).                             | He changes the emotion in up with frags. He    |
+|                  |    60   | I've extended this state in up direction.Is a       | chats when dead about the tactics.If he is     |
+|                  |         | initial state and the bot looks for fun and play    | killed frequently and his personality is not   |
+|      Normal      |---------| following teammates or like a "lone wolf".His       | an "veteran" or "good player" , he can get     |
+|                  |         | personality can decide what style of combat he uses | angry quickly. If he's a "newbie" and frags    |
+|                  |    50   |                                                     | "with luck" he can goes happy.                 |
+|                  |         |                                                     |                                                |
+|------------------|---------|-----------------------------------------------------|------------------------------------------------|
+|                  |         | He have fear, but his skill determines all. He can  | He raises emotion when kills, but a player     |
+|                  |    40   | camp frequently with any weapons. He follows        | with fear can have a bad aiming, and fires to  |
+|       Fear       |         | carefully the teammates in rush.                    | teammates (or everythings that moves.. heheh ! |
+|                  |         | He hides everywhere for fear...                     |                                                | 
+|                  |         |                                                     |                                                |
+|------------------|---------|-----------------------------------------------------|------------------------------------------------|
+|                  |         | High Angry-State. (mine state when im playing.. :) )| Is the first step to the "Total Looser" state. |
+|                  |         | When the bot is angry his skill is ignored... he    | He can raise his emotion when his squad wins a |
+|                  |    30   | have a bad aiming and his movements are not perfect | round or he does many kills. He taunts all     |
+|                  |         | He camps for desperaction, he fires without cares,  | players in chat (primary the teammates..).     |
+|                  |         | he not follows the teammates. He uses Flash Grenades| The reactions are based on Personality.        |
+|      Angry       |         | badly.                                              |                                                |
+|                  |---------|-----------------------------------------------------|------------------------------------------------|
+|                  |         | Low-Angry State. The bot plays badly with no aim    | The bots stop during the game for taunting...  |
+|                  |   20    | and no cares...                                     | he receives taunts from teammates and gets more|
+|                  |         |                                                     | angry and commits suicides (..going to "Total  |
+|                  |         |                                                     | Looser") or TK. His chat is based on "f***ed   |
+|                  |         |                                                     | cheaters" and more...                          |  
+|------------------|---------|-----------------------------------------------------|------------------------------------------------|
+|                  |         | The personality will be influenty in this state...  | The consequences are... TKs, suicides, taunts  |
+|   Total Looser   |   10    | A "newbie" commits TKs like a rain..... a "veteran" | and disconnections.... :)))                    |
+|                  |         | says "goodbye" and go to sleep...                   |                                                |
+|------------------|---------|-----------------------------------------------------|------------------------------------------------|
+
+
+
+For now i've figured out only four personalities :)). These are the most common certainly, Every personality have different emotions
+and reactions and must be influenced by the skill. I have a different concept of skill,that is not based only over aiming, see the 
+table below ! :)
+
+PERSONALITY AXIS:
+|-----------------------|-----------------------------------------------------------------------------------------------------------|
+|  Personality Types    |  Description                                                                                              |
+|-----------------------|-----------------------------------------------------------------------------------------------------------|
+|                       | Veteran is a complete CS  player. He knows how to rush and camp safely, how to use HE and flash, he       | 
+|      VETERAN          | knows the use of smoke grenades for covered rush or for defence tactics. He fires on some defined points, |
+|                       | like behind the crates or doors, for hunting the enemies. He chats not frequently, but if emotion is      |
+|                       | high he chats a bit... He camps around the planted bomb (when TERR) or guards the Hostages (when TERR),   |
+|                       | The skill make the difference from one veteran to another.. (i.e. im a veteran... playing CS since the    |
+|                       | beta 6, but my skill is not high :) caused truly for my bad connection). Veteran knows every angle of the |
+|                       | map, and can change his personality in a f***ed camper for two or three rounds.                           |
+|                       |--------------------------------------------------|--------------------------------------------------------|
+|                       | Veteran Emotions :                               | Emotions Consequence  :                                |
+|                       |-------|------------------------------------------|--------------------------------------------------------|
+|                       | Happy | Veteran can be a squad leader and other  | He chats and play....he changes his state for more     |
+|                       |       | bots follow him without fear.            | frag (in up) and ,for more suspected Headshots,        |
+|                       |       |                                          | makes him careful. He can disconnect when the number   |
+|                       |       |                                          | of frags is high                                       |
+|                       |-------|------------------------------------------|--------------------------------------------------------|
+|                       |  Care | He rushes and camps safely, looking at   | When camping he uses a Commando or Steyr, and get      |
+|                       |  full | every angles.                            | satisfaction from the frags. But changes emotion when  |
+|                       |       |                                          | killed by a pistol from 2 km :))) (ANGRY !!!)          | 
+|                       |-------|------------------------------------------|--------------------------------------------------------|
+|                       | Normal| He plays like a "lone wolf" with tactics | Is studying the enemies (and teammates)....            |
+|                       |-------|------------------------------------------|--------------------------------------------------------|
+|                       |  Fear | Can a veteran have fear ? no ! is a      | Or angry or carefull.... :))))                         |
+|                       |       | unknown state for the veteran..          |                                                        |
+|                       |-------|------------------------------------------|--------------------------------------------------------|
+|                       | Angry | he looses a bit of aim, but his skill    | An angry veteran in some case taunts the teammates     |
+|                       |       | can raise emotion.                       | only,doesnt commits TKs, and disconnect before the     |
+|                       |       |                                          | "Total Looser" state.                                  |
+|                       |-------|------------------------------------------|--------------------------------------------------------|
+|                       | Total | Can be a veteran in a "total looser"     | He disconnect... without actions....                   |  
+|                       | Looser| state ? Yes ! after he had received many |                                                        |
+|                       |       | HS, knifed, or killed with HE....        |                                                        |
+|-----------------------|-------|------------------------------------------|--------------------------------------------------------|
+|                       | Who is a "Good Player" ? The good player can rush and camp (this sometimes). He knows how to use weapons  |
+|      GOOD PLAYER      | and grenades in tactics, but his skill determines the results. With this personality, the bot target is   |
+|                       | "good game"... help and cover teammates, looks the objective of map (hostages,bomb,VIP...).When chats, he |
+|                       | tells the tactics, helps the newbies and related stuffs. The emotions in this personality are more linear |
+|                       | than other personalities. He looks only for game , frags  and chat... He can be angry quickly for         |
+|                       | teamkillers.                                                                                              |
+|                       |--------------------------------------------------|--------------------------------------------------------|
+|                       | Good Player Emotions :                           | Emotions  Consequence :                                | 
+|                       |-------|------------------------------------------|--------------------------------------------------------|
+|                       | Happy | He plays.... uses tactics and cover      | When fragged, his emotion lower a bit. For every kills |
+|                       |       | teammates                                | the emotion raises.                                    |
+|                       |-------|------------------------------------------|                                                        |
+|                       | Care  | Camping safely with appropriate weapons  |                                                        |
+|                       | full  | or rush in group with teammates          |                                                        |
+|                       |-------|------------------------------------------|                                                        |
+|                       | Normal| He rush, attempting to create teamplay   |                                                        |
+|                       |       | with other players                       |                                                        |
+|                       |-------|------------------------------------------|--------------------------------------------------------|
+|                       | Fear  | When have fear, camp....                 | After many kills, his emotions raises quickly. The bad |
+|                       |       |                                          | moment is bypassed... :)), if not.... DOWN!!           |
+|                       |-------|------------------------------------------|--------------------------------------------------------|
+|                       | Angry | HooHoooo !! ANGRY !! :)) and then camp   | He taunts teammates, he taunts enemies in case of HS   |
+|                       |       | in base or stealth behind strategic      | or knifing. He is thinking about the disconnection.    |
+|                       |       | crates.                                  |                                                        |
+|                       |-------|------------------------------------------|--------------------------------------------------------|
+|                       | Total | When he knows the bad situation... he    | Taunts, some TK or some "attack to teammate". He plays |
+|                       | Looser| becomes a bad newbie for a couple of     | with crazy rushes.                                     |
+|                       |       | rounds.                                  |                                                        |
+|-----------------------|-------|------------------------------------------|--------------------------------------------------------|
+|                       | "Born to be a camper...." . The objective of this personality is camp !. He camps everywhere, protecting  |
+|       CAMPER          | the teammates at start round, then, he camps... When is the last player in team he hides in strategic     |
+|                       | place and wait... He receives more chat messages like "no camp , plz !" that makes him happy (like one    |
+|                       | my clanmate... he camps ever !!). The emotions cant changes more a camper... camper is and camper remains |
+|                       |--------------------------------------------------|--------------------------------------------------------|
+|                       | Camper Emotions :                                | Emotions Consequences :                                |
+|                       |-------|------------------------------------------|--------------------------------------------------------|
+|                       | Happy | He helps teammates in rush, with cover   | Kills = Fun.... Camp = Fun !                           |
+|                       |       | from back.                               |                                                        |
+|                       |-------|------------------------------------------|--------------------------------------------------------|
+|                       | Care  | He puts more attention to the camp       | For ever kill he get some fun, if he's killed by       |
+|                       | full  | tactics, buying grenades for defence     | another camper... eheheh !! gets ANGRY !!              |
+|                       |-------|------------------------------------------|--------------------------------------------------------|
+|                       | Normal| In the initial rounds he buys the DEAGLE | He is studying the enemies path, waiting for the       |
+|                       |       | pistol (is a must for camper!) and rush  | necessary moneys for buy and AWP or G3.                |
+|                       |       | with teammates.In other cases camps with |                                                        |
+|                       |       | Commando or Steyr.                       |                                                        |
+|                       |-------|------------------------------------------|--------------------------------------------------------|
+|                       | Fear  | A feared camper uses his skill to survive| He wants blocks the enemies and kills raises the       |
+|                       |       |                                          | emotions up !.                                         |
+|                       |-------|------------------------------------------|--------------------------------------------------------|
+|                       | Angry | The nervousism can makes camper less     | Angry state can makes camper more chatter, about       |
+|                       |       | accurates but he puts more attention on  | the game-flow, commenting actions and other players.   |
+|                       |       | game-flow.                               | In some cases he start to attacks teammates, but not   |
+|                       |       |                                          | teamkilling. A camper can be very angry when teammates |
+|                       |       |                                          | blocks him's FOV for times (surely he fires at they...)|
+|                       |-------|------------------------------------------|--------------------------------------------------------|
+|                       | Total | He's plays like a newbie...              | No game, attacks to teammates and go to sleep without  |
+|                       | Looser|                                          | say "Goodbye"                                          |
+|-----------------------|-------|------------------------------------------|--------------------------------------------------------|
+|                       | The NEWBIES is the most popular personality... We are all newbies!. A newbie player rush ever, calls the  |
+|       NEWBIE          | team for any problems, have problems ever, chats frequently about silly things, he doesnt know the        |
+|                       | tactics, but he follows other players learning something of game. The newbie is a TK for "antonomasia"    |
+|                       | (ehmmm.. i dont remember the correct word in english, i hope that you could understand :)) ), he does     |
+|                       | mistakes every round, but is really a complement for a squad... "Cannon Fodder !!". The primary target of |
+|                       | newbies is learn... but their emotions can influences the results.                                        |
+|                       |--------------------------------------------------|--------------------------------------------------------|
+|                       | Newbie Emotions :                                | Emotions Consequences :                                | 
+|                       |-------|------------------------------------------|--------------------------------------------------------|
+|                       | Happy | The newbie is learning... He understands | For this personality the fear and the angry states are |
+|                       |       | the rush tecniques,skill makes difference| normal. But one HS and newbie starts to say "CHEATER!" |
+|                       |-------|------------------------------------------| He is not good camper, but wants camp using every      |
+|                       | Care  | uhmmm... he puts more attention, staying | weapons... what a mistake !. He receives taunts from   |
+|                       | full  | behind the other players and puts more   | Good players and campers that makes him angry.         |
+|                       |       | care at aiming...                        |                                                        |
+|                       |-------|------------------------------------------|                                                        |
+|                       | Normal| Plays normally following his skill       |                                                        |
+|                       |-------|------------------------------------------|--------------------------------------------------------|
+|                       |  Fear | He buys MP5, HE grenade and goes to      | He start to attack teammates, taunting all players...  | 
+|                       |       | death :)                                 |                                                        |
+|                       |-------|------------------------------------------|--------------------------------------------------------|
+|                       | Angry | It's time to rush... good luck newbie !  | He starts TK for mistake, with aiming at all that moves|
+|                       |       |                                          | taunting during the game....                           |
+|                       |-------|------------------------------------------|--------------------------------------------------------|
+|                       | Total | No comment !                             | He buys a PARA M249 :))). He continues TKs.... the     |
+|                       | Looser|                                          | other players kick him.                                |
+|-----------------------|-------|------------------------------------------|--------------------------------------------------------|
+
+
+Right now is the time to figure out the skill...Skill is not only aiming, but is a group of variables that defines how a player plays
+The skill table includes Aiming, Movements, Tactics/Teamplay, Weapon Use, Equipment Use. Is in a range 1-5, where the 1 is "worst" and 5 is
+best. Surely not all personality can have same skill. Im thinking to newbie with high skill.. is possible, here we call "luck newbie"
+(or probably cheater), or a Veteran with low skill, possible when isnt a day for him. For this reason the table have "holes"
+
+SKILL AXIS :
+               |-------------------------------------------------------------------- |
+               | Affected Parameters in Personalities                                |
+|--------------|-------------|-------------|-------------|-------------|-------------|
+| Skill No.for | Aiming      | Movements(1)| Tactics     |Weapon Use(2)| Equip Use(2)|
+|--------------|-------------|-------------|-------------|-------------|-------------|
+|     1        | Newbie      | Newbie      | Newbie      | Newbie      |             |
+| Worst Skill  | Camper      | Camper      | Camper      |             |             |
+|              |             | Good Player |             |             |             |
+|              |             |             |             |             |             |
+|--------------|-------------|-------------|-------------|-------------|-------------|
+|              | NewBie      | Newbie      | Newbie      | Newbie      |             | 
+|     2        | Camper      | Camper      | Camper      | Camper      | Camper      |
+|              |             | Good Player | Good Player |             | Good Player |
+|              |             | Veteran     |             |             | Veteran     |
+|--------------|-------------|-------------|-------------|-------------|-------------|
+|              | Newbie      | Newbie      | Newbie      | Newbie      | Newbie      |
+|     3        | Camper      | Camper      | Camper      | Camper      | Camper      |
+| Intermediate | Good Player | Good Player | Good Player | Good Player | Good Player |
+|    Skill     | Veteran     | Veteran     | Veteran     | Veteran     | Veteran     |
+|--------------|-------------|-------------|-------------|-------------|-------------|
+|              |             | Newbie      | Newbie      | Newbie      | Newbie      |
+|      4       | Camper      | Camper      | Camper      | Camper      | Camper      |
+|              | Good Player | Godd Player | Good Player | Good Player | Good Player |
+|              | Veteran     | Veteran     | Veteran     | Veteran     | Veteran     |
+|--------------|-------------|-------------|-------------|-------------|-------------|
+|              |             |             | Newbie      | Newbie      |             |
+|      5       | Camper      | Camper      | Camper      | Camper      |             |
+|  Best Skill  | Good Player | Good Player | Good player | Good Player | Good Player |
+|              | Veteran     | Veteran     | Veteran     | Veteran     | Veteran     |
+|--------------|-------------|-------------|-------------|-------------|-------------|
+
+
+(1) The players cant have the same movements types, i will attempt to figure out this. In this case im not reffering on the bots
+navigations, but at special moves that can make the difference from high skilled player to low skilled... 
+
+MOVEMENTS TABLE :
+|--------------------------------------------------------|--------------|
+| Actions/Descriptions                                   | In Skill No. |
+|--------------------------------------------------------|--------------|
+| BASIC FIRE :                                           | 1,2,3,4,5    |
+| Typical newbie's fire, one clip with no aim            |              |
+|--------------------------------------------------------|--------------|
+| DUCK SHOTS :                                           | 2,3,4,5      |
+| Fire one or two shots, then duck an fire....           |              |
+|--------------------------------------------------------|--------------|
+| THREE SHOTS FIRE :                                     | 3,4,5        |
+| the name explains all, for saving the precision, fire  |              |
+| three shots and pause then fire...                     |              |
+|--------------------------------------------------------|--------------|
+| JUMP SHOTS:                                            | 4,5          |
+| Typical using Pistols or MP5... not for campers :)     |              |
+|--------------------------------------------------------|--------------|
+| LINEAR STRAFE FIRE:                                    | 3,4,5        |
+| Hard to explain but simply to do... strafe left and    |              |
+| right when firing (possibly with precision and not one |              |
+| clip at same time).                                    |              |
+|--------------------------------------------------------|--------------|
+| CIRCULAR STRAFING :                                    | 4,5          |
+| From Deathmatch games... :)) lethal...                 |              |
+|--------------------------------------------------------|--------------|
+| JUMP/DUCK/SHOT :                                       | 3,4,5        |
+| My preferred action at the corners. :). I strafe, jump,|              |
+| then duck and shot at one fixed point. If the enemy is |              |
+| in position, i kill him surely :)) (but the lag doesnt |              |
+| help me everytimes).                                   |              |
+|--------------------------------------------------------|--------------|
+| HIDE/FIRE/HIDE :                                       | 4,5          |
+| Typical at corners.Strafing slowly, fire at enemies    |              |
+| then hide quickly behind the corner (uhmmm.. i must do |              |
+| a demo to show this....)                               |              |
+|--------------------------------------------------------|--------------|
+and more coming soon.... like ADVANCED HEARING, FIRE THRU WALLS AND OBJECTS, CONFUSE THE ENEMIES....
+
+(2) The Weapons and Equip Use includes the grenade handling (about this i've noticed that all existing bots use grenades
+ only in attack, without tactic stuff...), use of silencer, the zoom, the weapons fast switching (like camper that fires
+ with AWP then switch to pistol and fires again), the Defuser, the weapons dropped by deads players, the NighVision (yes,
+ in dark areas you can limit the FOV distance of the bots to simulate human's FOV, then with nightvision you can re-set
+ the FOV with particular parameters, and skill can do the rest for aiming and movements....)
+
+
+Ok, now it's the time of profiles.cfg : 
+
+|----------|-------------------------------|-------------|------------|------------|-------|-------------|-------------------|
+| Tag (1)  | Name                          | Nationality | Skin       | Decal      | Skill | Personality | Emotion           |
+|----------|-------------------------------|-------------|------------|------------|-------|-------------|-------------------|
+| [RACC]   | Mimi Traillette               | french      | terror     | skull.bmp  |   3   | Good Player | Carefull 75       |
+| |WWn|    | BombShot                      | english     | arctic     | valve3.bmp |   4   | Camper      | Happy 91          |
+| -none-   | lupazzo                       | italian     | gign       | valve3.bmp |   2   | Newbie      | fear 45           |
+|          |                               |             |            |            |       |             |                   |
+|          |                               |             |            |            |       |             |                   |
+|          |                               |             |            |            |       |             |                   |
+
+(1) When two or more players have the same "tag" , are of the same clan, for conseguences they can play in group. It's an idea
+ for simulate the teamplay. If the tag not exists the player can play alone or not (depending  from emotion,personality and
+ skill). It's good idea to include an alias of the name... i.e. my nick |STIcazzi-Slayer|PAS| can be only "slayer" or
+ "sticazzi" in chat. For this feature you can setup a set of "macros" for the chat in future (like Pod chat).
+
+
+I've wrote this file like a river.... mistakes and confusions are normal :))) and my english sucks a lots. 
+It's a good start point ? Or not ?
+
+|STICazzi-Slayer|PAS|
+
+
+ 

@@ -1,0 +1,120 @@
+<HTML>
+  <BODY topmargin="0" leftmargin="0" bgcolor="#202420" text="#A0A0A0" vlink="#007F00" link="#00FF00">
+    <A name="PAGETOP">
+    <FONT face="Arial" size="-1">
+    <UL>
+      <P align="left">
+        <LI><A name="THERACCPROJECT"><FONT color="#FFFFFF"><B>Le projet RACC</B></FONT></A><BR>
+      </P>
+      <P align="center">
+        <FONT face="Arial" color="#FF003F" size="+1"><B>VERSION ACTUELLE: 20020509</B></FONT><BR>
+        <FONT face="Arial" size="-1"><B>Consulter la <A href="../changelog.txt" target="main">liste des changements</A></B></FONT><BR>
+      </P>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; Rational Autonomous Cybernetic Commandos (RACC) est un projet de développement d'IA pour <A href="#WHATSABOT" target="mainframe">bot</A> visant à implémenter aussi fidèlement que possible un comportement humain pour NPCs (personnages non-joueur) dans des jeux vidéos de combat subjectif tels que <A href="#WHATSHALFLIFE" target="mainframe">Half-Life</A>. La version actuelle du projet supporte les MODs suivants: Half-Life, Team Fortress Classic, Opposing Force, Azure Sheep, Deathmatch Classic et Counter-Strike (bientôt War In Europe). La disposition du code est basée sur la maquette <A href="http://www.planethalflife.com/botman/hpb_bot.shtml" target="main">HPB</A>, un travail réalisé par <A href="http://www.planethalflife.com/botman" target="main">Botman</A> permettant un interfaçage efficace entre le moteur de jeu Half-Life et à peu près n'importe quelle DLL de MOD. Botman a généreusement fait profiter la communauté des programmeurs Half-Life de ses travaux, et de nombreux développeurs les ont utilisés afin de créer leur propre plugin. Les bots en sont un exemple.<BR>
+        &nbsp;&nbsp;&nbsp;&nbsp; Le projet RACC a été développé sous <A href="help.html#LICENSE" target="mainframe">Licence BSD</A>, afin que quiconque puisse librement utiliser le code source à toutes fins envisageables, pourvu que l'origine du code soit explicitement mentionnée dans le produit, c-à-d. la maquette HPB de Botman.<BR>
+      </P>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; <FONT color="#00FF00"><B>NOTE: Botman N'EST PAS AFFILIÉ AVEC RACC EN QUOI QUE CE SOIT! NE LE CONTACTEZ PAS POUR TOUTE QUESTION OU REQUÊTE AU SUJET DE CE BOT -- VOYEZ PLUTÔT À LA SECTION <A href="pm.html#TOP" target="mainframe"><B>[auteur]</B></A>.</B></FONT><BR>
+      </P>
+      <P align="center">
+        <FONT color="#FFFFFF" size="-2"><B>Counter-Strike: un bot à l'attaque</B></FONT><BR>
+        <IMG src="../img/fighting-bot-snapshot.png" border="0" alt="Counter-Strike: un bot à l'attaque"></IMG><BR>
+      </P>
+    </UL>
+    <UL>
+      <P align="left">
+        <LI><A name="FEATURES"><FONT color="#FFFFFF"><B>Caractéristiques</B></FONT></A><BR>
+      </P>
+      <P align="left">
+        Les caractéristiques de l'IA des <FONT face="Impact" color="#FFFFFF">RATIONAL AUTONOMOUS CYBERNETIC COMMANDOS</FONT> sont:<BR>
+        <FONT size="-2">
+        <BR>
+        <UL type="disc">
+          <FONT size="-1"><I>Installation et réglage des bots:</I></FONT><BR>
+          <LI>Supporte <FONT color="#FFFFFF">Half-Life</FONT>, <FONT color="#FFFFFF">Opposing Force</FONT>, <FONT color="#FFFFFF">Team Fortress</FONT>, <FONT color="#FFFFFF">Counter-Strike</FONT>, <FONT color="#FFFFFF">Deathmatch Classic</FONT> et <FONT color="#FFFFFF">Azure Sheep</FONT><BR>
+          <LI><FONT color="#FFFFFF">Installation propre</FONT> centralisée dans un répertoire unique afin de préserver l'intégrité de Half-Life<BR>
+          <LI><FONT color="#FFFFFF">Activation et désactivation facile</FONT> à l'aide de deux scripts batch: 'install.bat' et 'remove.bat'<BR>
+          <LI>Des <FONT color="#FFFFFF">modèles additionels de haute qualité</FONT> sont inclus dans la distribution<BR>
+          <LI><FONT color="#FFFFFF">Intégration et retrait automatiques en cours de partie</FONT> égalisés sur la capacité d'accueil du serveur<BR>
+          <LI><FONT color="#FFFFFF">Assignement d'équipe automatique</FONT> pour les MODs reposant sur un jeu d'équipe<BR>
+          <LI><FONT color="#FFFFFF">Outils de console</FONT> pour visualiser et contrôler les caractéristiques des bots ainsi que leur nombre<BR>
+          <LI><FONT color="#FFFFFF">Système de personnalisation des bots</FONT> incluant le contrôle sur leur nom, skin et niveau<BR>
+          <BR>
+          <FONT size="-1"><I>Communication:</I></FONT><BR>
+          <LI>Système de discussion textuelle avancé avec <FONT color="#FFFFFF">jusqu'à 12 situations de prise de parole</FONT><BR>
+          <LI>Les bots parlent comme s'ils utilisaient le <FONT color="#FFFFFF">Voice Chat System</FONT> de Half-Life dans les MODs d'équipe<BR>
+          <LI>Les bots utilisent la <FONT color="#FFFFFF">radio</FONT> dans Counter-Strike<BR>
+          <LI>Les bots peuvent <FONT color="#FFFFFF">demander une couverture</FONT> quand ils se font blesser et <FONT color="#FFFFFF">appeler un infirmier</FONT> si autorisé<BR>
+          <BR>
+          <FONT size="-1"><I>Comportement de combat:</I></FONT><BR>
+          <LI><FONT color="#FFFFFF">Sélection et utilisation avancées des armes</FONT>, incluant le <FONT color="#FFFFFF">tir en rafales</FONT> et <FONT color="#FFFFFF">l'utilisation de grenades</FONT><BR>
+          <LI><FONT color="#FFFFFF">Système de visée humanisé</FONT> sachant reconnaître la plupart des parties du corps sur une cible<BR>
+          <LI><FONT color="#FFFFFF">Comportement imprévisible au combat</FONT>, impliquant la <FONT color="#FFFFFF">peur</FONT> chez certains bots et la <FONT color="#FFFFFF">hardiesse</FONT> chez d'autres<BR>
+          <LI><FONT color="#FFFFFF">Intelligence d'équipe</FONT> afin que les bots décident de former un escadron et <FONT color="#FFFFFF">couvrir leurs arrières</FONT><BR>
+          <LI><FONT color="#FFFFFF">Routines d'achat avancées</FONT> pour Counter-Strike<BR>
+          <LI><FONT color="#FFFFFF">Pose et désamorçage de bombe</FONT> sont implémentés comme but de mission dans Counter-Strike<BR>
+          <LI><FONT color="#FFFFFF">Les bots peuvent s'interpeller</FONT> quand le VIP ou le site de la bombe sont en vue dans Counter-Strike<BR>
+          <LI>Utilisation avancée des <FONT color="#FFFFFF">fusils de snipe et arbalètes</FONT>, et évitement des <FONT color="#FFFFFF">grenades/charges explosives/parasites</FONT><BR>
+          <LI>Les bots peuvent <FONT color="#FFFFFF">peindre leurs logos</FONT> (impossible de changer le logo pour l'instant)<BR>
+          <BR>
+          <FONT size="-1"><I>Navigation:</I></FONT><BR>
+          <LI><FONT color="#FFFFFF">TOTALE AUTONOMIE</FONT>: les bots <FONT color="#FFFFFF">échantillonnent</FONT> leur champ de vision en <FONT color="#FFFFFF">temps réel</FONT> comme les humains<BR>
+          <LI><FONT color="#FFFFFF">Contrôle des recoins potentiellement dangereux</FONT>; les bots peuvent <FONT color="#FFFFFF">surprendre les embuscades</FONT> ou <FONT color="#FFFFFF">s'y placent</FONT><BR>
+          <LI><FONT color="#FFFFFF">Sens de l'orientation</FONT> basique implémenté afin que les bots se souviennent des emplacements intéressants<BR>
+          <LI>Les bots <FONT color="#FFFFFF">évitent leurs coéquipiers</FONT> durant le déplacement<BR>
+          <LI>Les bots savent <FONT color="#FFFFFF">adapter leur champ de vision à une pente ou un escalier</FONT><BR>
+          <LI>Les bots peuvent <FONT color="#FFFFFF">ouvrir les portes, briser les fenêtres et les traverser</FONT><BR>
+          <LI>Les bots <FONT color="#FFFFFF">évitent les chutes</FONT> plus intelligemment<BR>
+          <BR>
+          <FONT size="-1"><I>Interaction Joueur/Bot:</I></FONT><BR>
+          <LI><FONT color="#FFFFFF">Interface menu VGUI et touches de raccourci</FONT> pour passer des ordres aux bots de votre équipe<BR>
+          <LI>Ordres compris par un bot: <FONT color="#FFFFFF">'Suivez-moi'</FONT>, <FONT color="#FFFFFF">'Cessez de me suivre'</FONT>, <FONT color="#FFFFFF">'Tenez la position'</FONT><BR>
+          <LI><FONT color="#FFFFFF">Code de poursuite avancé</FONT>: sur échelles, caisses et à travers les fenêtres si leur guide saute ou se baisse<BR>
+          <LI>Les bots sous ordre savent <FONT color="#FFFFFF">couvrir leurs arrières</FONT> et <FONT color="#FFFFFF">écoutent le comportement des membres de leur escadre</FONT><BR>
+          <BR>
+          <FONT size="-1"><I>Divers:</I></FONT><BR>
+          <LI>Une <FONT color="#FFFFFF">emphase importante</FONT> a été placée sur l'<FONT color="#FFFFFF">exactitude</FONT>, la <FONT color="#FFFFFF">tenue</FONT> et le <FONT color="#FFFFFF">commentaire</FONT> du code source<BR>
+          <BR>
+        </UL>
+        </FONT>
+      </P>
+      <P align="left">
+        <BR>
+      </P>
+      <P align="center">
+        <FONT color="#FFFFFF" size="-2"><B>Counter-Strike: un bot tenant la position</B></FONT><BR>
+        <IMG src="../img/keeper-bot-snapshot.png" border="0" alt="Counter-Strike: un bot tenant la position"></IMG><BR>
+      </P>
+      <P align="left">
+        <BR>
+      </P>
+    </UL>
+    <UL>
+      <P align="left">
+        <LI><A name="WHATSHALFLIFE"><FONT color="#FFFFFF"><B>Qu'est-ce que Half-Life ? Qu'est-ce que Counter-Strike ?</B></FONT></A><BR>
+      </P>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; <A href="http://www.planethalflife.com/" target="main">Half-Life</A> est un jeu vidéo de combat subjectif, ce qui signifie que le joueur voit le monde du jeu à travers les yeux de son personnage, ceci produisant un sentiment de réalisme accru. Le but du jeu est, pour le joueur, de faire utilisation des armes qu'il collecte dans le monde du jeu afin d'éliminer ses ennemis, qui peuvent être des monstres contrôlés par l'ordinateur (en mode simple joueur) ou de vrais joueurs ennemis (en mode multijoueur). Les gens peuvent jouer par Internet, ou dans des LANs (petits réseaux locaux temporaires dédiés), et ainsi exploser la cervelle de leurs amis durant des nuits entières.<BR>
+      </P>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; <A href="http://www.counter-strike.net/" target="main">Counter-Strike</A> est le MOD ("modification" du jeu) pour Half-Life le plus célèbre, dans lequel les gens jouent avec de nouveaux personnages, nouvelles armes, nouveaux décors mais surtout dans un nouveau contexte. Counter-Strike est un jeu qui repose sur la coopération où les équipes terroristes et anti-terroristes s'affrontent l'une l'autre. Ce MOD est très attaché au réalisme, c'est pourquoi les balles dans la tête et les chutes de haut sont mortelles.<BR>
+      </P>
+    </UL>
+    <UL>
+      <P align="left">
+        <LI><A name="WHATSABOT"><FONT color="#FFFFFF"><B>Qu'est-ce qu'un bot ?</B></FONT></A><BR>
+      </P>
+      <P align="left">
+      &nbsp;&nbsp;&nbsp;&nbsp; Bot signifie robot. Un bot est un adversaire contrôlé par ordinateur, avec lequel ceux qui ne sont pas connectés à Internet ou ceux qui ont manqué la dernière LAN peuvent s'entraîner un peu, en attendant la suivante. Un bot a l'apparence d'un joueur humain, et son IA est programmée pour simuler le comportement normal d'un joueur en cours de partie : vous tirer dessus quand il vous voit, escalader les échelles, se cacher sous un escalier en attendant votre passage, collecter des objets, se moquer de vous quand vous êtes mort, en somme toutes les fourberies possibles et imaginables comme dans un véritable jeu en réseau. Si le bot est bon, le joueur peut avoir l'impression de jouer contre un adversaire humain.<BR>
+      </P>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; L'IA d'un bot est beaucoup plus complexe que celle des monstres standard du jeu, lesquels peuvent sembler assez stupides en général. Le but poursuivi par le développeur consiste à faire penser son bot en temps réel : le rendre capable d'identifier un mur, une porte, son arme, un ennemi qui le canarde, lui faire comprendre que s'il chute de haut il risque de se blesser, le rendre capable soit de courir se cacher ou de décider d'attaquer quand il est pris sous un feu nourri, de savoir quelle est la meilleure arme à utiliser dans telle ou telle situation, savoir quand tirer par rafales, prendre le temps de viser ou jeter une grenade, ainsi que bon nombre de comportements évidents qui doivent être correctement implémentés dans l'IA afin de rendre son bot sinon intelligent, du moins moins stupide, encore et encore.<BR>
+      </P>
+    </UL>
+    <P align="left">
+      <BR>
+      <A href="#PAGETOP" target="mainframe">[ Retour ]</A><BR>
+    </P>
+  </BODY>
+</HTML>

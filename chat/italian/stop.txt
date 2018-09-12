@@ -1,0 +1,41 @@
+# RACC - Bot chat file
+#
+# The maximum number of sentences that can be put in this file is 100.
+# Any void or sharp-prepended line will be ignored.
+# The '%s' will be filled in game by the name of the player.
+
+OK
+si si vai vai
+eddai vai %s
+OK %s
+cerrrrrrrto %s
+uno da questa parte %s
+si %s, daje che ce la famo....
+son qua' %s
+OK %s di qua'
+azz
+evvattene di la' %s !
+dimme che rompo... %s!!! :-)
+OK %s dividiamoci in due squadre
+dividiamoci
+non saro' tanto lontano %s
+non ti posso coprire di piu' %s
+arrangiati
+arrangiati %s
+capito...
+cosi vado per i cazzi miei ?
+yesss %s
+vabbe' %s guardati il culo....
+OK %s vai avanti
+vai avanti %s
+stai attento %s!!
+senza di me siete fottuti...
+%s ma 'ndo vai...
+vabbe' %s ennamo alla cazzo de cane
+arrangiateveeeeeeeee
+non mi aspettare... %s
+si si %s vai va'...
+eccazzo era ora che lo dicessi %s =)
+si %s mi fermo
+azzo che capo %s...
+GO GO GO !!!

@@ -1,0 +1,75 @@
+	"racc_maxbots"
+	{
+		"Nombre maximal de bots dans le jeu"
+		{ NUMBER 0 32 }
+		{ "32" }
+	}
+
+	"racc_autofill"
+	{
+		"Ajouter les bots automatiquement"
+		{ BOOL }
+		{ "1" }
+	}
+
+	"racc_defaultbotskill"
+	{
+		"Niveau par défaut des bots"
+		{
+			LIST
+			"Très faibles" "1"
+			"Faibles" "2"
+			"Normal" "3"
+			"Forts" "4"
+			"Très forts" "5"
+		}
+		{ "3" }
+	}
+
+	"racc_chatmode"
+	{
+		"Les bots peuvent bavarder"
+		{ BOOL }
+		{ "1" }
+	}
+
+	"racc_voicechatmode"
+	{
+		"Mode des communications vocales"
+		{
+			LIST
+			"Pas de communications vocales" "0"
+			"Sons d'ambiance" "1"
+			"Système vocal Half-Life" "2"
+		}
+		{ "1" }
+	}
+
+	"racc_defaultbotnationality"
+	{
+		"Nationalité des bots par défaut"
+		{
+			LIST
+			"Anglais" "0"
+			"Français" "1"
+			"Allemand" "2"
+			"Italien" "3"
+			"Espagnol" "4"
+		}
+		{ "1" }
+	}
+
+	"racc_internationalmode"
+	{
+		"Mode international"
+		{ BOOL }
+		{ "1" }
+	}
+
+	"racc_internetmode"
+	{
+		"Mode fréquentation internet"
+		{ BOOL }
+		{ "1" }
+	}
+

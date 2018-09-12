@@ -1,0 +1,19 @@
+# RACC - Bot chat file
+#
+# The maximum number of sentences that can be put in this file is 100.
+# Any void or sharp-prepended line will be ignored.
+# The '%s' will be filled in game by the name of the player.
+
+can't
+I can't
+negative sir
+no
+i cant do that at the moment, %s
+won't do that %s
+nope
+gee, sir, won't work!
+negative
+can't do that
+that's impossible at the moment sir
+can't acknowledge, sir!
+umm... nope %s

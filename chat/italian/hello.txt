@@ -1,0 +1,29 @@
+# RACC - Bot chat file
+#
+# The maximum number of sentences that can be put in this file is 100.
+# Any void or sharp-prepended line will be ignored.
+
+Ciao BELLI E BRUTTI
+hi/ciao
+ciao cari !
+buon giorno cazzoni ;o)
+hi
+ciao gente
+e' arrivato 'O SANTONE !! =)
+son di nuovo qua' =)
+ciaoooooo a tutti
+ciao... tutto ok ?
+CIAO BIMBETTI !!
+ecchimeeeeeeee!!!
+ciao animalooooos
+CHECAZZOOOOooOOOoooOOOooo?
+ciao cari =)
+che succede?
+HAUAHAUAHAUAHAUAHAAUHA !!!!
+ahoooooooooo senza di me ? =)
+che si dice ?
+ve faccio un mazzaccio tanto !!! =)
+saluti a tutti
+ahoooooooo 'sso qua'.... ecchissene....
+tu qui?
+=) =) =)

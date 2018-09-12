@@ -1,0 +1,119 @@
+A few words about RACC voice translating
+
+Voice translating for RACC is an easy task for localized versions of Half-Life, i.e. those that don't rely on "scripted sequences" for human grunt voicing. Those versions (as far as I know the French, Italian, German and Spanish version are concerned) have a sound/sentences/ additionnal folder in their valve/pak0.pak packaged file, containing the translated version of the scripted grunt sequences below.
+
+
+// On the receiving of a grenade
+HG_GREN0 hgrunt/clik(p120) grenade! clik
+HG_GREN1 hgrunt/(t30) clik take!(e75) cover!(s5) clik
+HG_GREN2 hgrunt/clik clik oh! shit! clik
+HG_GREN3 hgrunt/(p110 t40) clik(p120) get!(e78) down!(t30) clik 
+HG_GREN4 hgrunt/clik(p110) (t40) of!(e75) god! clik(p110)
+HG_GREN5 hgrunt/clik no! clik
+HG_GREN6 hgrunt/clik move! clik(p120)
+
+// Player alert
+HG_ALERT1 hgrunt/clik(p110) target! clik
+HG_ALERT2 hgrunt/clik movement! clik
+HG_ALERT3 hgrunt/(t40) shit!(t20), (t50) we! got! hostiles!(p120 t0) clik
+HG_ALERT6 hgrunt/(t30) clik clik move!(e75) in! clik(p120)
+
+// Take cover
+HG_COVER0 hgrunt/clik (t30) take! cover!(t0) clik
+HG_COVER1 hgrunt/clik (t45) (e75) I!(e80) need!(e80) suppressing!(t20) fire!(t10) clik
+HG_COVER2 hgrunt/clik (t45) we! need! backup!(t10) clik
+HG_COVER3 hgrunt/clik(p120) (t40) two!(e75) hot!(e80) here! clik
+HG_COVER4 hgrunt/clik(p110) (t30) fall!(e80) out! clik clik
+HG_COVER5 hgrunt/clik(p120) (t20) clear! this! area! clik
+HG_COVER6 hgrunt/clik (t40) god! damn! clik
+HG_COVER7 hgrunt/clik (t40) cover!(e75) fire! clik
+
+// Throw grenade
+HG_THROW0 hgrunt/clik(p120) (t40) fire!(e90) in!(e90) the!(e60) hole!(e100) clik
+HG_THROW1 hgrunt/clik (t30) take!(e75) this!(e100 t0) clik
+HG_THROW2 hgrunt/clik (t35) fire in the(e50) hole clik(p120)
+HG_THROW3 hgrunt/clik(p110) (t35 e80) squad, stay down clik
+ 
+// Taunt
+HG_TAUNT0 hgrunt/clik (t30 e75) uhh, we got heavy fire here clik
+HG_TAUNT1 hgrunt/clik(p120) (t40) roger, hold position clik
+HG_TAUNT2 hgrunt/clik (t40) we!(e80) will!(e75) kick!(e80) your!(e75) ass! clik
+HG_TAUNT3 hgrunt/clik (t40) mister, you(e75) are going down clik
+HG_TAUNT4 hgrunt/clik(p120) (t40) you got nothing clik
+HG_TAUNT5 hgrunt/clik(p110) (t40) request! backup! clik(p120) clik
+
+// Charge
+HG_CHARGE0 hgrunt/clik (t40) go! recon! clik(p120)
+HG_CHARGE1 hgrunt/clik(p110) (t40) move!(e75) in! clik
+HG_CHARGE2 hgrunt/clik go! clik(p120)
+HG_CHARGE3 hgrunt/clik lets! go! clik(p120)
+
+// Idle question
+HG_QUEST0 hgrunt/clik (t25) stay(e80) alert people clik(p120)
+HG_QUEST1 hgrunt/clik (t30) radio(e75) check, over clik(p120) 
+HG_QUEST2 hgrunt/clik (t20) maintain lookout clik(p120)
+HG_QUEST3 hgrunt/clik(p110) (t30) squad, quiet(e75) down clik(p120)
+HG_QUEST4 hgrunt/clik(p120) (t30) hold position, clik
+HG_QUEST5 hgrunt/clik(p120) (t30) sweep(e80) that sector, clik(p120) clik(p120)
+HG_QUEST6 hgrunt/clik(p120) (t30) uhh, go tango sweep formation clik(p120) clik(p120)
+HG_QUEST7 hgrunt/clik(p120) (t30) echo(e75) mission is go clik(p120) clik(p120)
+HG_QUEST8 hgrunt/clik(p110) (t30) fire(e75) team, weapons(e75) check ok clik(p120) clik
+HG_QUEST9 hgrunt/clik(p110) (t30) fire(e75) team, objective foxtrot niner clik(p120)
+HG_QUEST10 hgrunt/clik (t30) ok(e75) mission, zero(e75) niner clik
+
+// Response to idle question
+HG_ANSWER0 hgrunt/clik(p110) (t20) uhh roger(e75) that, clik(p120) clik
+HG_ANSWER1 hgrunt/clik(p120) (t10) yessir clik
+HG_ANSWER2 hgrunt/clik(p120) (t30) affirmative, sir clik
+HG_ANSWER3 hgrunt/clik (t30) negative clik(p120) clik
+HG_ANSWER4 hgrunt/clik(p105) (t30) roger clik
+HG_ANSWER5 hgrunt/clik(p105) (t30) ok control clik
+HG_ANSWER6 hgrunt/clik(p105) (t30) that(e75) is, uhh, affirmative clik
+
+// Response to "check" question
+HG_CLEAR0 hgrunt/clik(p130) (t30) all(e75) clear sir, clik
+HG_CLEAR1 hgrunt/clik (t30) bravo(e75) post, clear clik(p120)
+HG_CLEAR2 hgrunt/clik(p110) (t30) delta(e75) team, clear clik(p120)
+HG_CLEAR3 hgrunt/clik(p110) (t40) no sign hostiles sir, over clik(p120)
+HG_CLEAR4 hgrunt/clik (t30) no(e80) sign objective sir, over clik(p120)
+HG_CLEAR5 hgrunt/clik (t30) no(e75) movement this level clik(p120)
+HG_CLEAR6 hgrunt/clik(p120) (t28) sir, sector secure, over clik(p120) clik(p120)
+HG_CLEAR7 hgrunt/clik(p120) (t30) command(e75) post, team in position, over clik
+HG_CLEAR8 hgrunt/clik (t30) recon, in(e75) position, all quiet clik(p120)
+HG_CLEAR9 hgrunt/clik(p110) (t30) lookout(e90) post, all quiet, over clik(p110)
+HG_CLEAR10 hgrunt/clik (t40) sir, I(e80) here(e75) something clik
+HG_CLEAR11 hgrunt/clik(p120) (t30) sir, uhh, zero movement, over clik
+HG_CLEAR12 hgrunt/clik (t30) area secure sir, over clik(p120)
+
+// Idle "check" question
+HG_CHECK0 hgrunt/clik (t30) ok, check(e75) in clik
+HG_CHECK1 hgrunt/clik(p110) (t30) squad, are(e80) hostiles clear clik(p120)
+HG_CHECK2 hgrunt/clik (t30) check(e80) in people clik
+HG_CHECK3 hgrunt/clik (t30) lookout, check(e75) in clik(p110)
+HG_CHECK4 hgrunt/clik (t30) recon(e90) team, check(e80) in clik
+HG_CHECK5 hgrunt/clik(p130) (t30) movement check, over clik
+HG_CHECK6 hgrunt/clik (t30) check your zone, over, clik
+HG_CHECK7 hgrunt/clik (t30) everything(e85) ok(e75) there, clik(p130)
+
+
+All these sequences have their equivalent translation in a waveform sample in the sound/sentences/ directory. For example, the scripted sequence that says "we will kick your ass!", named !HG_TAUNT2, has an equivalent in the file sound/sentences/hg_taunt2.wav.
+In order to have the RACC bots speak your language, you'll have to retrieve all these files, identify their content, then you'll need to sort them in each of the twelve following folders, that correspond to twelve in-game chat situations:
+
+affirmative/ - when the bot acknowledges to an order from one of his teammates
+alert/ - when the bot sees or hear an enemy and wants to notify his team of that
+attacking/ - when the bot engages combat against one or more enemies
+firstspawn/ - when the bots speaks at respawning at each start of a new mission, or after a death when he lives again
+inposition/ - when the bot acknowledges to a "stay in position" order from one of his teammates
+negative/ - when the bot refuses an order from one of his teammates
+report/ - when the bot issues a "check in" order to his squad members
+reporting/ - when the bot replies to a "check in" order from one of his squad members and has no threat in sight
+seegrenade/ - when the bot sees an incoming enemy grenade and yells at his team to take coverage
+takingdamage/ - when the bot is being hurt during a battle and has to continue the combat
+throwgrenade/ - when the bot throws a grenade at his enemies and tells his team to step back and take coverage
+victory/ - when the bot's enemy is dead and the bot wants to notify his team about it
+
+There must be the EXACT SAME number of files between directories of all translations, with the SAME name. You may have to edit some samples to make them best fit your needs. For instance, much of the victory/ samples come from another file hgrunt/c0a4_ambush_vox.wav which has been hacked in parts to produce four different samples.
+
+The American/English version of the sounds is a ripoff done by Ezamudin (thank you!) of the standard Barney sounds. They are basically not the same as the grunt sounds. However, if you want to record your own ones, you should try to keep the same tone as the other versions in your chat, e.g. shouting for attack sounds, etc. I would be glad then if you submit them to me, in order to see if they are worth being put into the next release.
+
+Happy talking...

@@ -1,0 +1,138 @@
+<HTML>
+  <HEAD>
+  </HEAD>
+  <BODY bgcolor="#FFFFFF" marginheight="0" topmargin="0" marginwidth="0" leftmargin="0">
+    <TABLE bgcolor="#000000" border="0" cellspacing="1">
+      <TR>
+        <TD valign="top" width="15%" bgcolor="#0066FF">
+          <FONT color="#FFFFFF" size="-2"><B>Author</B></FONT><BR>
+        </TD>
+        <TD valign="top" width="85%" bgcolor="#0066FF">
+          <FONT color="#FFFFFF" size="-2"><B>Topic: unwaypointed bot</B></FONT><BR>
+        </TD>
+      </TR>
+      <TR>
+        <TD valign="top" bgcolor="#DBDBDB">
+          <FONT color="#000000" size="-2"><B>botman</B><BR>
+          Board Moderator<BR>
+          <BR>
+          <BR>
+          Posts: 2810<BR></FONT>
+        </TD>
+        <TD valign="top" bgcolor="#DBDBDB">
+          <FONT color="#000000" size="-2"><B>Re: unwaypointed bot</B><BR>
+          <HR>
+          I don't think there are very many people trying to do waypoint-less navigation. It just sucks up too much CPU time trying to constantly scan the environment for places where the bots can go.<BR>
+          <BR>
+          botman<BR>
+          <HR align=left width="40%"></FONT>
+        </TD>
+      </TR>
+      <TR>
+        <TD valign="top" bgcolor="#EEEEEE">
+          <FONT color="#000000" size="-2"><B>Pierre-Marie Baty</B><BR>
+          Member<BR>
+          <BR>
+          <BR>
+          Posts: 141<BR></FONT>
+        </TD>
+        <TD valign="top" bgcolor="#EEEEEE">
+          <FONT color="#000000" size="-2"><B>Re: unwaypointed bot</B><BR>
+          <HR>
+          Hmm... On a PIII 500MHz machine with 64MBytes SDRAM, my bots run around quite fluently...<BR>
+          <BR>
+          And I don't think my BotSampleFOV() function sucks so much ; It is not called every frame but just the time for the bot to determine a 'reach point', kind of volatile waypoint which is deleted from memory once the bot has reached it.<BR>
+          <BR>
+          I <B>do</B> believe efficient waypointless navigation is a winnable challenge nowadays. I am quite proud of how my bots spread on the maps now and I am currently working on giving them a 'sense of orientation' to fullfill map goals.<BR>
+          <BR>
+          My goal is to make a bot AI whose behaviour, computed from its sensors' retrieved informations, follows as close as possible a human behaviour, <B>from the way the bot senses its environment</B> up to its final navigation and combat behaviour. The means are rationality, autonomy (no resource file such as waypoints), and forbidding of non human-like ways of information retrieval about its environment.<BR>
+          <HR align=left width="40%">
+          Pierre-Marie Baty - pm@racc-ai.com<BR>
+          <A href="http://www.racc-ai.com" target=_blank>http://www.racc-ai.com</A> - RACC for Half-Life<BR>
+          "God is REAL, unless explicitly declared INTEGER"<BR></FONT>
+        </TD>
+      </TR>
+      <TR>
+        <TD valign="top" bgcolor="#DBDBDB">
+          <FONT color="#000000" size="-2"><B>Tobias</B><BR>
+          Member<BR>
+          <BR>
+          <BR>
+          Posts: 276<BR></FONT>
+        </TD>
+        <TD valign="top" bgcolor="#DBDBDB">
+          <FONT color="#000000" size="-2"><B>Re: unwaypointed bot</B><BR>
+          <HR>
+          <BLOCKQUOTE>
+            <HR>
+            <B>My goal is to make a bot AI whose behaviour, computed from its sensors' retrieved informations, follows as close as possible a human behaviour, from the way the bot senses its environment up to its final navigation and combat behaviour.</B>
+            <HR>
+          </BLOCKQUOTE>
+          Don't forget that human decisions are not only based on the current perception of the environment but also on plans which require a knowledge base of some kind. Human players, once they have played a map, know how to orientate themselves, i.e. know where the items they want are located and how to get there. This knowledge can be represented by waypoints, wayzones or whatever, but it has to be represented somehow. This is how - after half a year of developing waypointless navigation - I came to auto-waypointing when I realized that the current perceptions are not enough to base decisions upon.<BR>
+          <BR>
+          Tobias<BR>
+          <HR align=left width="40%"></FONT>
+        </TD>
+      </TR>
+      <TR>
+        <TD valign="top" bgcolor="#EEEEEE">
+          <FONT color="#000000" size="-2"><B>Pierre-Marie Baty</B><BR>
+          Member<BR>
+          <BR>
+          <BR>
+          Posts: 141<BR></FONT>
+        </TD>
+        <TD valign="top" bgcolor="#EEEEEE">
+          <FONT color="#000000" size="-2"><B>Re: unwaypointed bot</B>
+          <HR>
+          Of course, you're right. That's the purpose of the 'sense of orientation' I am working on. When my bots first see a map goal, they will store its location and some other info that still needs to be pointed out in some kind of database and notify their team of that. Then, using the well-known arbitrary decision situation: 'I can go left, I can go right, I can go forward, where will I go?', bots will be able to pick up the direction that looks the most like the direction of their destination. At each corner or sudden change in the layout of the bot's way, a check is made for the bot to know which are the possible directions that can be taken. My 'sense of orientation' has to be implemented right there.<BR>
+          <BR>The problem of dead-ends still remain ; to solve it I think I will have to store more locations in the database than just the map goals. I am thinking of a 'negative flag' associated with some stored locations for the bots to know that they have nothing interesting to do in the direction pointed by that flag (only in the case they want to reach their goal). This 'negative flag' would be turned on after some bots unsuccessfully try to reach a goal following that path ; the flag would then be dropped at the location where they made the last choice about the direction to follow ; direction that proved later to be false. I think that's just like how humans think, rather than autowaypointing.<BR>
+          <HR align=left width="40%">
+          Pierre-Marie Baty - pm@racc-ai.com<BR>
+          <A href="http://www.racc-ai.com" target=_blank>http://www.racc-ai.com</A> - RACC for Half-Life<BR>
+          "God is REAL, unless explicitly declared INTEGER"<BR></FONT>
+        </TD>
+      </TR>
+      <TR>
+        <TD valign="top" bgcolor="#DBDBDB">
+          <FONT color="#000000" size="-2"><B>cheesemonster</B><BR>
+          Member<BR>
+          <BR>
+          <BR>
+          Posts: 908<BR></FONT>
+        </TD>
+        <TD valign="top" bgcolor="#DBDBDB">
+          <FONT color="#000000" size="-2"><B>Re: unwaypointed bot</B>
+          <HR>
+          Unfortunately I don't think Half-life engine has allows the most efficient methods of non-waypointed navigation. Sure, tracelines is practically all you can use and doors etc. But Half-life was designed to use waypointed AI (As monsters use the nodes to navigate)<BR>
+          <BR>
+          I certainly don't think you are wasting your time though, you'll probably end up creating the best non-waypointed bot for half-life (if there are any at the moment) But the best results may still be unsatisfying.<BR>
+          <HR align=left width="40%">
+          -Cheesy<BR>
+          <BR>
+          <A href="http://www.waypointwarehouse.co.uk/" target=_blank>The Waypoint Warehouse Waypoint Site</A><BR>
+          <A href="http://www.botepidemic.com/rocketcrowbot" target=_blank>The Rocket CroWbot</A><BR>
+          <A href="http://homepage.ntlworld.com/pat.murphy" target=_blank>My CS Maps</A><BR></FONT>
+        </TD>
+      </TR>
+      <TR>
+        <TD valign="top" bgcolor="#EEEEEE">
+          <FONT color="#000000" size="-2"><B>Pierre-Marie Baty</B><BR>
+          Member<BR>
+          <BR>
+          <BR>
+          Posts: 141<BR></FONT>
+        </TD>
+        <TD valign="top" bgcolor="#EEEEEE">
+          <FONT color="#000000" size="-2"><B>Re: unwaypointed bot</B>
+          <HR>
+          I'm very close to success. Is waypointless navigation fatally worse than a waypointed one? We'll see it soon...<BR>
+          <HR align=left width="40%">
+          Pierre-Marie Baty - pm@racc-ai.com<BR>
+          <A href="http://www.racc-ai.com" target=_blank>http://www.racc-ai.com</A> - RACC for Half-Life<BR>
+          "God is REAL, unless explicitly declared INTEGER"<BR></FONT>
+        </TD>
+      </TR>
+    </TABLE>
+  </BODY>
+</HTML>

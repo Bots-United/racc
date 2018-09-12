@@ -1,0 +1,440 @@
+<HTML>
+  <BODY topmargin="0" leftmargin="0" bgcolor="#202420" text="#A0A0A0" vlink="#007F00" link="#00FF00">
+    <TABLE border="0" width="100%">
+      <TR>
+        <TD width="150px" align="left" valign="top">
+        </TD>
+        <TD align="left" valign="top">
+          <A name="PAGETOP">
+          <FONT face="Arial" size="-1">
+          <UL>
+            <LI><A name="CPLUSPLUSBASICS"><FONT color="FFFFFF"><B>Basics on C++ Objects and Inheritance</B>, <I>by Botman</I></FONT></A><BR>
+            <FONT color="007F00"><B>NOTE: this tutorial was written by Jeffrey 'botman' Broome, and is mainly located on his <A href="http://www.planethalflife.com/botman/" target="main">website</A>.</B></FONT><BR>
+            <P align="left">
+              C++ is a superset of the C programming language. C++ is an object-oriented language. This means that C++ allows you to deal with things as though they were real objects (they have specific characteristics or attributes, and they have specific behaviors or methods, which are things that you can do to them). For example, in C++ you could create an object for a door. The door object might have attributes like height, width, color, and material. The door object might have methods (things that you can do to it) like open, close, lock, and unlock. Once the "door object" was created you could use it for many different types of doors. You would know that each one of them would have a height, width, color and material attribute. You would know that you could open, close, lock and unlock each one of them. In C++ you could create a door object by using the following code...<BR>
+            </P>
+          </UL>
+          <TABLE width="100%" border="1" cellpadding="0" cellspacing="0" bgcolor="#000000">
+            <TR>
+              <TD>
+                <FONT color="FFFFFF">
+                  <CODE>
+                    <PRE>
+enum Color {red, green, blue, black, white};
+enum Material {wood, metal, stone};
+
+class Door
+{
+   public:
+      int height;
+      int width;
+      Color color;
+      Material material;
+
+      bool Open (void);
+      bool Close (void);
+      bool Lock (void);
+      bool Unlock (void);
+};
+
+Door my_door;
+                    </PRE>
+                  </CODE>
+                </FONT>
+              </TD>
+            </TR>
+          </TABLE>
+          <UL>
+            <P align="left">
+              In this example "Door" is a class (object) that I have created, and "my_door" is an instance of that object. You can only manipulate instances of objects, you can't do anything with the "Door" object itself. Once I have created the "my_door" instance of the Door object I can do things like this in C++:<BR>
+            </P>
+          </UL>
+          <TABLE width="100%" border="1" cellpadding="0" cellspacing="0" bgcolor="#000000">
+            <TR>
+              <TD>
+                <FONT color="FFFFFF">
+                  <CODE>
+                    <PRE>
+void main (void)
+{
+   Door my_door;
+
+   my_door.height = 60;
+   my_door.color = red;
+
+   // ERROR! The C++ compiler won't let you do this (type mismatch)
+   my_door.material = blue;
+
+   if (my_door.Open ())
+      printf ("my_door was opened sucessfully!\n");
+
+   if (my_door.material == wood)
+      printf("my_door is a wooden door!\n");
+
+   // ERROR! The C++ compiler won't let you do this (Door is not an instance)
+   Door.width = 40;
+}
+                    </PRE>
+                  </CODE>
+                </FONT>
+              </TD>
+            </TR>
+          </TABLE>
+          <UL>
+            <P align="left">
+              The "public:" keyword in the Door makes the variables (attributes) and functions (methods) publicly accessible so that even code outside the scope of the Door object can get to them. Normally attributes are private which means that only the code belonging to Door can access them. You create code within the scope of an object by using the object name followed by two colons like this <CODE>Door::</CODE>. Here's a slightly different Door object with private attributes and public methods:<BR>
+            </P>
+          </UL>
+          <TABLE width="100%" border="1" cellpadding="0" cellspacing="0" bgcolor="#000000">
+            <TR>
+              <TD>
+                <FONT color="FFFFFF">
+                  <CODE>
+                    <PRE>
+class Door
+{
+   private:
+      int height;
+      int width;
+      Color color;
+      Material material;
+
+   public:
+      int GetHeight (void);
+      void SetHeight (int value);
+      int GetWidth (void); 
+      void SetWidth (int value);
+      Color GetColor (void);
+      void SetColor (Color value);
+      Material GetMaterial (void); 
+      void SetMaterial (Material value);
+
+      bool Open (void);
+      bool Close (void);
+      bool Lock (void);
+      bool Unlock (void);
+};
+                    </PRE>
+                  </CODE>
+                </FONT>
+              </TD>
+            </TR>
+          </TABLE>
+          <UL>
+            <P align="left">
+              I have made the height, width, color and material attributes private so that only the Door object knows about them. Here is how the C++ code from above would have to be modified to work with the new Door object:<BR> 
+            </P>
+          </UL>
+          <TABLE width="100%" border="1" cellpadding="0" cellspacing="0" bgcolor="#000000">
+            <TR>
+              <TD>
+                <FONT color="FFFFFF">
+                  <CODE>
+                    <PRE>
+int Door::GetHeight (void)
+{
+   return height;
+}
+
+void Door::SetHeight (int value)
+{
+   height = value;
+}
+
+int Door::GetWidth (void)
+{
+   return width;
+}
+
+void Door::SetWidth (int value)
+{
+   width = value;
+}
+
+Color Door::GetColor (void)
+{
+   return color;
+}
+
+void Door::SetColor (Color value)
+{
+   color = value;
+}
+
+Material Door::GetMaterial (void)
+{
+   return material;
+}
+
+void Door::SetMaterial (Material value)
+{
+   material = value;
+}
+
+
+void main (void)
+{
+   Door my_door;
+   Door another_door;
+   Door *ptr_to_door; // THIS DOES NOT ALLOCATE SPACE FOR A DOOR
+
+   my_door.SetHeight (60);
+   my_door.SetColor (red);
+
+   if (my_door.Open ())
+      printf ("my_door was opened sucessfully!\n");
+
+   if (my_door.GetMaterial () == wood)
+      printf ("my_door is a wooden door!\n");
+
+   // ERROR! You can't access private members!
+   my_door.width = 40;
+
+   // ERROR! Type mismatch!
+   my_door.SetColor (stone);
+
+   // ptr_to_door now points to the "another_door" object
+   ptr_to_door = &another_door;
+
+   // another_door is now made of wood
+   ptr_to_door->SetMaterial (wood);
+
+   // are we able to Close another_door?
+   if (!ptr_to_door->Close ())
+      printf ("failed to Close another_door!\n");
+}
+                    </PRE>
+                  </CODE>
+                </FONT>
+              </TD>
+            </TR>
+          </TABLE>
+          <UL>
+            <P align="left">
+              You may ask "Why would anyone want to go to so much trouble to make attributes private?". That's another one of the benefits of C++. It's called "information hiding". It means that if I design a Door object and write the code for it, you don't have to know how I am storing things internally to be able to use this Door object. All I need to do is provide you with a header file that contains the "class" definition of the Door object and you will be able to pass parameters (arguments) to my methods (functions) without having to know how I store things inside the Door object. The C++ compiler will make absolutely sure that you are passing the correct types into these functions (like above, you can't set the door color to "stone"). This type checking is one of the most powerful features in C++.<BR>
+            </P>
+            <P align="left">
+              I mentioned that C++ is an object-oriented language. One of the advantages of objects is that you can have one object inherit properties from another object. The best way to determine if an object can inherit from another object is to check for the "is a" relationship. For example, if you had a Vehicle class, it might have color, weight, and number of wheels as attributes. You could create a Bicycle class that inherits from the Vehicle class since a Bicycle "is a" Vehicle. You could also have an Automobile class inherit from the Vehicle class since an Automobile "is a" Vehicle. You could not (should not) have an Automobile class inherit from a Bicycle class since an Automobile is NOT a Bicycle. Let's look at some examples of how to model these objects using C++. Here's the Vehicle class with attributes and methods:<BR>
+            </P>
+          </UL>
+          <TABLE width="100%" border="1" cellpadding="0" cellspacing="0" bgcolor="#000000">
+            <TR>
+              <TD>
+                <FONT color="FFFFFF">
+                  <CODE>
+                    <PRE>
+enum Color {red, green, blue, black, white, yellow, orange, purple};
+
+class Vehicle
+{
+   private:
+      Color color;
+      float weight; // in pounds
+      int number_of_tires;
+      int max_speed; // in miles per hour
+
+   public:
+      virtual Color GetColor (void) { return color; }
+      virtual void SetColor (Color value) { color = value; }
+      virtual float GetWeight (void) { return weight; }
+      virtual void SetWeight (float value) { weight = value; }
+      virtual int GetNumberOfTires (void) { return number_of_tires; }
+      virtual void SetNumberOfTires (int value) { number_of_tires = value; }
+      virtual int GetMaxSpeed (void) { return max_speed; }
+      virtual void SetMaxSpeed (int value) { max_speed = value; }
+};
+                    </PRE>
+                  </CODE>
+                </FONT>
+              </TD>
+            </TR>
+          </TABLE>
+          <UL>
+            <P align="left">
+              Here I've used a shorthand form of the <CODE>Vehicle::</CODE> function definition. The following code inside the Vehicle class:<BR>
+            </P>
+          </UL>
+          <TABLE width="100%" border="1" cellpadding="0" cellspacing="0" bgcolor="#000000">
+            <TR>
+              <TD>
+                <FONT color="FFFFFF">
+                  <CODE>
+                    <PRE>
+      virtual void SetColor (Color value) { color = value; }
+                    </PRE>
+                  </CODE>
+                </FONT>
+              </TD>
+            </TR>
+          </TABLE>
+          <UL>
+            <P align="left">
+              ...is equivalent to:<BR>
+            </P>
+          </UL>
+          <TABLE width="100%" border="1" cellpadding="0" cellspacing="0" bgcolor="#000000">
+            <TR>
+              <TD>
+                <FONT color="FFFFFF">
+                  <CODE>
+                    <PRE>
+virtual void Vehicle::SetColor (Color value)
+{
+   color = value;
+}
+                    </PRE>
+                  </CODE>
+                </FONT>
+              </TD>
+            </TR>
+          </TABLE>
+          <UL>
+            <P align="left">
+              ...it's just a shorter way of writing the same thing. The "virtual" keyword before the function definition tells the C++ compiler that these functions will exist in this object and in any object that inherits from this object. The class that is being inherited from is called a "base class" (Vehicle in this case). The class that is inheriting from another class is called the "derived class".<BR>
+            </P>
+            <P align="left">
+              Now let's create a Bicycle class that inherits from the Vehicle class:<BR>
+            </P>
+          </UL>
+          <TABLE width="100%" border="1" cellpadding="0" cellspacing="0" bgcolor="#000000">
+            <TR>
+              <TD>
+                <FONT color="FFFFFF">
+                  <CODE>
+                    <PRE>
+class Bicycle : public Vehicle
+{
+   private:
+      int number_of_gears;
+      bool has_hand_brakes;
+
+   public:
+      int GetNumberOfGears (void) { return number_of_gears; } 
+      void SetNumberOfGears (int value) { number_of_gears = value; }
+      bool HasHandBrakes (void) { return has_hand_brakes; }
+      void SetHandBrakeFlag (bool value) { has_hand_brakes = value; }
+};
+                    </PRE>
+                  </CODE>
+                </FONT>
+              </TD>
+            </TR>
+          </TABLE>
+          <UL>
+            <P align="left">
+              Let's also create an Automobile class that inherits from the Vehicle class:<BR>
+            </P>
+          </UL>
+          <TABLE width="100%" border="1" cellpadding="0" cellspacing="0" bgcolor="#000000">
+            <TR>
+              <TD>
+                <FONT color="FFFFFF">
+                  <CODE>
+                    <PRE>
+class Automobile : public Vehicle
+{
+   private:
+      int number_of_cylinders;
+      float horse_power;
+
+   public:
+      int GetNumberOfCylinders (void) { return number_of_cylinders; } 
+      void SetNumberOfCylinders (int value) { number_of_cylinders = value; }
+      bool GetHorsePower (void) { return horse_power; }
+      void SetHorsePower (float value) { horse_power = value; }
+};
+                    </PRE>
+                  </CODE>
+                </FONT>
+              </TD>
+            </TR>
+          </TABLE>
+          <UL>
+            <P align="left">
+              Now we can write the following C++ code to use the Vehicle, Bicycle and Automobile classes:<BR>
+            </P>
+          </UL>
+          <TABLE width="100%" border="1" cellpadding="0" cellspacing="0" bgcolor="#000000">
+            <TR>
+              <TD>
+                <FONT color="FFFFFF">
+                  <CODE>
+                    <PRE>
+void main(void)
+{
+   Vehicle v;
+   Bicycle bike;
+   Automobile car;
+
+   v.SetColor (white); // some kind of white vehicle
+   v.SetWeight (1000.0); // the vehicle is 1000 pounds
+
+   bike.SetColor (blue); // the bicycle is blue
+   bike.SetWeight (51.7); // the bicycle weighs 51.7 pounds
+   bike.SetHandBrakeFlag (TRUE); // this bicycle has hand brakes
+
+   if (bike.GetMaxSpeed () > 30) // get the maximum speed of this bicycle
+      printf ("The bike can go over 30 mph.\n");
+
+   car.SetNumberOfCylinders (4); // this car has 4 cylinders
+   car.SetWeight (4500.0); // this car weighs 4500 pounds
+
+   if (car.GetHorsePower () > 350) // get the maximum horsepower of the car
+      printf ("Man, that car has a lot of power!\n");
+}
+                    </PRE>
+                  </CODE>
+                </FONT>
+              </TD>
+            </TR>
+          </TABLE>
+          <UL>
+            <P align="left">
+             Notice that we can use the functions of the base class in the derived classes without having to explicitly copy them. If we wanted to change the behavior of the functions (methods) in the derived class we can do that as well. Here is an example with the function in the derived class that is different from the function in the base class:<BR>
+            </P>
+          </UL>
+          <TABLE width="100%" border="1" cellpadding="0" cellspacing="0" bgcolor="#000000">
+            <TR>
+              <TD>
+                <FONT color="FFFFFF">
+                  <CODE>
+                    <PRE>
+class Bicycle : public Vehicle
+{
+   private:
+      int number_of_gears;
+      bool has_hand_brakes;
+
+   public:
+      int GetNumberOfGears (void) { return number_of_gears; }
+      void SetNumberOfGears (int value) { number_of_gears = value; }
+      bool HasHandBrakes (void) { return has_hand_brakes; }
+      void SetHandBrakeFlag (bool value) { has_hand_brakes = value; }
+
+      int GetNumberOfTires (void) { return 2; }
+      void SetNumberOfTires (int value) { printf ("can't set number of tires!\n"); }
+};
+                    </PRE>
+                  </CODE>
+                </FONT>
+              </TD>
+            </TR>
+          </TABLE>
+          <UL>
+            <P align="left">
+              Notice that we have overridden the base class functions <CODE>SetNumberOfTires</CODE> and <CODE>GetNumberOfTires</CODE> for the Bicycle class. The Bicycle class prints out an error message when you call the <CODE>SetNumberOfTires</CODE> function and it will always return 2 as the number of tires when calling the <CODE>GetNumberOfTires</CODE> function. The <CODE>SetNumberOfTires</CODE> and <CODE>GetNumberOfTires</CODE> functions for the Automobile class still behave exactly the same as in the Vehicle base class.<BR>
+            </P>
+            <P align="left">
+              When looking though the Half-Life SDK, you will see many cases where classes will inherit from other classes and those classes, in turn, may have inherited from other classes. Refer to the <A href="http://planethalflife.com/botman/sdk.shtml">Half-Life SDK</A> page for more details on the C++ classes used by the Half-Life SDK.<BR>
+            </P>
+          </UL>
+          <P align="right">
+            <FONT color="007F00"><B>Botman</B></FONT><BR>
+          </P>
+        </TD>
+        <TD width="150px" align="left" valign="top">
+        </TD>
+      </TR>
+    </TABLE>
+  </BODY>
+</HTML>

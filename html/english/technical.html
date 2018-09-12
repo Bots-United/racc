@@ -1,0 +1,90 @@
+<HTML>
+  <BODY topmargin="0" leftmargin="0" bgcolor="#202420" text="#A0A0A0" vlink="#007F00" link="#00FF00">
+    <A name="PAGETOP">
+    <FONT face="Arial" size="-1">
+    <UL>
+      <P align="left">
+        <LI><A name="TECHNICALOVERVIEW"><FONT color="#FFFFFF"><B>Technical overview</B></A></FONT><BR>
+      </P>
+      <P align="left">
+        <FONT color="#FFFFFF"><B>Project goals</B></FONT><BR>
+      </P>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; The Rational Autonomous Cybernetic Commandos (RACC) project aims at implementing a fully <FONT color="#FFFFFF"><I>rational</I></FONT> artificial intelligence in <FONT color="#FFFFFF"><I>autonomous</I></FONT> non-player characters (NPCs or <FONT color="#FFFFFF"><I>cybernetic</I></FONT> robots or 'bots') which forehead characteristics are real-time environment analysis and <FONT color="#FFFFFF"><I>commandos</I></FONT> teamworking. RACC is a <B>waypointless</B> bot able to work as squads.<BR>
+      </P>
+      <P align="center">
+        <FONT color="#FFFFFF" size="-2"><B>Half-Life: a bot doing carnage in Crossfire</B></FONT><BR>
+        <IMG src="../img/carnage-bot-snapshot.png" border="0" alt="Half-Life: a bot doing carnage in Crossfire"></IMG><BR>
+      </P>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; <I>Waypoints</I> might be the oldest pathfinding method in bot AI developing. They are pre-computed locations in the virtual world that can be linked together to create <I>paths</I>. Basically all the work done previously with cybernetic opponents in 3D shooter games relied on waypoints. This was finally ending up in huge databases of pre-computed locations that had to be altered each time the virtual world was altered itself: map change, map modification, new maps all needed their waypoint files for the AI characters to wander correctly. If such an information was not available for the virtual world that was currently playing, all the NPCs would blindly bounce into walls and randomly head up to totally fuzzy directions.<BR>
+      </P>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; The advantage of waypoints was that the non-player character had no need to 'sense' its environment and view it like a human; instead it just had to follow recursive series of easily-computed paths to wander into the virtual world.<BR>
+        &nbsp;&nbsp;&nbsp;&nbsp; The drawbacks were that not only the behaviour of such NPCs was easily predictable in real-time; moreover it was a totally blind way of playing that often ended up in stupid actions, foremost all the virtual world was not necessarily covered by the waypoints so the NPCs would often keep doing the same things and often could be found at the same locations. The ease of use and the ability to set up relatively complex paths of waypoints was totally covered by a predictable, blind, non human-like at all behaviour.<BR>
+      </P>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; The Rational Autonomous Cybernetic Commandos challenge is to implement as close as possible a <B>human-like</B> way of thinking in <B>autonomous</B> non-player characters.<BR>
+      </P>
+      <P align="center">
+        <FONT color="#FFFFFF" size="-2"><B>A significative part of a thread on Botman's forums</B></FONT><BR>
+        <TABLE width="90%" bgcolor="#000000" border="0" cellspacing="0">
+          <TR>
+            <TD height="300px">
+              <IFRAME src="../forum.html" name="forum" width="100%" height="300px" frameborder="0">The document could not be opened. Your browser seems not to support iframes, which are W3C compliant.</IFRAME>
+            </TD>
+          </TR>
+        </TABLE>
+      </P>
+    </UL>
+    <UL>
+      <P align="left">
+        <LI><A name="CODELAYOUT"><FONT color="#FFFFFF"><B>Code layout</B></FONT></A><BR>
+      </P>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; Half-Life® was built following a <B>client/server</B> architecture. The game engine itself, in charge of the 3D display, sound processing, movement calculations, virtual world's physic rules appliance, and player commands handling (such as joining, saving, key binding through the console...) can be described as the 'server' whereas the player side DLL, in charge of passing the previously mentioned player commands to the engine in the form of <B>network packets</B> can be described as the client.<BR>
+      </P>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; When installed for a MOD, the RACC DLL locates itself <B>between</B> the server and the client DLLs and passes network packets from one to the other transparently. As a sort of 'hijacking' of the server/client relation, the DLL can thus intercept interesting information packets from the engine, but foremost can <B>fake connections</B> from other clients on the fly.<BR>
+      Please welcome the bots.<BR>
+      </P>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; Dumb clients, when spawned in the virtual world, need to be controlled at each frame of the game. That's where the DLL hijacks the <B><FONT size="+0"><CODE>StartFrame()</CODE></FONT></B> function call, which exists at each frame of the elapsed virtual time, to add its own code to make the fake clients think. Before calling the engine's actual <FONT size="+0"><CODE>StartFrame()</CODE></FONT> function, the DLL cycle through all the fake clients and call a <FONT size="+0"><CODE>BotThink()</CODE></FONT> function for them.<BR>
+      </P>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; The <B><FONT size="+0"><CODE>BotThink()</CODE></FONT></B> function is the core of a cybernetic character's AI. This function is in charge of many checks to determine if the bot needs to move, check for enemies, do some particuliar action such as taunting its opponents or asking backup from his team, etc. The wanted behaviour is then run by calling the appropriate function in the according behaviour domain: navigation, combat, chat, etc. It is obvious that none of these functions must loop. Each one has to terminate and return in the frame time it was called.<BR>
+      </P>
+      <P align="center">
+        <FONT color="#FFFFFF" size="-2"><B>Deathmatch Classic: a bot armed with a crowbar</B></FONT><BR>
+        <IMG src="../img/crowbar-bot-snapshot.png" border="0" alt="Deathmatch Classic: a bot armed with a crowbar"></IMG><BR>
+      </P>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; For <B>each frame</B>, the whole <B>decisional AI</B> of every bot is entirely self-contained within that <FONT size="+0"><CODE>BotThink()</CODE></FONT> function. Tracing deeper through this function will show up many function calls, pointing at different locations within the code, depending on whatever situation the cybernetic character is in: sampling the field of view, handling ladder movement, firing at a visible enemy threat...<BR>
+      </P>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; On the other side, the <B>reactive AI</B>, handling reflexes and unconscious reactions, is a client-side implementation (cf. <FONT size="+0"><CODE>bot_client.cpp</CODE></FONT>) which gets called whenever network messages are sent from the server engine to the clients. This can occur when the cybernetic character gets damaged by invisible enemy fire, for example. This is essentially a <B>sensorial</B> part in the AI layout. While the decisional AI <B><I>voluntarily polls</I></B> its sensors to retrieve information about the virtual world, the reactive AI <B><I>punctually senses</I></B> the environment, influented by external <B>stimuli</B>.<BR>
+      Here is how bots think.<BR>
+      </P>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; If you are interested in deeper source code explanation, more technical info can be found in <A href="../botman.txt" target="main">Botman's original readme.txt</A> supplied with his HPB bot template. This is a complete tutorial to HPB hacking. Really worth a look.<BR>
+      </P>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; Botman also wrote a <A href="../cplusplus.html" target="main">C++ tutorial</A> that explains very well the basis on C++ classes and inheritances. Although C knowledge is sufficient to hack the bot code, programmers should be aware that the interface with the Half-Life engine is written in C++.<BR>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; The Rational Autonomous Cybernetic Commandos source code is open for anyone to view and use. Strong emphasis has been put on <B>correctness</B>, <B>cleanliness</B>, <B>readability</B> and <B>commenting</B>.<BR>
+      </P>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; <I>Use the source, Luke!</I><BR>
+      </P>
+      <P align="center">
+        <IMG src="../img/ak47.png" border="0" alt="Avtomat Kalashnikov AK-47"></IMG><BR>
+        <FONT color="#FFFFFF" size="-2"><B>Avtomat Kalashnikov AK-47</B></FONT><BR>
+      </P>
+    </UL>
+    <P align="left">
+      <BR>
+      <BR>
+      <A href="#PAGETOP" target="mainframe">[ Back to top ]</A><BR>
+    </P>
+  </BODY>
+</HTML>

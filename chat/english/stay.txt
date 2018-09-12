@@ -1,0 +1,46 @@
+# RACC - Bot chat file
+#
+# The maximum number of sentences that can be put in this file is 100.
+# Any void or sharp-prepended line will be ignored.
+# The '%s' will be filled in game by the name of the player.
+
+OK
+go on, I'll take the point
+OK go ahead I'll stay here
+OK %s they can come all they want now
+understood %s
+they won't pass this point %s
+ok %s im in position
+at your service %s
+OK %s i won't move from here
+I'll take the point!
+I'll be successful in this mission sir!!! :-)
+OK %s i'll leave the squad
+I have to fire on everything moving %s, is that right?
+just let them come !!!
+Waiting for hostiles!!
+OK I'm keeping the place
+Got it. They'll never pass here
+don't worry %s they'll never pass...
+ok %s I'm staying in position
+got it
+ok I stay here
+yep %s
+sure %s you just take care of your skin
+OK %s go ahead I take the point
+go on %s if it gets hot I'll ask you for backup
+defence in position!!
+I defend the point
+%s if it gets tough you'd better fly back QUICKLY...
+OK %s I'm defending the point
+OK I'll fire on everything that moves!!
+got that %s
+at your service, general
+go ahead %s, they won't dare to approach
+OK %s I'll stay near here
+they won't pass %s =)
+OK %s I'll stay in the zone
+don't let me wait too long %s
+you are the boss %s...
+yes sir !!!
+at your service

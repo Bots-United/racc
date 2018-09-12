@@ -1,0 +1,121 @@
+<HTML>
+  <BODY topmargin="0" leftmargin="0" bgcolor="#202420" text="#A0A0A0" vlink="#007F00" link="#00FF00">
+    <A name="PAGETOP">
+    <FONT face="Arial" size="-1">
+    <UL>
+      <P align="left">
+        <LI><A name="THERACCPROJECT"><FONT color="#FFFFFF"><B>The RACC project</B></FONT></A><BR>
+      </P>
+      <P align="center">
+        <FONT face="Arial" color="#FF003F" size="+1"><B>CURRENT RELEASE: 20020509</B></FONT><BR>
+        <FONT face="Arial" size="-1"><B>Check out the <A href="../changelog.txt" target="main">changelog</A></B></FONT><BR>
+      </P>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; The Rational Autonomous Cybernetic Commandos (RACC) is a <A href="#WHATSABOT" target="mainframe">bot</A> AI development project which aims at implementing as close as possible a human-like behaviour for NPCs (non-player characters) in first-person shooter games such as <A href="#WHATSHALFLIFE" target="mainframe">Half-Life</A>. The current release of the project supports the following mods: Half-Life, Team Fortress Classic, Opposing Force, Azure Sheep, Deathmatch Classic and Counter-Strike (soon War In Europe). The code layout is based on the <A href="http://www.planethalflife.com/botman/hpb_bot.shtml" target="main">HPB</A> template, a work done by <A href="http://www.planethalflife.com/botman" target="main">Botman</A> permitting an efficient interfacing between the Half-Life game engine and almost any MOD DLL. Botman kindly provided his code to the Half-Life coding community, and many developers used it to create their own plugin. Bots are an example.<BR>
+        &nbsp;&nbsp;&nbsp;&nbsp; The RACC project has been wrote under the <A href="help.html#LICENSE" target="mainframe">BSD License</A>, to allow anyone to use the source code and do whatever he wants with it, provided that the original source of the code is explicitly mentioned in it, i.e. Botman's HPB.<BR>
+      </P>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; <FONT color="#00FF00"><B>NOTE: Botman IS IN NO WAY AFFILIATED WITH RACC! DO NOT SEND HIM ANY QUESTION OR REQUEST ABOUT THIS BOT -- SEE <A href="pm.html#TOP" target="mainframe"><B>[author]</B></A> INSTEAD.</B></FONT><BR>
+      </P>
+      <P align="center">
+        <FONT color="#FFFFFF" size="-2"><B>Counter-Strike: a bot attacking</B></FONT><BR>
+        <IMG src="../img/fighting-bot-snapshot.png" border="0" alt="Counter-Strike: a bot attacking"></IMG><BR>
+      </P>
+    </UL>
+    <UL>
+      <P align="left">
+        <LI><A name="FEATURES"><FONT color="#FFFFFF"><B>Features</B></FONT></A><BR>
+      </P>
+      <P align="left">
+        The <FONT face="Impact" color="#FFFFFF">RATIONAL AUTONOMOUS CYBERNETIC COMMANDOS</FONT> bot AI features are the following:<BR>
+        <FONT size="-2">
+        <BR>
+        <UL type="disc">
+          <FONT size="-1"><I>Bot setup and monitoring:</I></FONT><BR>
+          <LI>Support for <FONT color="#FFFFFF">Half-Life</FONT>, <FONT color="#FFFFFF">Opposing Force</FONT>, <FONT color="#FFFFFF">Team Fortress</FONT>, <FONT color="#FFFFFF">Counter-Strike</FONT>, <FONT color="#FFFFFF">Deathmatch Classic</FONT> and <FONT color="#FFFFFF">Azure Sheep</FONT><BR>
+          <LI><FONT color="#FFFFFF">Clean installation</FONT> centralized in a single directory not to corrupt any Half-Life file<BR>
+          <LI><FONT color="#FFFFFF">Easy setup and removal</FONT> with two batch scripts: 'install.bat' and 'remove.bat'<BR>
+          <LI><FONT color="#FFFFFF">High-quality additional player models</FONT> are included with the distribution<BR>
+          <LI><FONT color="#FFFFFF">Automatic in-game bot spawning and removal</FONT> equalized to max player count<BR>
+          <LI><FONT color="#FFFFFF">Automatic bot team assignment</FONT> for team-based MODs<BR>
+          <LI><FONT color="#FFFFFF">Console tools</FONT> to monitor and control bot characteristics and bot counts<BR>
+          <LI><FONT color="#FFFFFF">Bot personalization system</FONT> involving bot name, skin and skill<BR>
+          <BR>
+          <FONT size="-1"><I>Chat:</I></FONT><BR>
+          <LI>Advanced bot text chat system with <FONT color="#FFFFFF">up to 12 text chat situations</FONT><BR>
+          <LI>Bots talk like if they were using Half-Life's <FONT color="#FFFFFF">voice chat system</FONT> in team-based MODs<BR>
+          <LI>Bots use the <FONT color="#FFFFFF">radio</FONT> in Counter-Strike<BR>
+          <LI>Bots can <FONT color="#FFFFFF">ask for backup</FONT> when they get damaged and <FONT color="#FFFFFF">call for medic</FONT> when permitted<BR>
+          <BR>
+          <FONT size="-1"><I>Combat behaviour:</I></FONT><BR>
+          <LI><FONT color="#FFFFFF">Advanced weapon selection and usage</FONT>, including <FONT color="#FFFFFF">burst-firing</FONT> and <FONT color="#FFFFFF">grenade handling</FONT><BR>
+          <LI><FONT color="#FFFFFF">Human-like aiming system</FONT> allowing to aim at most of the parts of a body<BR>
+          <LI><FONT color="#FFFFFF">Unpredictable combat behaviour</FONT>, involving <FONT color="#FFFFFF">fearful</FONT> and <FONT color="#FFFFFF">rusher</FONT> bots<BR>
+          <LI><FONT color="#FFFFFF">Squad intelligence</FONT> for bots to decide to set up as a squad and <FONT color="#FFFFFF">cover their backs</FONT><BR>
+          <LI><FONT color="#FFFFFF">Advanced bot buy</FONT> routines in Counter-Strike<BR>
+          <LI><FONT color="#FFFFFF">Bomb planting and defusal</FONT> implemented as map goal in Counter-Strike<BR>
+          <LI><FONT color="#FFFFFF">Bots may call each other</FONT> when they see the VIP or the bomb site in Counter-Strike<BR>
+          <LI>Advanced <FONT color="#FFFFFF">sniper rifle and crossbow usage</FONT>, and <FONT color="#FFFFFF">grenade/satchel/snark avoidance</FONT><BR>
+          <LI>Bots <FONT color="#FFFFFF">spray logos</FONT> (can't change decal yet)<BR>
+          <BR>
+          <FONT size="-1"><I>Navigation:</I></FONT><BR>
+          <LI><FONT color="#FFFFFF">TOTALLY UNWAYPOINTED NAVIGATION</FONT>: bots <FONT color="#FFFFFF">sample</FONT> their field of view in <FONT color="#FFFFFF">real-time</FONT> like humans do<BR>
+          <LI>Careful <FONT color="#FFFFFF">look for potentially dangerous corners</FONT> while wandering; bots can <FONT color="#FFFFFF">strafe</FONT> or <FONT color="#FFFFFF">turn there</FONT><BR>
+          <LI>Basic <FONT color="#FFFFFF">sense of orientation</FONT> implemented for bots to remember interesting locations<BR>
+          <LI>Bots <FONT color="#FFFFFF">strafe to avoid teammates</FONT> while wandering<BR>
+          <LI>Bots are <FONT color="#FFFFFF">able to see up a slope or a staircase</FONT><BR>
+          <LI>Bots can <FONT color="#FFFFFF">open doors, break windows and walk through them</FONT><BR>
+          <LI>Bots <FONT color="#FFFFFF">avoid falling</FONT> more cleverly<BR>
+          <BR>
+          <FONT size="-1"><I>Player/Bot interaction:</I></FONT><BR>
+          <LI><FONT color="#FFFFFF">VGUI menu based interface and keybindings</FONT> to pass orders to bots from your team<BR>
+          <LI>Orders understood by a bot: <FONT color="#FFFFFF">'Follow me'</FONT>, <FONT color="#FFFFFF">'Stop following me'</FONT>, <FONT color="#FFFFFF">'Keep the position'</FONT><BR>
+          <LI><FONT color="#FFFFFF">Advanced follow-user code</FONT>: on ladders, over crates and through windows if their user jumps or ducks<BR>
+          <LI>Used bots pausing will try to <FONT color="#FFFFFF">cover their backs</FONT> and <FONT color="#FFFFFF">listen to squad members behaviour</FONT><BR>
+          <BR>
+          <FONT size="-1"><I>Miscellaneous:</I></FONT><BR>
+          <LI><FONT color="#FFFFFF">Strong emphasis</FONT> on source code <FONT color="#FFFFFF">correctness</FONT>, <FONT color="#FFFFFF">cleanliness</FONT> and <FONT color="#FFFFFF">commenting</FONT><BR>
+          <BR>
+        </UL>
+        </FONT>
+      </P>
+      <P align="left">
+        <BR>
+      </P>
+      <P align="center">
+        <FONT color="#FFFFFF" size="-2"><B>Counter-Strike: a bot keeping the place</B></FONT><BR>
+        <IMG src="../img/keeper-bot-snapshot.png" border="0" alt="Counter-Strike: a bot keeping the place"></IMG><BR>
+      </P>
+      <P align="left">
+        <BR>
+      </P>
+    </UL>
+    <UL>
+      <P align="left">
+        <LI><A name="WHATSHALFLIFE"><FONT color="#FFFFFF"><B>What's Half-Life ? What's Counter-Strike ?</B></FONT></A><BR>
+      </P>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; <A href="http://www.planethalflife.com/" target="main">Half-Life</A> is a first-person shooter video game, meaning that the player is viewing the game world by his own character's eyes, this producing an important feeling of realism. The goal of the game for the player is to make use of weapons he collects in the game world to destroy his enemies, which can be computer-controlled monsters (in single player mode) or real player opponents (in multiplayer mode). People can play over the Internet, or in LAN-parties (small temporary dedicated local networks), and so kick friendly ass all night long.<BR>
+      </P>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; <A href="http://www.counter-strike.net/" target="main">Counter-Strike</A> is the most famous MOD ("modification" of the game) for Half-Life in which people play with new player models, new guns, new environments, but mostly in a new context. Conter-Strike is a team-based game where terrorists and counter-terrorist teams fight each other. That MOD makes a very great deal of realism, thus headshots and falls from high places are deadly.<BR>
+      </P>
+    </UL>
+    <UL>
+      <P align="left">
+        <LI><A name="WHATSABOT"><FONT color="#FFFFFF"><B>What's a bot ?</B></FONT></A><BR>
+      </P>
+      <P align="left">
+      &nbsp;&nbsp;&nbsp;&nbsp; Bot means robot. A bot is a computer-controlled opponent, with whom people who aren't connected to the Internet or those who just missed the latest LAN-party can train a little, while waiting for the next one. A bot has the same look as a human player, and its AI program is aimed at simulating a normal player's in-game behaviour : fire at you when he sees you, climb at ladders, hide under a staircase while waiting for you, grab items, laugh at you when you are dead, in short all possible & imaginable treacheries like in a true network game. If the bot is good, the player could have the feeling that he is playing against a human opponent.<BR>
+      </P>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; A bot's AI is way more complex than the one of the game's standard monsters, which can seem fairly stupid in general. The goal for the developer consists in making his bot think in real time : make him able to identify a wall, a door, his weapon, an enemy firing at him, make him know that if he falls from high he'll probably get some damage, make him able to either go and hide or attack when taken under heavy fire, know which is the best weapon to use in whatever situation, know when to burst-fire, aim accurately or throw a grenade, and a bunch of obvious behaviours that have to be correctly implemented in the AI in an attempt to make his bot if not clever, at least less stupid, again and again.<BR>
+      </P>
+    </UL>
+    <P align="left">
+      <BR>
+      <BR>
+      <A href="#PAGETOP" target="mainframe">[ Back to top ]</A><BR>
+    </P>
+  </BODY>
+</HTML>

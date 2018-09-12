@@ -1,0 +1,24 @@
+# RACC - Bot chat file
+#
+# The maximum number of sentences that can be put in this file is 100.
+# Any void or sharp-prepended line will be ignored.
+
+AU SECOURS!!!
+ca chauffe par ici!!!
+RAPPLIQUEZ!! CA COMMENCE A CHAUFFER PAR ICI!!!
+rappliquez!! je me fais allumer ici!!
+CA CHAUFFE ICI!!!
+AU SECOURS CA COMMENCE A CHAUFFER!!
+je me fais allumer!!
+AU SECOURS JE VAIS MOURIR!!
+je vais pas tenir longtemps!
+:-@ :-@ au secours je ne tiendrai pas longtemps!!!
+ICI CA CHAUFFE!!
+Y'A DU MONDE!!!
+VENEZ M'AIDER!!
+RAPPLIQUEZ!! Y'A DU MONDE!!!
+RAPPLIQUEZ!!!
+je suis en danger !!!
+JE SUIS TOUCHE!!!
+rappliquez!! je suis salement touche!!
+j'ai besoin d'aide !!!

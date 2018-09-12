@@ -1,0 +1,75 @@
+	"racc_maxbots"
+	{
+		"Maximal number of bots in the game"
+		{ NUMBER 0 32 }
+		{ "32" }
+	}
+
+	"racc_autofill"
+	{
+		"Add bots automatically"
+		{ BOOL }
+		{ "1" }
+	}
+
+	"racc_defaultbotskill"
+	{
+		"Default bot skill level"
+		{
+			LIST
+			"Newbie" "1"
+			"Poor" "2"
+			"Normal" "3"
+			"Tough" "4"
+			"Pro" "5"
+		}
+		{ "3" }
+	}
+
+	"racc_chatmode"
+	{
+		"Bots can chat"
+		{ BOOL }
+		{ "1" }
+	}
+
+	"racc_voicechatmode"
+	{
+		"Bot voice chat mode"
+		{
+			LIST
+			"No voice chat" "0"
+			"Ambient sound style" "1"
+			"Half-Life Voice style" "2"
+		}
+		{ "1" }
+	}
+
+	"racc_defaultbotnationality"
+	{
+		"Default bot nationality"
+		{
+			LIST
+			"English" "0"
+			"French" "1"
+			"German" "2"
+			"Italian" "3"
+			"Spanish" "4"
+		}
+		{ "4" }
+	}
+
+	"racc_internationalmode"
+	{
+		"International mode"
+		{ BOOL }
+		{ "1" }
+	}
+
+	"racc_internetmode"
+	{
+		"Internet traffic mode"
+		{ BOOL }
+		{ "1" }
+	}
+

@@ -1,0 +1,7 @@
+"0" "BOT"
+{
+	"1" "'Follow me'" "botuse"
+	"2" "'Stop following me'" "botstop"
+	"3" "'Stay in position'" "botstay"
+}
+

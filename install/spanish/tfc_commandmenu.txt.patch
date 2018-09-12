@@ -1,0 +1,29 @@
+"0" "BOT"
+{
+	"1"	"'Follow me'" "botuse"
+	"2"	"'Stop following me'" "botstop"
+	"3"	"'Stay in position'" "botstay"
+	"4" "DEMOMAN BOT"
+	{
+		"1" "'Place plastic (5 sec)'" "botdet5"
+		"2" "'Place plastic (20 sec)'" "botdet20"
+		"3" "'Disarm plastic'" "botdetstop"
+	}
+	"5" "SPY BOT"
+	{
+		"1" "'Disguise enemy'" "botdisguiseenemy"
+		"2" "'Disguise friend'" "botdisguisefriendly"
+		"3" "'Feign death'" "botfeign"
+		"4" "'Wake up'" "botfeignstop"
+	}
+	"6" "ENGINEER BOT"
+	{
+		"1" "'Build sentry gun'" "botbuildsentry"
+		"2" "'Rotate sentry gun 180'" "botrotatesentry180"
+		"3" "'Rotate sentry gun'" "botrotatesentry"
+		"4" "'Destroy sentry gun'" "botdetsentry"
+		"5" "'Build dispenser'" "botbuilddispenser"
+		"6" "'Destroy dispenser'" "botdetdispenser"
+	}
+}
+

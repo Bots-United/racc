@@ -1,0 +1,89 @@
+<HTML>
+  <BODY topmargin="0" leftmargin="0" bgcolor="#202420" text="#A0A0A0" vlink="#007F00" link="#00FF00">
+    <A name="PAGETOP">
+    <FONT face="Arial" size="-1">
+    <UL>
+      <P align="left">
+        <LI><A name="TECHNICALOVERVIEW"><FONT color="#FFFFFF"><B>Aperçu technique</B></A></FONT><BR>
+      </P>
+      <P align="left">
+        <FONT color="#FFFFFF"><B>Buts du projet</B></FONT><BR>
+      </P>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; Le projet Rational Autonomous Cybernetic Commandos (RACC) vise à implémenter une intelligence artificielle totalement <FONT color="#FFFFFF"><I>rationelle</I></FONT> dans des personnages non joueur (NPCs ou robots <FONT color="#FFFFFF"><I>cybernétiques</I></FONT> ou 'bots') totalement <FONT color="#FFFFFF"><I>autonomes</I></FONT> dont les principales caractéristiques sont l'analyse environnementale en temps réel et l'intelligence d'équipe de <FONT color="#FFFFFF"><I>commandos</I></FONT>. RACC est un bot <B>non waypointé</B> capable de travailler en équipe.<BR>
+      </P>
+      <P align="center">
+        <FONT color="#FFFFFF" size="-2"><B>Half-Life: un bot faisant un carnage dans Crossfire</B></FONT><BR>
+        <IMG src="../img/carnage-bot-snapshot.png" border="0" alt="Half-Life: un bot faisant un carnage dans Crossfire"></IMG><BR>
+      </P>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; Les <I>waypoints</I> sont peut-être la méthode de détermination d'itinéraire la plus ancienne dans le développement d'IA. Ce sont des emplacements pré-calculés du monde virtuel qui peuvent être reliés ensemble pour former des <I>itinéraires</I>. Typiquement tous les travaux précédemment réalisés sur des adversaires cybernétiques dans les jeux de combat subjectifs reposaient sur les waypoints. Ceci finissait fatalement par d'énormes bases de données d'emplacements pré-calculés qui devaient être altérées à chaque fois que le monde virtuel était lui-même altéré: un changement de carte, une modification sur celle-ci ou une nouvelle carte, tout ceci nécessitant leurs fichiers de waypoints correspondants pour que les personnages de l'IA se déplacent correctement. Si ces informations n'étaient pas disponibles pour le monde virtuel actuellement en cours de jeu, tous les NPCs étaient réduits à se heurter aveuglément aux murs et à s'orienter de manière totalement aléatoire.<BR>
+      </P>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; L'avantage des waypoints était que le NPC n'avait pas besoin de 'sentir' son environnement ni de le visualiser comme un humain; il lui suffisait juste de suivre à l'aveugle des séries récursives d'itinéraires aisément calculés afin de se mouvoir dans le monde virtuel.<BR>
+        &nbsp;&nbsp;&nbsp;&nbsp; Les inconvénients étaient que non seulement le comportement de tels NPCs était facilement prévisible en temps réel, mais surtout il s'agissait d'une manière de jouer totalement aveugle qui occasionnait souvent des actions idiotes; enfin l'intégralité du monde virtuel n'était pas nécessairement couverte par des waypoints et ainsi les NPCs se retrouvaient souvent à faire les mêmes actions, de la même manière et aux mêmes endroits. Leur facilité d'utilisation et la possibilité d'établir des itinéraires de waypoints relativement complexes étaient totalement couvertes par un comportement prévisible, aveugle et pas ressemblant du tout à l'équivalent humain.<BR>
+      </P>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; Le défi des Rational Autonomous Cybernetic Commandos est d'implémenter aussi près que possible une manière de penser <B>humaine</B> dans des NPCs <B>autonomes</B>.<BR>
+      </P>
+      <P align="center">
+        <FONT color="#FFFFFF" size="-2"><B>Un extrait significatif de discussion sur les forums de Botman</B></FONT><BR>
+        <TABLE width="90%" bgcolor="#000000" border="0" cellspacing="0">
+          <TR>
+            <TD height="195px">
+              <IFRAME src="../forum.html" name="forum" width="100%" height="195px" frameborder="0">Le document n'a pas pu être ouvert. Votre navigateur ne semble pas supporter les iframes, qui sont compatibles W3C.</IFRAME>
+            </TD>
+          </TR>
+        </TABLE>
+      </P>
+    </UL>
+    <UL>
+      <P align="left">
+        <LI><A name="CODELAYOUT"><FONT color="#FFFFFF"><B>Organisation du code</B></FONT></A><BR>
+      </P>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; Half-Life® a été conçu suivant une architecture <B>client/serveur</B>. Le moteur de jeu lui-même, en charge de l'affichage 3D, traitement sonore, calcul des mouvements, application des règles de la physique du monde virtuel, et gestion des commandes des joueurs (telles que la jonction, la sauvegarde, l'assignation de touches de raccourcis...) peut être décrit comme le 'serveur' alors que la DLL du côté du joueur, en charge de passer les commandes sus-citées au moteur sous forme de <B>paquets réseau</B> peut être décrite comme le client.<BR>
+      </P>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; Quand il est installé pour un MOD particulier, la DLL RACC va se positionner <B>entre</B> la DLL serveur et la DLL client et tâche de passer les paquets réseau de l'une à l'autre de manière transparente. Grâce à cette sorte de 'piratage' de la relation client/serveur, la DLL peut ainsi intercepter des paquets d'information intéressants en provenance du moteur, mais surtout peut <B>imiter des connections</B> de nouveaux clients au vol.<BR>
+      Mesdames et messieurs, voici les bots.<BR>
+      </P>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; Ces clients fantômes, une fois intégrés dans le monde virtuel, ont besoin d'être contrôlés à chaque trame vidéo du jeu. C'est ici que la DLL intercepte l'appel de la fonction <B><FONT size="+0"><CODE>StartFrame()</CODE></FONT></B>, qui se produit à chaque nouvel instant du temps virtuel, et rajoute son propre code à exécuter qui va faire 'penser' les faux clients. Avant d'appeler la vraie fonction <FONT size="+0"><CODE>StartFrame()</CODE></FONT>, la DLL passe tous les faux clients un à un et appelle une fonction <FONT size="+0"><CODE>BotThink()</CODE></FONT> pour eux.<BR>
+      </P>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; La fonction <B><FONT size="+0"><CODE>BotThink()</CODE></FONT></B> est le coeur de l'IA d'un personnage cybernétique. Cette fonction est en charge de nombreux tests pour déterminer si le bot doit se déplacer, vérifier la présence d'ennemis, faire une action particulière comme provoquer ses ennemis ou demander une couverture à son équipe, etc. Le comportement voulu est alors obtenu en appelant la fonction appropriée dans le domaine comportemental correspondant: navigation, combat, communication, etc. Il semble évident qu'aucune de ces fonctions ne doit être bouclée. Chacune doit se terminer et retourner sa valeur dans le temps de trame où elle a été appelée.<BR>
+      </P>
+      <P align="center">
+        <FONT color="#FFFFFF" size="-2"><B>Deathmatch Classic: un bot armé d'une barre de fer (©)</B></FONT><BR>
+        <IMG src="../img/crowbar-bot-snapshot.png" border="0" alt="Deathmatch Classic: un bot armé d'une barre de fer (©)"></IMG><BR>
+      </P>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; Pour <B>chaque trame</B>, l'intégralité de l'<B>IA décisionnelle</B> de chaque bot est contenue dans et à travers cette fonction <FONT size="+0"><CODE>BotThink()</CODE></FONT>. Investiguer plus profondément dans cette fonction montrera de nombreux appels de fonctions, pointant vers différents endroit du code, dépendant de la situation dans laquelle se trouve le personnage cybernétique: échantillonnage du champ de vision, gestion du mouvement sur une échelle, feu sur une menace ennemie visible...<BR>
+      </P>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; D'un autre côté, l'<B>IA réactive</B>, en charge des réflexes et des réactions inconscientes, possède une implémentation côté client (cf. <FONT size="+0"><CODE>bot_client.cpp</CODE></FONT>) et est invoquée chaque fois qu'un message réseau est envoyé du moteur serveur aux clients. Ceci peut se produire quand le personnage cybernétique est blessé par les balles d'un ennemi invisible, par exemple. Il s'agit essentiellement de la partie <B>sensorielle</B> de l'IA. Alors que l'IA décisionnelle <B><I>scanne volontairement</I></B> ses sens pour réunir des informations sur le monde virtuel, l'IA réactive <B><I>ressent ponctuellement</I></B> l'environment, sous l'influence externe de <B>stimuli</B>.<BR>
+      Et voilà comment les bots pensent.<BR>
+      </P>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; Si vous êtes intéressés par des explications plus détaillées sur le code source, davantage d'informations techniques sont disponibles dans le <A href="../botman.txt" target="main">readme.txt original</A> de Botman, fourni avec sa maquette HPB. Il s'agit d'un tutoriel complet pour l'étude du HPB. Indispensable.<BR>
+      </P>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; Botman est également l'auteur d'un <A href="../cplusplus.html" target="main">tutoriel C++</A> qui explique très bien la base des classes et héritages en C++. Même si la connaissance du C est suffisante pour travailler le code, les programmeurs doivent se souvenir que l'interface avec le moteur Half-Life est en C++.<BR>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; Le code source des Rational Autonomous Cybernetic Commandos est libre pour chacun à voir et utiliser. Une forte emphase a été placée sur l'<B>exactitude</B>, la <B>tenue</B>, la <B>lisibilité</B> et le <B>commentaire</B>.<BR>
+      </P>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; <I>Use the source, Luke!</I><BR>
+      </P>
+      <P align="center">
+        <IMG src="../img/ak47.png" border="0" alt="Avtomat Kalashnikov AK-47"></IMG><BR>
+        <FONT color="#FFFFFF" size="-2"><B>Avtomat Kalashnikov AK-47</B></FONT><BR>
+      </P>
+    </UL>
+    <P align="left">
+      <BR>
+      <A href="#PAGETOP" target="mainframe">[ Retour ]</A><BR>
+    </P>
+  </BODY>
+</HTML>

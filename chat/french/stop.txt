@@ -1,0 +1,49 @@
+# RACC - Bot chat file
+#
+# The maximum number of sentences that can be put in this file is 100.
+# Any void or sharp-prepended line will be ignored.
+# The '%s' will be filled in game by the name of the player.
+
+OK
+je te laisse partir %s
+OK vas-y tout seul
+OK %s
+d'accord %s
+chacun de son cote %s
+ok %s on se debrouillera
+a tes ordres %s
+OK %s chacun son cote
+d'ac
+tu me laches deja %s ?
+dis carrement que je t'encombre %s!!! :-)
+OK %s on casse la formation
+on casse la formation
+je ne serai jamais tres loin %s
+je ne te couvre plus %s
+OK je ne te couvre plus
+bien compris
+tres bien %s debrouille-toi tout seul...
+tres bien %s
+d'accord
+bon je fais cavalier seul ?
+yep %s
+d'accord %s fais gaffe a toi
+OK %s vas-y
+vas-y %s
+fais attention maintenant %s!!
+mon pauvre sans moi tu es perdu
+%s si tu crois pouvoir t'en tirer tout seul...
+OK %s on casse la formation
+je lache la formation
+bien compris %s
+a vos ordres general
+ne m'attends plus %s
+OK %s go
+j'en attendais pas moins de toi %s =)
+OK %s je me retire
+tu n'iras pas loin comme ca %s
+c'est toi le patron %s...
+CHEF OUI CHEF !!!
+go %s go!!!
+GO GO GO !!!
+a tes ordres %s

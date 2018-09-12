@@ -1,0 +1,72 @@
+sense of orientation
+fall bug
+func_illusionaries bug
+improve navigation
+shoot grenades or fire rockets at hidden enemies
+use trains (func_tracktrain)
+sneaking
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>> Implement this instead of UTIL_TraceLines to cope with func_illusionaries
+
+typedef enum {point_hull = 0, human_hull=1, large_hull=2, head_hull=3};
+UTIL_TraceHull (pPlayer->v.origin, v_dest, dont_ignore_monsters, head_hull, pPlayer, &tr);
+
+
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>> taken from the ODD bot, here's some sort of interesting stuff:
+
+inline float BotGetTargetValue(bot_t *pBot, edict_t * pEnemy, float max_dist)
+{
+	float dist = (pBot->pEdict->v.origin- pEnemy->v.origin).Length();
+	float val;
+	if (dist > max_dist)
+	{
+		return 0.0; //no good
+	}
+	val = max_dist/dist;
+	if (pEnemy->v.button |= IN_ATTACK)
+	{
+		val *= 2.0; //ahhh, this bastard is shooting
+	}
+	return val;
+}
+
+Vector CBotGLauncher::GetTargetVector(Vector botOrigin, Vector targetOrigin, edict_t * pBotEnemy)
+{
+	Vector toTarget = targetOrigin - botOrigin;
+	Vector angles = UTIL_VecToAngles(toTarget);
+	Vector2D horizontal = Vector2D(toTarget.z, toTarget.y);
+	float x = horizontal.Length()/240.0;
+	float x2 = x*x; //x = x^2
+	float y = toTarget.z / 240.0;
+	float root = (4- x2 - 4*y);
+	if (root < 0)
+	{
+		return targetOrigin - botOrigin;
+	}
+	root = sqrt(root);
+	root = 2+root;
+	root /= x;
+	float angle = atan(root);
+	if (angle > 180)
+	{
+		angle -= 360.0;
+	}
+	angles.x = angle;
+	UTIL_MakeVectors(angles);
+	return gpGlobals->v_forward * toTarget.Length();
+}
+

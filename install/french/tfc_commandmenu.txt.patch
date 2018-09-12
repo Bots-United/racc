@@ -1,0 +1,29 @@
+"0" "BOT"
+{
+	"1"	"'Suis-moi'" "botuse"
+	"2"	"'Casse la formation'" "botstop"
+	"3"	"'Tiens la position'" "botstay"
+	"4" "BOT ARTIFICIER"
+	{
+		"1" "'Pose le plastic (5 sec)'" "botdet5"
+		"2" "'Pose le plastic (20 sec)'" "botdet20"
+		"3" "'Desamorce le plastic'" "botdetstop"
+	}
+	"5" "BOT ESPION"
+	{
+		"1" "'Camouflage ennemi'" "botdisguiseenemy"
+		"2" "'Camouflage ami'" "botdisguisefriendly"
+		"3" "'Simule la mort'" "botfeign"
+		"4" "'Ne simule plus'" "botfeignstop"
+	}
+	"6" "BOT TECHNICIEN"
+	{
+		"1" "'Construis une tourelle'" "botbuildsentry"
+		"2" "'Retourne la tourelle'" "botrotatesentry180"
+		"3" "'Fais pivoter la tourelle'" "botrotatesentry"
+		"4" "'Detruis la tourelle'" "botdetsentry"
+		"5" "'Construis un ravitailleur'" "botbuilddispenser"
+		"6" "'Detruis le ravitailleur'" "botdetdispenser"
+	}
+}
+
