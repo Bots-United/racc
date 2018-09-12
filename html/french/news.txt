@@ -1,0 +1,25 @@
+Octobre 2003
+
+Les buts et ambitions du projet ont été revus à la baisse.
+J'ai décidé d'abandonner temporairement la méthode
+d'abstraction du moteur 3D car elle causait un lag
+inacceptable, et les travaux sur l'IA cognitive n'ont pas
+été beaucoup plus loin que les tests conceptuels. Même si
+tous ont été concluants, ce travail me demande trop trop
+de temps et est par trop dépendant du reste du projet, de
+telle sorte que tout doit être fixé et bétonné d'abord.
+Il reste toujours des problèmes avec la navigation, mais
+il y a des chances qu'ils soient résolus bientôt.
+Les parties sensorielle, motile et mémorielle de l'IA sont
+en revanche terminées (et ça fonctionne effrayament bien).
+J'ai mis en ligne une version mise à jour de la preview
+jouable, dans laquelle j'ai inclus la plupart du contenu
+de la template, afin que les programmeurs disposent de
+quelque chose de jouable pour commencer, et que les joueurs
+aient à disposition une version améliorée de ce qui reste
+toujours les meilleurs bots non waypointés. Ils n'ont
+cependant pas grand-chose de comparable avec ce que seront
+les véritables RACC pour l'instant. Comme d'habitude, CETTE
+VERSION N'EST PAS UNE RELEASE OFFICIELLE. Elle est loin
+d'être parfaite, mais suffisamment intéressante pour que
+chacun y retrouve un peu son compte.

@@ -1,0 +1,19 @@
+# RACC - Bot chat file
+#
+# The maximum number of sentences that can be put in this file is 100.
+# Any void or sharp-prepended line will be ignored.
+# The '%s' will be filled in game by the name of the player.
+
+non ti seguo %s
+vacce te....
+non ti copro piu' %s
+attaccate... 
+'sso lontano....
+non aspettarmi %s
+mi ritiro %s
+son fuori %s
+son fuori ora
+non aspettarmi piu'
+non comando piu' %s
+me ne vo' da te
+me ne vo' da te %s

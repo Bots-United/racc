@@ -1,0 +1,48 @@
+Rational Autonomous Cybernetic Commandos AI
+
+Template #2
+
+Huge thanks go to Botman and his HPB code!
+http://www.planethalflife.com/botman
+
+Additional models contain work done by Gabor (http://gabor.cs-fusion.net):
+models Emilie, Angelina, Salma. Those models are *NOT* covered by the RACC
+license but remain the exclusive property of their creator, Gabor. Please
+respect his work.
+
+
+***************************************************************************
+For the impatient, run the install.bat batch script provided with this
+distribution, launch half-life, create a LAN game, set the max number of
+players, and enjoy.
+***************************************************************************
+
+
+This source code is provided as an example of how to create a bot for MODs
+for the game Half-Life by Valve software. The use of this source code is
+unrestricted as long as you provide credit to Botman in any ReadMe.txt file
+distributed with your bot or MOD and also on any website that is used to
+distribute your bot or MOD. The source code included here will allow you to
+add a bot to Half-Life deathmatch, Gearbox's Opposing Force MOD, Counter-
+Strike, Azure Sheep, Valve's Deathmatch Classic and the Team Fortress
+Classic MOD. This source code allows you to build a bot DLL file for the
+Windows version of Half-Life only.
+
+
+To run the bot on a Windows machine, you will need the full retail version
+of Half-Life, Team Fortress Classic, Counter-Strike, Deathmatch Classic or
+Opposing Force. The demo version of Half-Life will not allow you to run a
+bot or any MOD.
+
+
+Before going any further, please be sure to check out the following files:
+   LICENSE.DOC - RACC License (BSD License)
+   SERVER.DOC - Server administration notes (commands, CVARs, Metamod...)
+The html subdirectory contains also other documentation about the bot, as
+well as the complete RACC pages.
+
+
+You will need Microsoft Visual C++ 6.0 (available for purchase from
+www.microsoft.com) to rebuild the bot. You'll need to open the RACC.dsw
+workspace file in the release/ directory then use "Build->Rebuild All" to
+build the racc.dll file for each flavor of the bot.

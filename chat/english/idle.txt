@@ -1,0 +1,54 @@
+# RACC - Bot chat file
+#
+# The maximum number of sentences that can be put in this file is 100.
+# Any void or sharp-prepended line will be ignored.
+# The '%s' will be filled in game by the name of the player.
+
+is there some1 to frag overthere?
+does someone want me to kick his ass? =)
+hey you band of motherfuckers are you all hiding?
+hey what's the mess here?
+whats that mess =)
+woohoo that's bronx i'm just gonna do a bit of cleanup =)
+well who wants to be the next one?
+%s where are you? i just want to kill you...
+im looking for a little bit of love....
+get out!
+get out you cowards !!
+get out here !!!
+get out here and fight you cowards !!
+get out of yer holes, all of you!!! =)
+yeepee i've got a big gun
+hoho here's a gun i DO like =)
+c'mon %s, cmon and fight
+are there any women overhere? =)
+where are the chicks?
+hoho, loads of corpses in here...
+hello my name is bob, i am a poor orphan, and i want to frag the world =)
+hehehe youre all dead....
+well then %s shall we go and hide then?
+hoho now i have real stuff !!!
+who wants to try out my new gun with me?? =)
+where r u?, i wanna kill you!
+hey %s, wanna die??
+so you cowardly motherf*ckers, you fear me?
+who fears the great evil wolf??
+<--- bored
+where are you i want to see some heads burst??
+would you mind if we frag together?
+well %s, i'm afraid you'll be my next victim LoL
+hey %s, i have an idea on how to kill you this time =)
+uhhh wait wait i'm changing weapons
+i'm here folks LoL kaboom you're all dead =)
+watch it %s, i'm right behind you!! =)
+behind u! =)
+u cowards you spend too much time chatting and hiding!!!
+don't draw too much attention to yourself %s..... :)
+that's a too violent game for u my dear fellow
+loooool
+moarf
+no comment =)
+so what's that mess ?
+does some1 want me to frag him????
+hey %s wanna die??
+u sh*t sucking pieces of crap hahahaha

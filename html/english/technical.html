@@ -1,0 +1,234 @@
+<HTML>
+  <BODY topmargin="0" leftmargin="0" bgcolor="#202420" text="#A0A0A0" vlink="#007F00" link="#00FF00">
+    <A name="PAGETOP">
+    <FONT face="Verdana" size="-2">
+    <UL>
+      <P align="left">
+        <LI><A name="TECHNICALOVERVIEW"><FONT size="-1" color="#FFFFFF"><B>Technical overview</B></A></FONT><BR>
+      </P>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; <FONT size="-1" color="#00FF00">Project goals.</FONT><BR>
+      </P>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; The Rational Autonomous Cybernetic Commandos (RACC) project aims at implementing a totally <FONT color="#FFFFFF"><I>Rational</I></FONT> Artificial Intelligence in <FONT color="#FFFFFF"><I>cybernetic</I></FONT> non-player characters (NPCs or "bots") able to behave as <FONT color="#FFFFFF"><I>autonomous</I></FONT> entities which main characteristics are real-time environmental analysis and squad intelligence of <FONT color="#FFFFFF"><I>commandos</I></FONT>.<BR>
+      </P>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; <FONT size="-1" color="#00FF00">About non-cognitive abilities of the AI.</FONT><BR>
+      </P>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; The <FONT color="#FFFFFF">instinctive</FONT> side of an intelligence constitutes the sum of senses, means and actions the being is capable without these all to be driven from the reason. Instinct represents the automatic mechanical dimension of an individual's capabilities. It is for biological systems a <FONT color="#FFFFFF">nervous phenomenon</FONT> which behavior is subject to rules established at the <FONT color="#FFFFFF">genetic</FONT> level. It will be for cybernetic systems a read-only program which behavior will be subject to rules established by the programmer in a way to <FONT color="#FFFFFF">simulate</FONT> the known instinctive behavior of biological systems, for instance Man.<BR>
+      </P>
+      <P align="center">
+        &nbsp;&nbsp;&nbsp;&nbsp; Program is <FONT color="#FFFFFF">genom</FONT> for Artificial Intelligence.<BR>
+        &nbsp;&nbsp;&nbsp;&nbsp; Genom is <FONT color="#FFFFFF">program</FONT> for natural intelligence.<BR>
+        &nbsp;&nbsp;&nbsp;&nbsp; <FONT color="#FFFFFF"><I>Both are Turing machines</I></FONT>.<BR>
+      </P>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; The robot is then an <FONT color="#FFFFFF">anthropomorphic</FONT> living being (or, relatively to its universe, "player-o-morphic"). The non-cognitive abilities of this AI declinate in three domains: <FONT color="#FFFFFF">sensing</FONT>, <FONT color="#FFFFFF">action</FONT> and <FONT color="#FFFFFF">navigation</FONT>.<BR>
+      </P>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; <FONT size="-1" color="#00FF00">Sensing and sensitivity of a cybernetic individual.</FONT><BR>
+      </P>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; The virtual world of first-person shooter games provides three sensing vectors, respectively by order of vital importance <FONT color="#FFFFFF">sight</FONT>, <FONT color="#FFFFFF">hearing</FONT> and <FONT color="#FFFFFF">touch</FONT>. These must be implemented in a way as realistic as possible in the instinctive program of the AI. Of their quality depend the capabilities of adaptation and learning, that's to say the <FONT color="#FFFFFF">survival</FONT> capability, of the cybernetic individual.<BR>
+      </P>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; <FONT color="#FFFFFF">Sight</FONT> is implemented by spatial consideration. A parallelization with the way of functioning of a human eye reveals an identical principle of function, the <FONT color="#FFFFFF">ray caster</FONT>, or line tracer, in charge for each angle considered in the field of view to <FONT color="#FFFFFF">quantify the distance</FONT> between the individual and its nearest obstacle in that direction. The cybernetic being acquires then faculties of spatial consideration of its universe comparable to those of the human being. Time-based quantification of human vision allows 15 discernable captures per second. Thus, the bot should not be able to sample its field of view more than 15 times per second.<BR>
+        &nbsp;&nbsp;&nbsp;&nbsp; This ray caster successively emits <FONT color="#FFFFFF">TraceLine</FONT> bursts (test lines. Cf. <A href="http://www.idsoftware.com/" target="main">ID Software</A>'s 3D engines technical documentation) from the location of the character according to an angle which is incremented at each iteration. The distances which are gotten this way invest an array in which the median index matches the direction the bot is facing.<BR>
+        &nbsp;&nbsp;&nbsp;&nbsp; The entity list is <FONT color="#FFFFFF">provided by the engine</FONT> upon asking, under the form of an indexed list. For each of those a test is made upon their respective location in order to determine whether the entity in question is <FONT color="#FFFFFF">potentially visible</FONT>, in which case an additional TraceLine is fired to test the LOS (Line Of Sight, whether it is clearly visible or not). If the result is positive, the entity is held in the visible entities set and replaced in its context, like here below, the player in the background. A request is then made, either directly through this entity's own pointer, or by calling a specialized function of the engine, to acquire its <FONT color="#FFFFFF">visual parameters</FONT> (illumination, size, model, etc).<BR>
+        &nbsp;&nbsp;&nbsp;&nbsp; This as a whole constitutes a <FONT color="#FFFFFF">rational model of the human eye</FONT>.<BR>
+      </P>
+      <P align="center">
+        <TABLE border="0" cellspacing="2" cellpadding="2">
+          <TR>
+            <TD>
+              <P align="center">
+                <FONT color="#FFFFFF" size="-2"><B>Compared sight: human model</B></FONT><BR>
+                <IMG src="../img/human-fov-compare.png" border="0" alt="Compared sight: human model"></IMG><BR>
+              </P>
+            </TD>
+            <TD>
+              <P align="center">
+                <FONT color="#FFFFFF" size="-2"><B>Compared sight: AI model</B></FONT><BR>
+                <IMG src="../img/bot-fov-compare.png" border="0" alt="Compared sight: AI model"></IMG><BR>
+              </P>
+            </TD>
+          </TR>
+        </TABLE>
+      </P>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; <FONT color="#FFFFFF">Hearing</FONT> is implemented through both time-based and spatial consideration. Ideally, it is about software-based computing, for each date <I>t</I> of the virtual time, the noise intensity potentially heard by the cybernetic character by summing the values of the sound samples being played at this date <I>t</I>. The sound wave gotten this way represents the <FONT color="#FFFFFF">ambient noise</FONT>, of which it is then possible to identify disturbing or surprising sound events by a simple <FONT color="#FFFFFF">derivation of this graph</FONT>. The game engine technology does not permit to acquire for each instant this noise intensity, but limits itself to flag, at the relevant dates, the start of processing of a sound sample.<BR>
+        &nbsp;&nbsp;&nbsp;&nbsp; The human model will therefore be inaccurately reproduced only. The selected solution consists in computing beforehand, the duration and the <FONT color="#FFFFFF">average loudness</FONT> of each sample, and to alter in real-time, the <FONT color="#FFFFFF">auditive floor</FONT> in consequence of it. We then get a time-based graph of which the high values mean a great loudness intensity, where the hearing system is meant to <FONT color="#FFFFFF">reach a ceiling</FONT> (ignore then additional sounds which mix too well with the ambient noise), and whose peaks in the derivation mean <FONT color="#FFFFFF">surprise</FONT>, which effect will range from a jump to a turn round in that direction, of intensity proportional to the surprise coefficient itself.<BR>
+        &nbsp;&nbsp;&nbsp;&nbsp; This is a <FONT color="#FFFFFF">rational model of the human ear</FONT>.<BR>
+      </P>
+      <P align="center">
+        <TABLE border="0" cellspacing="2" cellpadding="2">
+          <TR>
+            <TD>
+              <P align="center">
+                <FONT color="#FFFFFF" size="-2"><B>Compared hearing: human model</B></FONT><BR>
+                <IMG src="../img/human-audition-compare.png" border="0" alt="Compared hearing: human model"></IMG><BR>
+              </P>
+            </TD>
+            <TD>
+              <P align="center">
+                <FONT color="#FFFFFF" size="-2"><B>Compared hearing: AI model</B></FONT><BR>
+                <IMG src="../img/bot-audition-compare.png" border="0" alt="Compared hearing: AI model"></IMG><BR>
+              </P>
+            </TD>
+          </TR>
+        </TABLE>
+      </P>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; <FONT color="#FFFFFF">Touch</FONT> is, in that type of virtual world, a feeling acquired by <FONT color="#FFFFFF"><B>proxy</B></FONT>. The machine-human interface being only composed of a screen and loudspeakers, the touch sense can only be transmitted through these two vectors.<BR>
+        &nbsp;&nbsp;&nbsp;&nbsp; The game engine simulates, for the player to consider it so, the touch sense firstly in an <FONT color="#FFFFFF">auditive</FONT> manner: footstep sounds, landing sounds, hit sounds. These sound samples are therefore referenced and are subject to a special processing in the hearing part of the AI. The results of such a processing has to be amplified when the touch sense is equally felt through a <FONT color="#FFFFFF">visual</FONT> vector: screen hop (<I>flinch</I>), wound (<I>damage</I>), blood. In which case it is relevant to adjust a <FONT color="#FFFFFF">panic</FONT> factor in consequence, which variation of intensity is direct function of the <FONT color="#FFFFFF">intensity</FONT> of combined <I>flinch</I> and <I>damage</I>, and whose time-based variation is function of the <I>flinch</I> <FONT color="#FFFFFF">duration</FONT>. Arising to a certain floor, the panic factor (which can safely be confused with self-confidence) triggers a <FONT color="#FFFFFF">survival</FONT> reaction (flight), by taking control, until restoration of a normal cognitive thinking cycle, of the last non-cognitive ability of the AI: <FONT color="#FFFFFF">navigation</FONT>.<BR>
+      </P>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; <FONT size="-1" color="#00FF00">About the means of action of the cybernetic individual.</FONT><BR>
+      </P>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; The standard human-machine interface between man and his controlled avatar in the virtual world (the player), is commonly made up of a <FONT color="#FFFFFF">mouse</FONT> and a <FONT color="#FFFFFF">keyboard</FONT>.<BR>
+      </P>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; We can <FONT color="#FFFFFF">modelize</FONT> the movement of the mouse under the action of a human hand from a point on screen whose coordinates are (x<SUB><FONT size="-1">(0)</FONT></SUB>, y<SUB><FONT size="-1">(0)</FONT></SUB>) to a point whose coordinates are (x<SUB><FONT size="-1">(+<FONT face="Symbol" size="+1">¥</FONT>)</FONT></SUB>, y<SUB><FONT size="-1">(+<FONT face="Symbol" size="+1">¥</FONT>)</FONT></SUB>) in function of time <FONT color="#FFFFFF">t</FONT> measured in display frames (t<FONT face="Symbol"> Î N</FONT>), according to the following logarithmic functions system (thanks to: Tobias "Killaruna" Heimann, Johannes "@$3.1415rin" Lampel) :<BR>
+      </P>
+      <P align="left">
+        <TABLE bgcolor="#000000" width="90%" border="0" cellspacing="0" cellpadding="1">
+          <TR>
+            <TD>
+              <FONT size="-2">
+              <FONT size="-1">d<I>y</I>/d<I>t</I> = a·(d<I>y</I>/d<I>(t-1)</I> × e<SUP>(a·log (s / 2))</SUP> + s·(y<SUB>(+<FONT face="Symbol" size="+1">¥</FONT>)</SUB>-y<SUB>(t)</SUB>) × (1 - e<SUP>(a·log (s / 2))</SUP>))</FONT><BR>
+              <FONT size="-1">d<I>x</I>/d<I>t</I> = a·(d<I>x</I>/d<I>(t-1)</I> × e<SUP>(a·log (s / 2))</SUP> + s·(x<SUB>(+<FONT face="Symbol" size="+1">¥</FONT>)</SUB>-x<SUB>(t)</SUB>) × (1 - e<SUP>(a·log (s / 2))</SUP>))</FONT><BR>
+              <BR>
+              <I>where</I> a <I>equals 20 times the duration in milliseconds of a frame</I>.<BR>
+              <I>where</I> s <I>is the reaction speed of the individual (empirical constant ranging from 0 to 1)</I>.<BR>
+              </FONT>
+            </TD>
+          </TR>
+        </TABLE>
+      </P>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; The reaction speed of the individual varies according to the level of experience and self-confidence.<BR>
+      </P>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; It is moreover necessary to introduce a <FONT color="#FFFFFF">noise</FONT> inherent in the x and y axes coordination:<BR>
+      </P>
+      <P align="left">
+        <TABLE bgcolor="#000000" width="90%" border="0" cellspacing="0" cellpadding="1">
+          <TR>
+            <TD>
+              <FONT size="-2">
+              <FONT size="-1">d<I>x</I>/d<I>t</I> + c·(d<I>y</I>/d<I>t</I>)·((d<I>x</I>/d<I>t</I>)/|d<I>x</I>/d<I>t</I>|)</FONT><BR>
+              <FONT size="-1">d<I>y</I>/d<I>t</I> + c·(d<I>x</I>/d<I>t</I>)·((d<I>y</I>/d<I>t</I>)/|d<I>y</I>/d<I>t</I>|)</FONT><BR>
+              <BR>
+              <I>where</I> c <I>is the accuracy coefficient inferred to the cybernetic individual</I>.<BR>
+              </FONT>
+            </TD>
+          </TR>
+        </TABLE>
+      </P>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; The orientation of the cybernetic individual will thus be described using <FONT color="#FFFFFF">two</FONT> vector axes and one pair of integers : the <FONT color="#FFFFFF">current</FONT> axis, the <FONT color="#FFFFFF">ideal</FONT> axis, and the <FONT color="#FFFFFF">movement speed</FONT> of the cursor.<BR>
+      </P>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; Identically, we can <FONT color="#FFFFFF">modelize</FONT> action on any of the keyboard's keys by considering the two parameters that suffice to describe a minimal event of this type: the <FONT color="#FFFFFF">press date</FONT> and <FONT color="#FFFFFF">release date</FONT> of the key. A test is made each frame in order to know whether, among the allowed keyboard input channels, one of them should be <FONT color="#FFFFFF">activated</FONT> or <FONT color="#FFFFFF">suspended</FONT>. The keyboard/mice human-machine interface implemented so enables the AI to dispose of <FONT color="#FFFFFF">comparable</FONT> action facilities to those the human player disposes of to control his software avatar.<BR>
+      </P>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; <FONT size="-1" color="#00FF00">Tactical waypointless navigation.</FONT><BR>
+      </P>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; To move around is for any biological system having such a freedom a <FONT color="#FFFFFF">vital instinctive need</FONT>. It will be the same of the cybernetic individual.<BR>
+        &nbsp;&nbsp;&nbsp;&nbsp; The navigational ability ideally declinates itself in two poles, respectively <FONT color="#FFFFFF">instinctive</FONT> and <FONT color="#FFFFFF">cognitive</FONT>. In the first quoted expresses the need to <FONT color="#FFFFFF">explore</FONT> the environment; in the second express the conscious means that influence its performance: <FONT color="#FFFFFF">caution</FONT>, <FONT color="#FFFFFF">tactics</FONT>; the "tactics" naming regrouping, by opposition to "strategic", the sum of means consciously considered as the best ones, put to work in the achievement of a goal whose time-based validity does not exceed a near future of <FONT color="#FFFFFF">a few seconds</FONT>.<BR>
+        &nbsp;&nbsp;&nbsp;&nbsp; Such a model had to be simplified for technical order reasons, for it requires too much of a power of calculation the hardware can provide. The cybernetic individual has then been inferred the <FONT color="#FFFFFF">instinctive</FONT> capability of tactical movement, traditionally located on the <FONT color="#FFFFFF">cognitive</FONT> plane in the human being.<BR>
+      </P>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; Any human being of normal physiological condition in an environment <I>a priori</I> free from danger, has in the absence of any cognitive thinking focus, a <FONT color="#FFFFFF">natural</FONT> tendency to direct its look in the direction of the <FONT color="#FFFFFF">longest distance coverable by his field of view</FONT>. This is a <FONT color="#FFFFFF">postulate</FONT> of which I am author and only responsible, but that I believe relevant enough to be accepted as a basic axiom. The RACC preview already showed that a waypointless navigation based <FONT color="#FFFFFF">uniquely on this axiom and on only it, largely suffices for navigation</FONT> in virtual worlds of relatively simple geometry. Therefore, the <FONT color="#FFFFFF">view focus</FONT> during the movement of the cybernetic character adapts consequentively to the variations of its field of view.<BR>
+        &nbsp;&nbsp;&nbsp;&nbsp; A particular attention shall nevertheless be given to <FONT color="#FFFFFF">lateral intersections</FONT>, for they are <FONT color="#FFFFFF">potentially representative</FONT> of a greater coverable distance than the one focalized at this moment. The character can, using a few TraceLines, <FONT color="#FFFFFF">anticipate</FONT> the uncovered passage and <FONT color="#FFFFFF">temporarily</FONT> direct its view focus in the direction of the intersection, the overall process duration <FONT color="#FFFFFF">lasting at best a little second</FONT>.<BR>
+      </P>
+      <P align="center">
+        <TABLE border="0" cellspacing="2" cellpadding="2">
+          <TR>
+            <TD>
+              <P align="center">
+                <FONT color="#FFFFFF" size="-2"><B>Navigation: view focus direction</B></FONT><BR>
+                <IMG src="../img/bot-fov-snapshot.png" border="0" alt="Navigation: view focus direction"></IMG><BR>
+              </P>
+            </TD>
+            <TD>
+              <P align="center">
+                <FONT color="#FFFFFF" size="-2"><B>Navigation: lateral anticipation</B></FONT><BR>
+                <IMG src="../img/bot-corner-anticipation.png" border="0" alt="Navigation: lateral anticipation"></IMG><BR>
+              </P>
+            </TD>
+          </TR>
+        </TABLE>
+      </P>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; A rational use of the data collected by the <FONT color="#FFFFFF">eye</FONT> of the cybernetic character enables the implementation of a <FONT color="#FFFFFF">tactical</FONT> approach of movement. In an environment <I>a priori</I> dangerous, tactical navigation consists in moving <FONT color="#FFFFFF">from cover point to cover point</FONT> avoiding as much as possible any direct exposition to the presumed source of danger.<BR>
+      </P>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; - <FONT color="#FFFFFF">Any peak in the graph</FONT> representing the field of view, represents a <FONT color="#FFFFFF">convex</FONT> obstacle angle. If a TraceLine fired from the corresponding location to the source of threat returns a <FONT color="#FFFFFF">negative result</FONT>, this point also represents a <FONT color="#FFFFFF">covered zone</FONT>.<BR>
+        &nbsp;&nbsp;&nbsp;&nbsp; - <FONT color="#FFFFFF">Any peak in the <B>derivation</B> of the graph</FONT> representing the field of view, represents a <FONT color="#FFFFFF">concave</FONT> angle. Any index of this type represents a <FONT color="#FFFFFF">potential source of danger</FONT>, for it indicates a <FONT color="#FFFFFF">lateral intersection</FONT>. These angles shall be subject to <FONT color="#FFFFFF">particular surveillance</FONT>.<BR>
+      </P>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; The study of the instinctive movement reactions of an individual involved in urban warfare shows moreover that, during the time interval when the threat has not explicitly manifested its source yet, this one is commonly <FONT color="#FFFFFF">assimilated to any concave angle (i.e. lateral intersection) nearby</FONT>, as long as the angle made with the vectors directed <FONT color="#FFFFFF">towards the objective</FONT> from one hand and <FONT color="#FFFFFF">towards the suspicious intersection</FONT> from another hand, does not exceed 90° in absolute value, this to guarantee the cybernetic character will <FONT color="#FFFFFF">never face back its objective</FONT>.<BR>
+      </P>
+      <P align="center">
+        <TABLE border="0" cellspacing="2" cellpadding="2">
+          <TR>
+            <TD>
+              <P align="center">
+                <FONT color="#FFFFFF" size="-2"><B>Tactical navigation in action</B></FONT><BR>
+                <IMG src="../img/tactical-navigation-fov.png" border="0" alt="Tactical navigation in action"></IMG><BR>
+              </P>
+            </TD>
+            <TD>
+              <P align="center">
+                <FONT color="#FFFFFF" size="-2"><B>Corresponding FOV graph</B></FONT><BR>
+                <IMG src="../img/tactical-navigation-diagram.png" border="0" alt="Corresponding FOV graph"></IMG><BR>
+              </P>
+            </TD>
+          </TR>
+        </TABLE>
+      </P>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; <FONT color="#FFFFFF">Pathfinding</FONT> always require the symbolic division of the virtual universe, either in <FONT color="#FFFFFF">waypoints</FONT>, or in <FONT color="#FFFFFF">walkable space zones</FONT> (navmesh). Contrarily to the traditionally chosen direction during the programming of a moving entity, the second solution shall be retained, for it provides accurately the <FONT color="#FFFFFF">spatial dimension</FONT> of the walkable zone, a thing waypoints don't allow, or in a very imprecise manner.<BR>
+        &nbsp;&nbsp;&nbsp;&nbsp; The walkable faces list is obtained through an <FONT color="#FFFFFF">interpretation of the BSP file</FONT> where the totality of the polygons that make up a map in the virtual world are spatially described. The BSP format (<FONT color="#FFFFFF">Binary Space Partition</FONT>) stores a <FONT color="#FFFFFF">descending tree</FONT> describing the successive divisions that should be made on a single volume in order to <FONT color="#FFFFFF">reproduce all the geometry of the universe in non-concave polygons</FONT>. The interpretation of it is made using <A href="http://www.planethalflife.com/botman/" target="main">botman</A>'s works, and notably his excellent <A href="http://www.planethalflife.com/botman/" target="main">BSP Tools</A>. It is to note that this operation is realized only <FONT color="#FFFFFF">once per map</FONT>, in order to build the corresponding data file.<BR>
+      </P>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; Each <FONT color="#FFFFFF">horizontal</FONT> polygon, or subject to a slope not exceeding the maximal walkable value (45°), is listed as <FONT color="#FFFFFF">potentially walkable</FONT>. Their reachability will be built in real-time by <FONT color="#FFFFFF">experience</FONT> and <FONT color="#FFFFFF">monitoring</FONT>. Each cybernetic individual acquires then the memory of <FONT color="#FFFFFF">its own moves</FONT>, together with <FONT color="#FFFFFF">those of the other individuals it sees</FONT>. A correctly filled bitmask enables to tell the difference between each type of reachability from one to another of the walkable polygons (ladder, jump, liquid, need to crouch, etc.)<BR>
+        &nbsp;&nbsp;&nbsp;&nbsp; The connections system described above constitutes the <I>navmesh</I> (pseudo-cognitive map) of the AI, which can be parsed by an algorithm like <FONT color="#FFFFFF">A*</FONT>, in order to determine a path according to a strategic choice depending on the situation (the shortest, the safest, etc.)<BR>
+        &nbsp;&nbsp;&nbsp;&nbsp; <B><I>NOTE</I></B> : It is absolutely pointless to store danger, frequentation, or any other sort of information which would <FONT color="#FFFFFF">not be strictly objective</FONT> in the structure of these walkable spaces. Storage of such subjective information is made in the individual's <FONT color="#FFFFFF">cognitive memory</FONT>, which shall therefore be questioned during the pathfinding process.<BR>
+      </P>
+      <P align="center">
+        <FONT color="#FFFFFF" size="-2"><B>Pathfinding: A*</B></FONT><BR>
+        <IMG src="../img/astar-pathfinder.png" border="0" alt="Pathfinding: A*"></IMG><BR>
+      </P>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; <FONT size="-1" color="#00FF00">About the cognitive abilities of AI.</FONT><BR>
+      </P>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; [ this part has yet to be written ]<BR>
+      </P>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; If you are interested in more detailed explanations about the source code more technical information is available in the original <A href="../botman.txt" target="main">readme.txt</A> botman provided with his HPB template. This is a complete tutorial for hacking the HPB_bot.<BR>
+      </P>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; botman is also the author of a <A href="../cplusplus.html" target="main">C++ tutorial</A> that explains quite well the basis of classes and inheritances in C++. Even if knowledge of C is sufficient to hack the code out, programmers must remember that the interface with the Half-Life engine is written in C++.<BR>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; The Rational Autonomous Cybernetic Commandos source code is free for all to look at and use. A strong emphasis has been put on <B>correctness</B>, <B>cleanliness</B>, <B>readability</B> and <B>commenting</B>.<BR>
+      </P>
+      <P align="left">
+        &nbsp;&nbsp;&nbsp;&nbsp; <I>Use the source, Luke!</I><BR>
+      </P>
+      <P align="center">
+        <IMG src="../img/ak47.png" border="0" alt="Avtomat Kalashnikov AK-47"></IMG><BR>
+        <FONT color="#FFFFFF" size="-2"><B>Avtomat Kalashnikov AK-47</B></FONT><BR>
+      </P>
+    </UL>
+    <P align="left">
+      <BR>
+      <A href="#PAGETOP" target="mainframe">[ Back ]</A><BR>
+    </P>
+  </BODY>
+</HTML>

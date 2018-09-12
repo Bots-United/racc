@@ -1,0 +1,33 @@
+# RACC - Bot chat file
+#
+# The maximum number of sentences that can be put in this file is 100.
+# Any void or sharp-prepended line will be ignored.
+
+boh e' ora della nanna...
+me ne vo'
+me 'sso rotto le palle...
+ci si vede !
+OK NANNA !!
+SALUTI & BACI !!
+CIAOOOooOOOooooOOOooo
+'NOTTE 'NOTTE !!
+me ne vo'! annatece anche voi =)
+statemi bene !!
+saluti a tutti
+tra un po' torno =)
+ciao a tutti, NANNA !! =)
+vado a tromb... ehmmm dormire !
+ciao =)
+ho preso troppe botte e vado a dormire...
+me sto' a rincojoni'... =)
+xe vedemo 
+ora torno...
+OK !! CIAOOO CAZZONI !!!!!
+ciao belli !!
+saluti a tutti tranne che ai santoni
+'NOTTE A TUTTI !!
+HAUAHAUHAUAHAUAHAUH !!!! HO SONNOOOOO !!!
+troppe laggate, stacco....
+che la ceppa vi colga... ci vediamo !!
+Ciao ! Ciao
+buonanotte....

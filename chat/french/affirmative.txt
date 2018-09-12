@@ -1,0 +1,19 @@
+# RACC - Bot chat file
+#
+# The maximum number of sentences that can be put in this file is 100.
+# Any void or sharp-prepended line will be ignored.
+# The '%s' will be filled in game by the name of the player.
+
+OK
+d'ac
+d'accord
+d'accord %s
+bien compris
+CHEF OUI CHEF
+ok %s
+ca roule %s
+jawohl
+yes sir
+oui mon general
+compris
+compris %s

@@ -1,0 +1,52 @@
+# RACC - Bot chat file
+#
+# The maximum number of sentences that can be put in this file is 100.
+# Any void or sharp-prepended line will be ignored.
+# The '%s' will be filled in game by the name of the player.
+
+HAUAHAUAHAUAHAAUHAAUAHAUAHAUH !!!!
+ooOOOOoooOOOooooOOOooooOOOooooo !!!!!
+BWAHAHAHAHAHAHA !!!!!!!! aaaaarrrrgggggg!!!!!
+HAUAHAUAHAUAHAUAHAAUHAAUAHAUAhaaaaaaaaaaaaazzzzoooooooooo
+eheheheh a pippone !!!!!
+lo adoro  =)
+LOL %s
+che ? LoL
+EHEHEHEHHEHEH...HOHOHOHOHOH... HAUAHAUAHAUAHAUAHAUHAAUHA !!!
+riprovace.....
+bel colpo =)
+troppo facile =)
+heeheeheeheeheeheehee =)
+LOLLETEEEEEE =)
+scusa %s! :)
+che fai %s? 
+perfetto =)
+uahhhhhhh =)
+GNAMMETE :)))))
+ahoooooo %s, t'ho sdrajatooooooooooo !!
+MHUAUHAUAHUAHAUHA !!!!
+me sto a tajaaaaaaaaaa!!
+nun t'enccazza %s!
+LOL abbambocciooooooo
+lava per terra ora :)
+avvertito !!!
+%s che schifoooooooo ;-)
+te l'ho detto, sei morto !!
+ACCAPITOOOOOO ?? =)
+%s... che t'ho fatto ? =)
+ahoooo %s, eccalmatii e' solo un gioco! lol
+oh scusa! eheheh
+%s! ma che sei?
+divertente =)
+%s sei il concreto esempio della schifezza ! LoL
+ma quanto sei sega !! =)
+HAUAHAUAHAUAHAUAHAUAHU !!! TE STAI A RINCOJONIIIIII =)
+ahoooooo e c'e' l'avete con me ? =)
+'SSO BRAVO 'SSO BELLO 'SSO ER PIU' FICO DER TUFELLO !!!
+impara !! LoL
+certo %s, farai di meglio =)
+oh scusami %s 
+HAUAHAUAHAUAHAUHAAHAAAAAAAAAUUUUURRRRRRPP !!!
+oops....
+scusa %s te devi sciaqqua da le palle !! 
+ROFL ROFL ROFL ROFL ROFL ROFL ROFL ROFL 

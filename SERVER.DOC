@@ -1,0 +1,77 @@
+RACC server administration
+
+
+:: Supported software platforms
+
+RACC should be able to run both on Win32 listen servers and dedicated servers. It also has the ability to run together with Metamod, and has been reported to run inside Botmixer as well.
+Your Half-Life engine must be up to date to run RACC. The current version of the Half-Life engine is 1.1.1.1. If this is not your version, download an upgrade package from:
+   http://www.planethalflife.com/files/
+RACC supports the following MODs: Half-Life Deathmatch and Team play, Opposing Force Deathmatch, Team play and CTF, Deathmatch Classic Deathmatch and Team play, Azure Sheep Deathmatch and Team play, Team Fortress Classic and Counter-Strike.
+
+
+:: Getting RACC to work together with Metamod
+
+If you are willing to run RACC together with Metamod, you have to install RACC *AFTER* Metamod is installed and set up properly. Installing Metamod after RACC won't work. Trying to load RACC as a metamod plugin won't work either. RACC has the ability to detect if the Metamod DLL is present, and if it is, it will load it instead of the game DLL. This is why the RACC DLL has to be specified in the liblist.gam file as the DLL the engine will load, instead of the Metamod DLL. i.e, in the liblist.gam file, instead of:
+   gamedll "addons/metamod/dlls/metamod.dll"
+you must have:
+   gamedll "../racc/release/your_mod/release/racc.dll"
+Note that this configuration step should be done automatically by the install.bat script provided with RACC. You should not need to worry about it unless you intend to manually set up RACC.
+
+
+:: RACC configuration files and CVARs
+
+No special configuration file is needed apart from the 'profiles.cfg' file that contains the bot personalities.
+The 'profiles.cfg' file allows you to define different personalities for the bots. This involves the bot's name, the skin he will have in the game, the logo he will spray (NOTE: this feature is not reimplemented yet), the language he will speak in, and his skill level. You can add as much personalized profiles you want to this file and change the existing ones to suit your tastes.
+
+Several CVARs allow you to dynamically set the most important game characteristics about the bots. You can save yourself from manually setting them up from the console by adding them together with their values to any of your autoexec files (listenserver.cfg, server.cfg or whatever file that is parsed at server startup). Below are the CVARs you can use and a brief description of what they do.
+
+   racc_minbots [0...32] - Sets the minimum number of bots that will always be present in the game
+   racc_maxbots [0...32] - Sets the maximum number of bots that can be present in the game
+   racc_autofill [0, 1] - Enables/disables automatic filling of player slots (it does not prevent other players to connect)
+   racc_botforceteam [0...4] - Forces the bots to select the specified team ID from 1 to 4, 0 means auto-select
+   racc_internetmode [0, 1] - Enables/disables online traffic mode featuring bots randomly joining/leaving the server
+   racc_chatmode [0, 1] - Enables/disables both bot text chat and audio chat
+   racc_voicechatmode [0, 1, 2] - Disables bot voice chat if set to 0. Enables ambient sound mode bot voice chat if set to 1. Enables HLVoice-style bot voice chat (NOTE: this feature is still incomplete) if set to 2.
+   racc_internationalmode[0, 1] - Enables/disables local language only bot chat (no foreign languages if 0)
+   racc_defaultbotnationality [0...4] - Sets the default value for bot nationality (the language in which the bots will speak). 0, 1, 2, 3 and 4 mean successively English, French, German, Italian and Spanish.
+   racc_defaultbotskill [1...5] - Sets the default value for bot skill (overriden by personalities in 'profiles.cfg')
+
+
+:: RACC server commands
+
+RACC server commands all start with the "racc" keyword. To obtain help, for example, just type "racc help". There is no syntax difference between a listen server command and a dedicated server one. Below are the server commands you can use to control and monitor the bots during the game.
+
+   racc help - Displays the RACC command-line help
+   racc add - Make a bot connect and join the current game. The parameters that can be passed this function (bot name, skin, logo, skill, team, class) vary between MODs, so check the command-line help for proper usage. If no parameter is supplied, a bot named 'Bot' with default characteristics will join the game.
+   racc kick - Make a bot disconnect from the current game
+   racc kickall - Make all bots disconnect from the current game
+   racc viewprofiles - Displays the profiles of the currently loaded bots from the 'profiles.cfg' file
+   racc botcount - Displays the total number of bots currently playing
+   racc playercount - Displays the total number of clients (bots included) currently playing
+   racc time - Displays the current map play time
+
+
+:: Internet and Local Area Network server notes
+
+High-traffic server administrators should be aware that if RACC voice is active, thus precached, clients who don't own the voice chat samples on their machine (i.e. who don't have RACC installed them too) will not be able to connect your server. To ensure your server will be fully accessible to everyone, you will have to disable the voice chat completely *AT SERVER BOOT TIME*. To ensure it is disabled at boot time, you have to put the following line:
+   "racc_voicechatmode"		"0.00000000"
+at the bottom of your game.cfg file in your MOD directory.
+Note: you CAN'T just add this line to one of your autoexec scripts, because the Half-Life engine does precache the sounds BEFORE your autoexec.cfg files are parsed. If you do it, it won't work, because the sounds will still be precached, thus taken in account in the game requirements asked to every client who will attempt to connect your server.
+
+
+:: Server population and team management
+
+As for listen servers, there is no need to manually add bots to a dedicated server. They should join automatically within the first seconds of server uptime and fill up all player slots less one, without disturbing normal clients connections: as soon as a real player joins, a bot leaves. And on the contrary, as soon as a real player leaves, a bot joins the game within a delay depending on your configuration; 10 seconds for normal operation and below the minute if racc_internetmode is set to 1.
+
+To force a specific team selection for incoming bots, use the "racc botforceteam" command. If this CVAR is set to 0, the bots will be auto-assigned a team. If this CVAR is set to 1, 2, 3 or 4 (when appliable), the bots will join the team corresponding to this number. E.g, for Counter-Strike, the Terrorist team has the ID #1 whereas the Counter-Terrorist team has the ID #2. For Team Fortress Classic, the blue, red, yellow and green teams have respectivly the IDs #1, #2, #3 and #4. For Opposing Force CTF, the Black Mesa team has the ID #1 whereas the Grunts team has the ID #2. Using this CVAR together with the racc_maxbots CVAR, you can make bots fill up the half of your server in one complete team. For example, to fill up all the Terrorist slots with bots in Counter-Strike and let the Counter-Terrorist slots available for real players, on a 16 player server you would use:
+   racc_botforceteam 1
+   racc_maxbots 8
+Another solution would be to disable racc_internetmode and manually adding the bots for a specific team from the server console. However those CVARs have beed added for your convenience, so you may prefer using them instead.
+
+
+:: Server failure eventuality
+
+In case of server failure, if you believe it's related with RACC, please report it to the author with as much details as possible about the state of the game when the event occured.
+
+
+Happy fragging...

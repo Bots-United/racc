@@ -1,0 +1,107 @@
+# RACC - Bot chat file
+#
+# The maximum number of sentences that can be put in this file is 100.
+# Any void or sharp-prepended line will be ignored.
+# The '%s' will be filled in game by the name of the player.
+
+mais c pas gentil du tout ca, %s!!
+ca va chhhhhier
+ca va chier pour ton grade %s
+coleeeeere!!!!
+NAAAAAAAAAAN!!!!!
+pkoi c toujours sur moi que ca tombe?
+bon. il va falloir que je me mette a jouer serieusement, on dirait.
+%s t'es pas drole.
+meme pas mal d'abord
+j'vais l'dire!
+OK, %s. mtnt je C ce ki me reste a faire
+tu trouves ca drole connard?
+cours %s, cours.
+ho putain %s!!!
+restons zen..............
+bien vu!!!
+bien joue %s
+%s, tu vas vite comprendre qu'y faut pas faire ca...
+je t'aimais bien, %s.
+%s j'en ai que deux mais tu me les brises
+aha...aha.
+quel jeu de merde.
+<----- vexe
+ma vengeance sera terrible
+bravo %s c'etait bien vu
+ouaiii.....c'est KooL.
+oh non pas deja!!!
+ca commence a me gonfler severe.
+c pas cool du tout ca %s
+grrrrrrrrr %s grrrrrrrrrrrrrrrrrrrr
+j'ai posement horreur de ca, %s
+oh toi! t'es mort!!!
+t'es mort %s. cours.
+%s tu crois ptet que tu vas t'en tirer comme ca?
+aie.
+grrrrrrrrrrrr
+<<------- est tres enerve
+%s a besoin d'une bonne fessee! ::pan:: ::pan::
+pourquoi tant de violence?
+chuis vert.
+naaaaan %s
+naaaaaaaaaaan
+j'hallucine
+ayaya t mort
+%s, tu vas crever
+meurs
+creve
+creve charogne
+VENGEANCE
+chuis degouteeeee
+ca me deglingue
+et MEEEEEEEERDEEEEEUUUU
+fait chieeeeeeer
+J croa pooo
+c pas possible????
+heeeeeu? c'etait quoi ca?
+COMMENT T'AS FAIT CA ??????
+HEIN????????
+j'ai rien vu venir...
+ou il est ce charmant %s qui m'a fait ca que je le butte
+ca %s c'etait toi non?
+je t'ai reconnu %s
+oui eh bien cours maintenant
+petite ordure si je t'attrape...
+%s... on etait amis mais la c fini.
+%s. t'es un lache.
+rhoaaaa quel fumier
+ou tu es %s que je t'explose
+pffff la belle affaire.
+petit merdeux tu vas voir
+salaud
+j'aime pas mourir, %s.
+ca va chier pour ton matricule %s
+ENCULEEEEEEEEEEEEEEEEEEEEEEEEEE
+>:-@ GROSSE COLERE >:-@
+espece d'enf.... t'aurais pu me laisser le temps de recharger!!!
+oh toi tu vas avoir mal
+la mort ne m'arretera pas, %s. je vais te le faire payer.
+T mort %s. cache toi.
+whoa j't'ai rien fait !!!!
+pas taper, %s. moi gentil.
+putain, %s? comment t'as fait ca??
+eh les mecs !! %s utilise un bot.
+pffffffff
+MAIS MERDE!!! CONFISQUEZ-LUI SON FLINGUE QUOI!!!
+oh et puis merde
+toi tu vas avoir mal
+je l'dirai a Botman!!!
+connard
+ispice di connasse!!!
+coyote
+va te faire mettre
+merde
+putain t'es mort
+rhoa l'autre
+tu vas souffrir
+oh my god tu vas souffrir
+t'aurais pas du
+comment t'aurais pas du
+bon %s ca suffit maintenant
+mais c'est fini oui?
