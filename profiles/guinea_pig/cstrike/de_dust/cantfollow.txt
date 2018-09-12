@@ -1,0 +1,21 @@
+# RACC - Bot chat file
+#
+# The maximum number of sentences that can be put in this file is 100.
+# Any void or sharp-prepended line will be ignored.
+# The '%s' will be filled in game by the name of the player.
+
+im leaving the squad %s
+i'm leaving the squad
+i won't cover you anymore %s
+i won't cover u anymore
+i'm going there alone
+here i go alone
+i resign command
+don't wait for me %s
+i'm retiring %s
+im off %s
+im off now
+don't wait 4me anymore
+i'm not in command anymore %s
+im leaving u alone
+i'm leaving u %s

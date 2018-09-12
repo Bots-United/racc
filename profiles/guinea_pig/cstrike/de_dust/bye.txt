@@ -1,0 +1,33 @@
+# RACC - Bot chat file
+#
+# The maximum number of sentences that can be put in this file is 100.
+# Any void or sharp-prepended line will be ignored.
+
+hmmm i think i'm gonna stop here...
+well thats about it, I have to go...
+ummm I'm gonna commit crimes elsewhere I think...
+I've had enough. See ya later everybody.
+OK I think i will stop now...
+hey I must go and sleep I guess =)
+well I have to go now. Cya.
+I think i'm gonna leave
+I'm leaving. dont be too upset =)
+I'm stopping. So long...
+cya every1 Im leaving
+i'll be back... =)
+ciao every1, it's time to sleep =)
+so long guys
+cya =)
+I've had my amount of frags. So long!
+Im stopping coz its starting to turn me mad =)
+Im leaving folks see ya!
+i'll be back =) ...
+OK Im leaving
+cya guys
+ok let's return to the real world now
+ciao everybody
+so long all
+ok this stinks, im leaving
+bullshit its lagging too much today, Im leaving, see you later
+im off to bed now.
+whew i'm out, so long!

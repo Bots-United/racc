@@ -1,0 +1,49 @@
+# RACC - Bot chat file
+#
+# The maximum number of sentences that can be put in this file is 100.
+# Any void or sharp-prepended line will be ignored.
+# The '%s' will be filled in game by the name of the player.
+
+OK
+I'll let you go then %s
+OK go ahead alone
+OK %s
+affirmative %s
+each one on his side %s
+ok %s we'll survive
+at your service %s
+OK %s each side
+ack
+you leave me now %s ?
+just say I disturb you %s!!! :-)
+OK %s let's break the squad
+we will break the squad
+I'll never be very far %s
+I won't cover you anymore %s
+OK I won't cover u anymore
+got that
+ok %s get out of your mess alone...
+ok %s
+acknowledged
+so I have to go alone ?
+yep %s
+okay %s take care of your ass skin
+OK %s go ahead
+go ahead %s
+be careful now %s!!
+fool! without me you're lost
+%s if you believe you can get out alone...
+OK %s we stop the squad
+i'm leaving the squad
+got it %s
+aye aye general
+don't wait for me anymore %s
+OK %s go
+I was waiting for you to say that %s =)
+OK %s I stop
+you won't get far like that %s
+you're the boss %s...
+SIR YES SIR !!!
+go %s go!!!
+GO GO GO !!!
+at your service %s

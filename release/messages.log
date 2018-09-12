@@ -1,0 +1,85 @@
+RACC log file started
+
+Game registering user message "VoiceMask" to index 64
+Game registering user message "ReqState" to index 65
+(server console): 
+(server console):    RACC version 20021122 - http://www.racc-ai.com
+(server console):    This program comes with ABSOLUTELY NO WARRANTY; see license for details.
+(server console):    This is free software, you are welcome to redistribute it the way you want.
+(server console): 
+(server console): RACC: Fetching world map...........................(server console):  done
+   27 parallels, 30 meridians, 246.92 kilobytes world data
+(server console): RACC: waking up cybernetic population.(server console):  done
+Game registering user message "CurWeapon" to index 66
+Game registering user message "Geiger" to index 67
+Game registering user message "Flashlight" to index 68
+Game registering user message "FlashBat" to index 69
+Game registering user message "Health" to index 70
+Game registering user message "Damage" to index 71
+Game registering user message "Battery" to index 72
+Game registering user message "Train" to index 73
+Game registering user message "HudText" to index 74
+Game registering user message "SayText" to index 75
+Game registering user message "TextMsg" to index 76
+Game registering user message "WeaponList" to index 77
+Game registering user message "ResetHUD" to index 78
+Game registering user message "InitHUD" to index 79
+Game registering user message "ViewMode" to index 80
+Game registering user message "CheckModels" to index 81
+Game registering user message "GameTitle" to index 82
+Game registering user message "DeathMsg" to index 83
+Game registering user message "ScoreAttrib" to index 84
+Game registering user message "ScoreInfo" to index 85
+Game registering user message "TeamInfo" to index 86
+Game registering user message "TeamScore" to index 87
+Game registering user message "GameMode" to index 88
+Game registering user message "MOTD" to index 89
+Game registering user message "ServerName" to index 90
+Game registering user message "AmmoPickup" to index 91
+Game registering user message "WeapPickup" to index 92
+Game registering user message "ItemPickup" to index 93
+Game registering user message "HideWeapon" to index 94
+Game registering user message "SetFOV" to index 95
+Game registering user message "ShowMenu" to index 96
+Game registering user message "ScreenShake" to index 97
+Game registering user message "ScreenFade" to index 98
+Game registering user message "AmmoX" to index 99
+Game registering user message "SendAudio" to index 100
+Game registering user message "RoundTime" to index 101
+Game registering user message "Money" to index 102
+Game registering user message "ArmorType" to index 103
+Game registering user message "BlinkAcct" to index 104
+Game registering user message "StatusValue" to index 105
+Game registering user message "StatusText" to index 106
+Game registering user message "StatusIcon" to index 107
+Game registering user message "BarTime" to index 108
+Game registering user message "ReloadSound" to index 109
+Game registering user message "Crosshair" to index 110
+Game registering user message "NVGToggle" to index 111
+Game registering user message "Radar" to index 112
+Game registering user message "Spectator" to index 113
+Game registering user message "VGUIMenu" to index 114
+Game registering user message "AllowSpec" to index 115
+Game registering user message "BombDrop" to index 116
+Game registering user message "BombPickup" to index 117
+Game registering user message "ClCorpse" to index 118
+Game registering user message "HostagePos" to index 119
+Game registering user message "HostageK" to index 120
+(server console): Verifying and uploading resources...
+(server console): Custom resources total 0 bytes
+(server console):   Decals:  0 bytes
+(server console): ----------------------
+(server console): Resources to request: 0 bytes
+(server console): All clients receive message: TeamInfo
+(server console): All clients receive message: ScoreInfo
+(server console): All clients receive message: TextMsg
+(server console): All clients receive message: TeamInfo
+(server console): All clients receive message: TextMsg
+(server console): All clients receive message: TeamInfo
+(server console): All clients receive message: ScoreInfo
+(server console): All clients receive message: TextMsg
+(server console): RACC: Current bot profiles
+(server console): Name: adjudant Cruchot - Model: terror - Logo: default - Skill: 2
+(server console): All clients receive message: TextMsg
+(server console): All clients receive message: TextMsg
+(server console): All clients receive message: TextMsg

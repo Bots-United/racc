@@ -1,0 +1,24 @@
+# RACC - Bot chat file
+#
+# The maximum number of sentences that can be put in this file is 100.
+# Any void or sharp-prepended line will be ignored.
+
+HELP!!!
+its getting HOT here!!!
+WHERES MY BACKUP?? ITS STARTING TO BECOME TOUGH!!!
+c'mon!! i need backup here!!
+ITS HOT HOT HERE!!!
+HEEELP I NEED HELP!!
+i'm under heavy fire!!
+HELP I DONT WANNA DIE!!
+wont last long! need backup
+:-@ :-@ HEEEEEELP i cant hold 'em very long!!!
+HERES HOT STUFF!!
+PEOPLE IN THE PLACE!!!
+CMON HELP ME!!
+BACKUP!! HOSTILES!!!
+BACKUP!!!
+i am in danger !!!
+I AM GETTING SEVERELY HURT!!!
+come back!! i am badly hurt!!
+i need BACKUP RIGHT NOW !!!

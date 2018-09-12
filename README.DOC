@@ -1,0 +1,36 @@
+Rational Autonomous Cybernetic Commandos AI Source Code Template
+Version 1
+
+Huge thanks go to Botman and his HPB code!
+http://www.planethalflife.com/botman
+
+
+This source code is provided as an example of how to create a bot for MODs
+for the game Half-Life by Valve software. The use of this source code is
+unrestricted as long as you provide credit to Botman in any ReadMe.txt file
+distributed with your bot or MOD and also on any website that is used to
+distribute your bot or MOD. The source code included here will allow you to
+add a bot to the Counter-Strike MOD, and to build a bot DLL file for the
+Windows version of Half-Life. Very little work remain to do in the template
+source code in order to build a Linux version.
+
+
+To run the bot on a Windows machine, you will need the full retail version
+of Half-Life and the Counter-Strike MOD, or Counter-Strike retail. The demo
+version of Half-Life will not allow you to run a bot or any MOD. If you intend
+to use this source code to build a full-featured bot, you will also need quite
+a powerful machine, since the sensing AI is quite CPU-intensive.
+
+
+Before going any further, please be sure to check out the following files:
+   LICENSE.DOC - RACC License (BSD License)
+   THANKS.DOC - Credits to people who helped the project
+   SERVER.DOC - Server administration notes (commands, CVARs, Metamod...)
+
+
+You will need Microsoft Visual C++ 6.0 (available for purchase from
+www.microsoft.com) to rebuild the bot. You'll need to open the RACC.dsw
+workspace file in the release/ directory then use "Build->Rebuild All" to
+build the racc.dll file for each MOD the bot supports. If you intend to
+finish porting the template source code to GNU/Linux, you'll need an egcs
+compiler version able to build the Half-Life SDK.
